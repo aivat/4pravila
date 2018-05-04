@@ -17,8 +17,8 @@
                 </a>
             </div>
 
-            <div class="header-right">
-                <span  class="href-contact menu-svg">
+            <div class="header-right" tabindex="1">
+                <span  class="href-contact menu-svg" tabindex="2">
                     <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0h24v24H0z" fill="none"/>
                         <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
@@ -141,20 +141,21 @@ ul {
     padding: 0;
     /* border: 2px solid white; */
     border-radius: 2px;
-
+visibility: hidden;
     background-color: rgba(0, 0, 0, 0.644);
     background-color: white;
-     top: 70px;
-    right: 10px;
+
     padding: 10px 0;
     max-height: 0px;
+    opacity: 0;
     /* height: 0px;
     width: 0px; */
     max-width: 0px;
     transform: translateZ(0);
 background-color: white;
 color:#676767;
-  
+  outline: none;
+    overflow: hidden;
   /* transition: background-color 1s cubic-bezier(0.1, 0.8, 0.5, 2), color 0.2s linear; */
 }
 
@@ -176,9 +177,18 @@ color:#676767;
     cursor: pointer;
     /* display: inline-block; */
 }
-.menu-svg:hover>.submenu {
-     transition: right .2s cubic-bezier(0.0,0.0,0.2,1),max-width .2s cubic-bezier(0.0,0.0,0.2,1),max-height .2s cubic-bezier(0.0,0.0,0.2,1),opacity .05s linear,top .2s cubic-bezier(0.0,0.0,0.2,1); 
-        box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 
+.menu-svg:focus>.submenu {
+         top: 70px;
+    right: 10px;
+     opacity:1;
+    visibility: visible;
+     transition: 
+     right .2s cubic-bezier(0.0,0.0,0.2,1),
+     max-width .2s cubic-bezier(0.0,0.0,0.2,1),
+     max-height .2s cubic-bezier(0.0,0.0,0.2,1),
+     opacity .05s linear,
+     top .2s cubic-bezier(0.0,0.0,0.2,1); 
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 
     0 3px 14px 2px rgba(0,0,0,0.12), 
     0 5px 5px -3px rgba(0,0,0,0.2);
     display: block;
