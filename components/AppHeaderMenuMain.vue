@@ -2,12 +2,12 @@
   <header class="header-top sticky header">
       <div class="container">
           <div class="header-top">
-            <div class="header-left">
-                <a  href="tel: 608-464" class="href-contact">
+            <div class="header-item header-left">
+                <a  href="/" class="href-contact">
                     <img src="~static/logo.png" alt="Логотип 4 ПРАВИЛА"  class="logo-img">
                 </a>
             </div>
-            <div class="header-right">
+            <div class="header-item">
                 <a  href="tel: 608-464" class="href-contact">
                     <svg class="iconic" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0h24v24H0z" fill="none"/>
@@ -16,34 +16,35 @@
                     93-50-60
                 </a>
             </div>
-
-            <div class="header-right" tabindex="1">
-                <span  class="href-contact menu-svg" tabindex="2">
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-                    </svg>
-                    <ul class="submenu">
-                        <li>
-                            <a href="#">О НАС</a>
-                        </li>
-                        <li>
-                            <a href="#">БЛОГ</a>
-                        </li>
-                        <li>
-                            <a href="#">КАК МЫ РАБОТАЕМ</a>
-                        </li>
-                        <li>
-                            <a href="#">КОНТАКТЫ</a>
-                        </li>
-                        <li>
-                            <a href="#">ЦЕНЫ</a>
-                        </li>    
-                    </ul>
+            <div class="header-item header-right">
+                <span  class="href-contact menu-svg">
+                    <div class="svg-wrap" @focus="showMenu" tabindex="1">
+                        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"  >
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <!-- <div class="submenu-wrap" @click="showModal = false" v-bind:class="{ showmenuwrap: showModal }"> -->
+                        <ul class="submenu" v-bind:class="{ showsubmenu: showModal }">
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Блог</a>
+                            </li>
+                            <li>
+                                <a href="#">Как мы работаем</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#">Цены</a>
+                            </li>    
+                        </ul>
+                    <!-- </div> -->
                 </span>
-
             </div>
-
         </div>
     </div>
   </header>
@@ -54,8 +55,16 @@
 export default {
     data () {
       return {
-        online: true
+        online: true,
+        showModal: false
       }
+    },
+    methods:{
+        showMenu: function() {
+            if ( this.showModal ) {
+                this.showModal = false
+            } else  this.showModal = true
+        }
     }
   }
 </script>
@@ -74,18 +83,21 @@ export default {
     justify-content: space-between;
     background-color: white;
     z-index: 9999;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.header-left, .header-right {
-   display: flex;
-   padding: 10px 10px;
+
+.header-item {
+    display: flex;
+    padding: 10px 10px;  
 }
 .header-left {
     padding-right: 0;
 }
-
 .header-right {
     padding-left: 0;
+    padding-right: 0;
 }
 .sticky {
     position: -webkit-sticky;
@@ -102,10 +114,10 @@ export default {
 	/* border-bottom: 2px dashed #000000; */
     color: black;
     color: #676767;
-    font-weight: 500;
+    font-weight: 700;
     display: flex;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .href-contact:hover {
@@ -116,10 +128,6 @@ export default {
     width: 215px;
 }
 
-.iconic-adress {
-    width: 34px;
-    height: 34px;
-}
 .iconic {
     margin-right: 5px;
     fill: currentColor;
@@ -134,27 +142,28 @@ ul {
     margin-left: 0; /* Отступ слева в браузере IE и Opera */
     padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
+.submenu-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+}
 .submenu {
-    /* display: none; */
     display: block;
     position: absolute;
     padding: 0;
-    /* border: 2px solid white; */
     border-radius: 2px;
-visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.644);
+    visibility: hidden;
     background-color: white;
-
     padding: 10px 0;
     max-height: 0px;
     opacity: 0;
-    /* height: 0px;
-    width: 0px; */
     max-width: 0px;
     transform: translateZ(0);
-background-color: white;
-color:#676767;
-  outline: none;
+    color:#676767;
+    outline: none;
     overflow: hidden;
   /* transition: background-color 1s cubic-bezier(0.1, 0.8, 0.5, 2), color 0.2s linear; */
 }
@@ -163,21 +172,28 @@ color:#676767;
 .submenu>li>a {
     display: block;
     padding: 5px 20px 5px 40px;
-    color: black;
-    color: #676767;
-    color: inherit;
+    /* color: black;
+    color: #676767; */
+    color: rgb(33, 56, 117);
+    /* color: inherit; */
     width: 100%;
     text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .submenu>li>a:hover {
     background-color: rgba(0, 0, 0, 0.1)
 }
+
 .menu-svg {
     cursor: pointer;
+    /* display: block; */
     /* display: inline-block; */
 }
-.menu-svg:focus>.submenu {
+
+
+.showsubmenu {
          top: 70px;
     right: 10px;
      opacity:1;
@@ -195,7 +211,23 @@ color:#676767;
     max-height: 300px;
     /* height: 300px; */
      max-width: 400px;
+     max-width: 100%;
+     width: 94%;
 
+}
+.showmenuwrap {
+    display: block;
+}
+
+.svg-wrap {
+    width: 48px;
+    text-align: center;
+    z-index: 9999;
+    outline:none;
+}
+.svg-wrap:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
 }
 @media (min-width: 360px) {
     .href-contact-adress {
@@ -210,10 +242,6 @@ color:#676767;
 @media (min-width: 500px) {
     .href-contact-adress {
         width: auto;
-    }
-    .iconic-adress {
-        width: 24px;
-        height: 24px;
     }
 }
 

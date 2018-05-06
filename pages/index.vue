@@ -1,6 +1,28 @@
 <template>
   <div class="container">
     <AppHeaderMenuMain/>
+    <div>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+    </div>
   </div>
 </template>
 
@@ -16,8 +38,9 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 body {
-  font-family: roboto, Source Sans Pro, Arial;
+  font-family: 'Open Sans', roboto, Source Sans Pro, Arial;
   font-size: 16px;
 }
 </style>
