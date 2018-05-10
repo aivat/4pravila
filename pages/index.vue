@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <AppHeaderMenuMain/>
+    <AppHeader/>
     <div>
       Текст <br>
       Текст <br>
@@ -22,16 +22,40 @@
       Текст <br>
       Текст <br>
       Текст <br>
+        Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+          Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
     </div>
   </div>
 </template>
 
 <script>
 import AppHeaderMenuMain from '~/components/AppHeaderMenuMain.vue'
+import AppHeader from '~/components/AppHeader.vue'
 
 export default {
   components: {
-    AppHeaderMenuMain
+    AppHeaderMenuMain,
+    AppHeader
   }
 }
 </script>
