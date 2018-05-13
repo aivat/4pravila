@@ -64,8 +64,13 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,600,700,800');
 body {
-  font-family: 'roboto', 'Open Sans', Source Sans Pro, Arial;
+  font-family:  'EB Garamond','Yanone Kaffeesatz', 'Roboto Condensed', 'Arimo','roboto', 'Open Sans', Source Sans Pro, Arial;
   font-size: 16px;
 }
 </style>
