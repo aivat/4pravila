@@ -1,7 +1,10 @@
 <template>
-  <div class="container">
+  <div class="content-wrap">
     <AppHeader/>
     <div>
+      <div class="test">
+        eded
+        </div>
       Текст <br>
       Текст <br>
       Текст <br>
@@ -23,6 +26,53 @@
       Текст <br>
       Текст <br>
         Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+          Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      <div id="test" href="#test">
+        Сюда должно дойти
+      </div>
+        Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+          Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+            Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+      Текст <br>
+              Текст <br>
             Текст <br>
       Текст <br>
       Текст <br>
@@ -72,5 +122,9 @@ export default {
 body {
   font-family:  'EB Garamond','Yanone Kaffeesatz', 'Roboto Condensed', 'Arimo','roboto', 'Open Sans', Source Sans Pro, Arial;
   font-size: 16px;
+}
+.test {
+  height: 500px;
+  background-color: rgb(180, 180, 180)
 }
 </style>

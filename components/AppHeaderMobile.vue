@@ -3,36 +3,31 @@
     <ul class="header-icon-wrap-submenu">
         <hr>
         <li>
-            <a href="#" class="submenu-link">О нас
-                <svg viewBox="0 0 24 24">
+            <a href="#test" class="submenu-link" v-on:click="nextLink()">О нас<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
         </li>
         <li>
-            <a href="#" class="submenu-link">Блог
-                <svg viewBox="0 0 24 24">
+            <a href="#" class="submenu-link">Блог<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
         </li>
         <li>
-            <a href="#" class="submenu-link">Как мы работаем
-                <svg viewBox="0 0 24 24">
+            <a href="#" class="submenu-link">Как мы работаем<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
         </li>
         <li>
-            <a href="#" class="submenu-link">Контакты
-                <svg viewBox="0 0 24 24">
+            <a href="#" class="submenu-link">Контакты<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
         </li>
         <li>
-            <a href="#" class="submenu-link">Цены
-                <svg viewBox="0 0 24 24">
+            <a href="#" class="submenu-link">Цены<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
@@ -69,14 +64,20 @@
             </li>
         </ul>
     </div>
-    <div class="header-icon-wrap-close" @click="$emit('close')">
+    <button class="header-icon-wrap-close" @click="$emit('close')">
         ЗАКРЫТЬ
-    </div>
+    </button>
 </div>
 </template>
 <script>
 export default {
-  
+    methods: {
+        nextLink:function (event) {
+            setTimeout(() => {
+                this.$emit('close');
+            }, 180);
+        }
+    }
 }
 </script>
 <style>
@@ -88,16 +89,23 @@ export default {
     flex-direction: column; */
     z-index: 9998;
     top: 50px;
+    /* bottom: 0; */
+    
     left: 0;
     width: 100%;
-    height: 90%;
+    height: 100%;
+    padding-bottom: 60px;
+    /* height: 90%;
+    height: 100vh; */
     transition: opacity .3s ease;
     /* padding: 0 30px; */
     background-color: #fff;
     transition: all .3s ease;
     color: #213875;
     font-size: 16px;
-    overflow: scroll;
+    /* overflow: scroll; */
+    overflow: auto;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
 }
 
 ul {
@@ -119,7 +127,7 @@ li {
     color: #213875;
     text-decoration: none;
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 700;
     justify-content: space-between;
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
     -webkit-tap-highlight-color: transparent;
@@ -143,8 +151,11 @@ li {
     background: #e9f6f9;
     transform: scaleX(0);
     transform-origin: right;
+    -webkit-transition: -webkit-transform .8s cubic-bezier(.19,1,.22,1);
     transition: transform .8s cubic-bezier(.19,1,.22,1);
+    
     z-index: -1;
+
 }
 .submenu-link:active:before {
 /* background: #e9f6f9;
@@ -153,7 +164,7 @@ li {
     transition: transform .8s cubic-bezier(.19,1,.22,1); 
 z-index: -1; */
 
-transform: scaleX(1);
+    transform: scaleX(1);
     transform-origin: left;
 }
 .submenu-link > svg {
@@ -200,19 +211,40 @@ hr {
     display: inline-block;
     width: 48px;
     height: 48px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+    color: #213875;
 }
-
+.social:active {
+    color: #213775b6;
+}
 .social>svg {
-    fill: #213875;
+    fill: currentColor;
+}
+button:active, button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
 }
 .header-icon-wrap-close {
     display: flex;
+    width: 100%;
     height: 68px;
     align-items: center;
     justify-content: center;
-    background-color: rgba(177, 177, 177, 0.116);
+    background-color: rgba(230, 230, 230, 0.1);
     color: rgba(168, 168, 168, 0.89);
     cursor: pointer;
+    outline: none;
+    border: 0;
+    font-family: inherit;
+    font-size: 16px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent;
+}
+
+.header-icon-wrap-close:active {
+    background-color: rgba(230, 230, 230, 0.4);
 }
 </style>
 
