@@ -1,7 +1,7 @@
 <template>
     <header class="header sticky">
         <div class="container">
-            <header class="header-wrap"  v-bind:class="{ scrollmenu: onScrollMenu }">
+            <header class="header-wrap">
                 <div class="header-logo">
                     <a  href="/" class="header-logo-link">
                         <img src="~static/logo.png" alt="Логотип 4 ПРАВИЛА"  class="header-logo-img">
@@ -50,9 +50,6 @@
                     </ul>
                 </div>
                 <div class="header-call-wrap">
-                    <a href="tel:+ 7 (3532) 93-50-60" class="call-numder">
-                        + 7 (3532) 93-50-60
-                    </a>
                     <div class="call-wrap">
                         <div class="call" @click="showModal = true">
                             <svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -80,34 +77,12 @@ export default {
       }
     },
     methods:{
-        handleScroll (event) {
-        // почему так высчитывается так до конца и не разобрался, но математическим путем опряделяется верно. 40 пиксей добавил, чтобы загрузка происхода еще до прокрутки до самого низа
-        let scrollTop = window.pageYOffset,
-            listOffsetHeight = document.body.offsetHeight,
-            listScrollHeight = document.body.scrollHeight
-        
-        let diffHeight = listScrollHeight - listOffsetHeight
-        if ( scrollTop > 20) {
-            document.body.offsetHeight = document.body.Height + 20
-            this.onScrollMenu = true
-        } else this.onScrollMenu = false
-        console.log('scrollTop=',scrollTop)
-        console.log('listOffsetHeight=',listScrollHeight)
-        // if (diffHeight <= (scrollTop+40) && !this.loading && !this.error) {
-        //     this.fetchData ();
-        // }
-        }
     },
     components: {
         AppHeaderMobile
     },
     created () {
-        if (process.browser) {    
-             window.addEventListener('scroll', this.handleScroll)
-             console.log('qwe')
-        }
     }
-
   }
 </script>
 
@@ -124,6 +99,7 @@ export default {
 .header {
     display: flex;
     background-color: #fff;
+    z-index: 9999;
 }
 .container {
     width: 100%; 
@@ -207,15 +183,14 @@ export default {
     .header {
         justify-content: center;
         /* height: 100px; */
-
     }
     .container {
         width: 1200px; 
     }
     .header-wrap {
         padding: 15px 0;
-        height: 130px;
-        transition: all 0.15 ease-in;
+        height: auto;
+        align-items: center;
     }
     .header-icon {
         display: none;
@@ -226,6 +201,11 @@ export default {
     .header-call-wrap {
         flex-direction: column;
         font-size: 22px;
+        /* width: 190px; */
+    }
+    .call-wrap {
+        display: flex;
+
     }
     .call {
         display: flex;
@@ -250,22 +230,28 @@ export default {
         background-color:rgba(129,34,25,1);
         color: #fff;
     }
+
+    .call:active {
+        background-color:rgba(129, 34, 25, 0.7);
+    }
     .call-numder {
         text-decoration: none;
         margin-bottom: 8px;
         color: inherit;
         display: inline-block;
-        border-bottom: 2px dotted black;
+        /* border-bottom: 2px dotted black; */
     }
     .call-numder:hover {
-        border-bottom: 2px dotted rgba(129,34,25,1);
+        /* border-bottom: 2px dotted rgba(129,34,25,1); */
         color: rgba(129,34,25,1);
     }
     .menu-list {
         margin-left: 0;
         padding-left: 0;
         display: flex;
-        font-size: 22px;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0;
     }
 
     .menu-list>li {
@@ -273,7 +259,7 @@ export default {
     }
     .menu-list>li>a {
         display: inline-block;
-        padding:0 30px;
+        padding: 5px 30px;
         text-decoration: none;
         color: inherit;
         border-bottom: 2px solid transparent;
@@ -282,14 +268,6 @@ export default {
     .menu-list>li>a:hover{
          border-bottom: 2px solid rgba(129,34,25,1);
          color: rgba(129,34,25,1);
-    }
-
-    .scrollmenu {
-        padding: 0;
-    }
-
-    .scrollmenupadding {
-        padding: 15px 0;
     }
 }
 </style>

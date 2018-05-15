@@ -94,6 +94,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
+    height: 90%;
     padding-bottom: 60px;
     /* height: 90%;
     height: 100vh; */
@@ -229,17 +230,18 @@ button::-moz-focus-inner {
 }
 .header-icon-wrap-close {
     display: flex;
+    font-weight: 600;
     width: 100%;
     height: 68px;
     align-items: center;
     justify-content: center;
     background-color: rgba(230, 230, 230, 0.1);
-    color: rgba(168, 168, 168, 0.89);
+    color: rgba(168, 168, 168, 0.6);
     cursor: pointer;
     outline: none;
     border: 0;
-    font-family: inherit;
-    font-size: 16px;
+    /* font-family: inherit; */
+    font-size: 14px;
     -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent;
 }
 

@@ -1,6 +1,8 @@
 <template>
   <div class="content-wrap">
+    <AppHeaderTop/>
     <AppHeader/>
+    <AppSlider/>
     <div>
       <div class="test">
         eded
@@ -101,11 +103,15 @@
 <script>
 import AppHeaderMenuMain from '~/components/AppHeaderMenuMain.vue'
 import AppHeader from '~/components/AppHeader.vue'
+import AppHeaderTop from '~/components/AppHeaderTop.vue'
+import AppSlider from '~/components/AppSlider.vue'
 
 export default {
   components: {
     AppHeaderMenuMain,
-    AppHeader
+    AppHeader,
+    AppHeaderTop,
+    AppSlider
   }
 }
 </script>
@@ -120,7 +126,7 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,600,700,800');
 body {
-  font-family:  'EB Garamond','Yanone Kaffeesatz', 'Roboto Condensed', 'Arimo','roboto', 'Open Sans', Source Sans Pro, Arial;
+  font-family:  'roboto', 'EB Garamond','Yanone Kaffeesatz', 'Roboto Condensed', 'Arimo', 'Open Sans', Source Sans Pro, Arial;
   font-size: 16px;
 }
 .test {
