@@ -187,6 +187,9 @@ export default {
     .container {
         width: 1200px; 
     }
+    .header-logo {
+        padding: 0;
+    }
     .header-wrap {
         padding: 15px 0;
         height: auto;

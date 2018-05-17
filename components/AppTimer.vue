@@ -49,15 +49,15 @@ export default {
             var self = this;
             setInterval(function() {
                 self.s = self.s -1
-                if ( self.s == 0 ) {
+                if ( self.s < 0 ) {
                     self.m = self.m - 1
                     self.s = 59
                 }
-                if ( self.m == 0 ) {
+                if ( self.m < 0 ) {
                     self.h = self.h - 1
                     self.m = 59
                 }
-                if ( self.h == 0 ) {
+                if ( self.h < 0 ) {
                     self.day = self.day - 1
                     self.h = 23
                 }
