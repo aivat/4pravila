@@ -13,7 +13,7 @@
                             </h3>
                             <p>Это очень выгодно, обязательно попробуйте, не пожалеете</p>
                         </div>
-                        <a href="#">Позвонить</a>
+                        <a href="tel:+7 (3532) 93-50-60">Позвонить</a>
                     </div>
                     <div class="service-item item-two">
                         <div class="service-header">
@@ -22,7 +22,7 @@
                             </h3>
                             <p>Обеспечить безопасность и юридическую чистоту сделки, безусловно, лучше всего может солидная компания, у которой есть свои юристы, специализирующиеся на рынке недвижимости</p>
                         </div>
-                        <a href="#">Позвонить</a>
+                        <a href="tel:+7 (3532) 93-50-60">Позвонить</a>
                     </div>
                     <div class="service-item item-three">
                         <div class="service-header">
@@ -31,7 +31,7 @@
                             </h3>
                             <p>Любая сделка требует весьма сложной организационной работы. Кто, кроме опытного риэлтора, может правильно выстроить цепочку из трёх-четырёх, а то и пяти-шести квартир и договориться со всеми заинтересованными сторонами так, чтобы всё прошло ровно и гладко?</p>
                         </div>
-                        <a href="#">Позвонить</a>
+                        <a href="tel:+7 (3532) 93-50-60">Позвонить</a>
                     </div>
                 </div>
             </div>
@@ -63,6 +63,7 @@ export default {
     justify-content: space-between;
     background-color: rgb(242, 245, 248);
     padding: 10px;
+    margin-bottom: 15px;
 }
 .zachem-h2 {
     font-size: 24px;
@@ -86,20 +87,26 @@ export default {
     background-image: radial-gradient(circle farthest-side at 95px 95px,rgb(187, 48, 36),rgba(129,34,25,1) 125%);
     background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%);
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+    background-color: #fff;
+    background-image: none;
     align-items: flex-start;
 }
 .item-two {
-    background-color: rgba(129,34,25,1);
+    /* background-color: rgba(129,34,25,1);
     background-image: none;
-    /* background-image: radial-gradient(circle farthest-side at 95px 95px,#fbda01,#f0b801 125%);
-    background-image: radial-gradient(circle farthest-side at 95px 95px,rgb(187, 48, 36),rgba(129,34,25,1) 125%); */
-    color: #fff;
+     background-image: radial-gradient(circle farthest-side at 95px 95px,#fbda01,#f0b801 125%);
+    background-image: radial-gradient(circle farthest-side at 95px 95px,rgb(187, 48, 36),rgba(129,34,25,1) 125%); 
+    color: #fff; */
 }
+
+
 .item-one {
     background-color: #ececec;
     background-image: radial-gradient(circle farthest-side at 95px 95px,#eaeaea,#cecccc 125%);
     background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%);
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+    background-color: #fff;
+    background-image: none;
+    /* box-shadow: 0 1px 4px 0 rgba(0,0,0,.14); */
 }
 .service-item:nth-child(2) {
     margin: 10px 0;
@@ -119,6 +126,13 @@ export default {
     padding: 12px 25px;
     border-radius: 4px;
 }
+.service-item>a:hover {
+    background-color: rgba(129,34,25,.8);
+}
+/* .item-two>a {
+    background-color: #fff;
+    color:rgba(129,34,25,1);
+} */
 @media (min-width: 1200px) {
     .zachem {
         justify-content: center;
@@ -138,6 +152,7 @@ export default {
     }
     .zachem-wrap {
         align-items: center;
+        margin-bottom: 42px;
     }
     .service {
         display: flex;
@@ -146,7 +161,7 @@ export default {
         margin: 0 10px;
     }
     .service-item {
-        width: 320px;
+        width: 337px;
         /* height: 250px; */
     }
 }
