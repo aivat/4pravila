@@ -4,6 +4,7 @@
     <AppHeader/>
     <AppSlider/>
     <AppZachem/>
+    <AppPlus/>
     <div>
       <div class="test">
         eded
@@ -107,13 +108,16 @@ import AppHeader from '~/components/AppHeader.vue'
 import AppHeaderTop from '~/components/AppHeaderTop.vue'
 import AppSlider from '~/components/AppSlider.vue'
 import AppZachem from '~/components/AppZachem.vue'
+import AppPlus from '~/components/AppPlus.vue'
+
 export default {
   components: {
     AppHeaderMenuMain,
     AppHeader,
     AppHeaderTop,
     AppSlider,
-    AppZachem
+    AppZachem,
+    AppPlus
   }
 }
 </script>
