@@ -13,8 +13,8 @@
                             </div>
                             <div class="opinions-header-wrap">
                                 <div class="opinions-header-wrap-star" v-for="item in 5" :key="item">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-                                        height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px"
+                                        height="20px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
                                     <g id="Bounding_Boxes">
                                         <path fill="none" d="M0,0h24v24H0V0z"/>
                                         <path fill="none" d="M0,0h24v24H0V0z"/>
@@ -90,7 +90,7 @@ export default {
 .opinions-item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     border-radius: 4px;
     padding: 25px 35px;
     background: linear-gradient(to right, rgba(26, 9, 9, 0.6) 0%, rgba(6, 7, 6, 0.6) 100%);
@@ -103,6 +103,10 @@ export default {
     background-color: #fff;
     background-image: none;
     align-items: flex-start;
+    width: 30%;
+}
+.opinions-item:nth-child(2) {
+    margin: 0 10px;
 }
 .opinions-list {
     display: flex;
@@ -111,9 +115,29 @@ export default {
 }
 .opinions-header-wrap {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.opinions-header-wrap-date {
+    display: flex;
+    align-items: center;
+    color: rgb(153, 153, 153);
+    font-weight: 300;
+    margin-left: 10px;
 }
 .opinions-body {
     font-weight: 300;
+}
+.opinions-header {
+    margin-bottom: 10px;
+}
+.opinions-header-wrap-star {
+    display: flex;
+    align-items: center;
+    color: rgba(252, 164, 1, 0.938);
+}
+.opinions-header-wrap-star>svg {
+    fill: currentColor;
 }
 @media (min-width: 1200px) {
     .opinions {
