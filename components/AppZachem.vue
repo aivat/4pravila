@@ -153,6 +153,7 @@ export default {
     .zachem-wrap {
         align-items: center;
         margin-bottom: 42px;
+        padding: 0;
     }
     .service {
         display: flex;
@@ -161,7 +162,7 @@ export default {
         margin: 0 10px;
     }
     .service-item {
-        width: 337px;
+        width: 343px;
         /* height: 250px; */
     }
 }

@@ -5,6 +5,8 @@
     <AppSlider/>
     <AppZachem/>
     <AppPlus/>
+    <AppFiveShagov/>
+    <AppOpinions/>
     <div>
       <div class="test">
         eded
@@ -109,7 +111,8 @@ import AppHeaderTop from '~/components/AppHeaderTop.vue'
 import AppSlider from '~/components/AppSlider.vue'
 import AppZachem from '~/components/AppZachem.vue'
 import AppPlus from '~/components/AppPlus.vue'
-
+import AppFiveShagov from '~/components/AppFiveShagov.vue'
+import AppOpinions from '~/components/AppOpinions.vue'
 export default {
   components: {
     AppHeaderMenuMain,
@@ -117,7 +120,9 @@ export default {
     AppHeaderTop,
     AppSlider,
     AppZachem,
-    AppPlus
+    AppPlus,
+    AppFiveShagov,
+    AppOpinions
   }
 }
 </script>

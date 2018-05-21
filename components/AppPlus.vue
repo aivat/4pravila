@@ -512,5 +512,8 @@ return top
         border: 2px solid rgb(217, 225, 233);
         z-index: 1;
     }
+    .plus-wrap {
+        padding: 0;
+    }
 }
 </style>
