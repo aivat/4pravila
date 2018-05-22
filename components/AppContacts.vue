@@ -1,0 +1,131 @@
+<template>
+    <div class="contacts">
+        <div class="container">
+            <div class="contacts-wrap">
+                <div class="contacts-h2">
+                    Контакты
+                </div>
+                <div class="contacts-body">
+                    <div class="contacts-item">
+                        <p class="contacts-item-p">Адрес: <strong>г. Оренбург, ул. Салмышская, 43\2, офис № 707</strong></p>
+                        <p>Остановка: <strong>18 микрорайон, ТЦ "ОРЕОН"</strong></p>
+                        <p>Идут маршруты: <strong>18, 22, 25, 35, 48</strong></p>
+                    </div>
+                    <div class="contacts-item">
+                        <p>Время работы: <strong>Пн-Пт: с 09:00 до 18:00</strong></p>
+                        <p>Телефон: <strong>+7 (3532) 93-50-60</strong></p>
+                        <p>email: <strong>studia_56@mail.ru</strong></p>                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="map-wrapper">
+            <yandex-map 
+            :coords="[51.827540, 55.158256]"
+            zoom="16"
+            style="width: 98vw; height: 600px;"
+            :cluster-options="{
+                1: {clusterDisableClickZoom: true}
+            }"
+            :behaviors="['multiTouch']"
+            :controls="['trafficControl', 'zoomControl', 'geolocationControl', 'fullscreenControl']"
+            >
+                <ymap-marker 
+                marker-id='1'
+                marker-type="placemark"
+                :coords="[51.827540, 55.158256]"
+                hint-content="Юридическое бюро 'Ваш Советник', ул. Салмышская, д. 34/5, офис № 207"
+                :balloon="{header: 'Юридическое бюро Ваш Советник', body: 'Оренбург, ул. Салмышская, д. 34/5, офис № 207<br> Тел.: 608-464', footer: 'Пн-Пт: с 09:00 до 19:00'}"
+                :icon="{color: 'blue', glyph: 'court'}"
+                cluster-name="1"
+                ></ymap-marker>
+            </yandex-map>
+        </div>
+    </div>
+</template>
+<script>
+import Vue from 'vue'
+
+import YmapPlugin from 'vue-yandex-maps'
+
+if (process.browser) {
+  Vue.use(YmapPlugin)
+}
+export default {
+    data() {
+      return {
+          day: 24
+      }
+    }
+  }
+</script>
+ 
+<style scoped>
+.contacts {
+    display: flex;
+    background-color: rgb(242, 245, 248);
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.container {
+    width: 100%; 
+}
+.contacts-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(242, 245, 248);
+    padding: 0;
+    margin-bottom: 15px;
+}
+.contacts-h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #444;
+    border-bottom: 1px solid rgb(217, 225, 233);
+    margin: 10px auto;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.contacts-body {
+    font-weight: 300;
+    font-size: 18px;
+    padding: 0 10px;
+}
+strong {
+    font-weight: 400;
+}
+.contacts-item-p {
+    margin: 0;
+}
+@media (min-width: 1200px) {
+    .contacts {
+        justify-content: center;
+        /* height: 100px; */
+    }
+    .contacts-h2 {
+        font-size: 32px;
+        border-bottom: 1px solid rgb(217, 225, 233);
+        margin: 42px 0;
+        line-height: 47px;
+        margin: 40px auto;
+    }
+    .container {
+        width: 1200px; 
+    }
+    .contacts-list {
+        flex-direction: row;
+        align-items: flex-start;
+        align-items: stretch;
+        justify-content: center;
+    }
+}
+</style>
