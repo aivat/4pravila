@@ -41,10 +41,10 @@ export default {
     /* justify-content: center; */
     align-items: center;
     background-color: #fff;
-    padding: 20px 10px;
+    padding: 35px 10px;
     /* margin-bottom: 15px; */
     border-radius: 4px;
-    width: 200px;
+    width: 240px;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
 }
 .card-wrap:hover {
@@ -94,6 +94,7 @@ export default {
 }
 .card-h3>div{
     text-align: center;
+    font-size: 24px;
 }
 ul {
     margin: 0;

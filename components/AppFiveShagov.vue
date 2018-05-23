@@ -146,13 +146,14 @@ export default {
     margin-bottom: 15px;
 }
 .shag-h2 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 500;
     color: #444;
-    border-bottom: 1px solid rgb(217, 225, 233);
+    /* border-bottom: 1px solid rgb(217, 225, 233); */
     margin: 10px auto;
-    margin-bottom: 15px;
-    line-height: 30px;
+    margin-bottom: 25px;
+    /* line-height: 30px; */
+    text-align: center;
 }
 .shag-item {
     display: flex;

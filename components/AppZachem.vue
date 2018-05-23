@@ -63,16 +63,17 @@ export default {
     justify-content: space-between;
     background-color: rgb(242, 245, 248);
     padding: 10px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 .zachem-h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 500;
     color: #444;
-    border-bottom: 1px solid rgb(217, 225, 233);
+    /* border-bottom: 1px solid rgb(217, 225, 233); */
     margin: 10px auto;
-    margin-bottom: 15px;
-    line-height: 30px;
+    margin-bottom: 25px;
+    line-height: 32px;
+    text-align: center;
 }
 .service-item {
     display: flex;
@@ -113,10 +114,12 @@ export default {
 }
 .service-h3 {
     font-size: 24px;
+    margin: 15px 0;
 }
 
 .service-header>p {
     font-weight: 300;
+    
 }
 .service-item>a {
     text-decoration: none;
@@ -125,6 +128,7 @@ export default {
     background-color: rgba(129,34,25,1);
     padding: 12px 25px;
     border-radius: 4px;
+    margin-bottom:  15px;
 }
 .service-item>a:hover {
     background-color: rgba(129,34,25,.8);

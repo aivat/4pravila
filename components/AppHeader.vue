@@ -95,6 +95,7 @@ export default {
     position: sticky;
     top: 0;
     padding: 0;
+    box-shadow: 0 -1px 8px rgba(0,0,0,.3);
 }
 .header {
     display: flex;

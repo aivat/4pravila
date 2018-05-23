@@ -146,13 +146,13 @@ export default {
     margin-bottom: 15px;
 }
 .opinions-h2 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 500;
     color: #444;
     border-bottom: 1px solid rgb(217, 225, 233);
     margin: 10px auto;
-    margin-bottom: 15px;
-    line-height: 30px;
+    margin-bottom: 25px;
+    /* line-height: 30px; */
 }
 
 .opinions-item-video {
@@ -164,18 +164,21 @@ export default {
 .slide-wrap {
     display: flex;
 }
+.banner {
+    /* box-shadow: 0 1px 4px 0 rgba(0,0,0,.14); */
+}
     .opinions-item {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         border-radius: 4px;
-        padding: 25px 15px;
+        padding: 20px 25px;
         background: linear-gradient(to right, rgba(26, 9, 9, 0.6) 0%, rgba(6, 7, 6, 0.6) 100%);
         background-color: rgba(129,34,25,1);
         background-color: #009cde;
         background-color: rgb(187, 48, 36);
-        background-image: radial-gradient(circle farthest-side at 95px 95px,rgb(187, 48, 36),rgba(129,34,25,1) 125%);
-        background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%);
+        /* background-image: radial-gradient(circle farthest-side at 95px 95px,rgb(187, 48, 36),rgba(129,34,25,1) 125%);
+        background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%); */
         box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
         background-color: #fff;
         background-image: none;
@@ -183,8 +186,9 @@ export default {
     }
     .opinions-header-wrap {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-start;
+        margin-top: 3px;
     }
     .opinions-header-wrap-date {
         display: flex;
@@ -192,12 +196,13 @@ export default {
         color: rgb(153, 153, 153);
         font-weight: 300;
         margin-left: 10px;
+        font-size: 15px;
     }
     .opinions-body {
         font-weight: 300;
     }
     .opinions-header {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
     .opinions-header-wrap-star {
         display: flex;

@@ -36,8 +36,9 @@
                     </li>
                     <div class="submenu-hr"></div>  
                 </ul>
+                <hr>
                 <div class="header-icon-wrap-contact">
-                    <hr>
+                    
                     <h2 class="contact-h2">КАК С НАМИ СВЯЗАТЬСЯ</h2>
                     <p class="contact-p">studia_56@mail.ru</p>
                     <p class="contact-p">+ 7 (3532) 93-50-60</p>
@@ -50,8 +51,8 @@
                         09:00 - 18:00
                     </p>
                 </div>
+                <hr>
                 <div class="header-icon-wrap-social">
-                    <hr>
                     <h2 class="contact-h2 social-h2">МЫ В СОЦСЕТЯХ</h2>
                     <ul class="social-list">
                         <li>
@@ -101,6 +102,8 @@ export default {
     font-weight: 300;
     font-size: 18px;
     padding: 0 10px;
+    /* margin: 0 10px; */
+    /* box-shadow: 0 1px 4px 0 rgba(0,0,0,.14); */
     /* color: #fff; */
 }
 strong {
@@ -119,6 +122,7 @@ strong {
 ul {
     margin-left: 0;
     padding-left: 0;
+    margin: 0;
 }
 
 li {
@@ -135,7 +139,7 @@ li {
     color: #213875;
     color: black;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     justify-content: space-between;
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
@@ -178,8 +182,8 @@ z-index: -1; */
 }
 .submenu-link > svg {
     fill: currentColor;
-    width: 28px; 
-    height: 28px;
+    width: 20px; 
+    height: 20px;
 }
 hr {
     display: block;
@@ -198,9 +202,9 @@ hr {
     padding: 0 30px;
 }
 .contact-p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 35px;
+    /* line-height: 28px; */
     padding: 0 30px;  
     vertical-align: center;
 }
@@ -225,6 +229,7 @@ hr {
     -webkit-tap-highlight-color: transparent;
     color: #213875;
     color: black;
+    text-align: center;
 }
 .social:active {
     color: #213775b6;
@@ -257,6 +262,11 @@ button::-moz-focus-inner {
 
 .header-icon-wrap-close:active {
     background-color: rgba(230, 230, 230, 0.4);
+}
+.header-icon-wrap-contact, .header-icon-wrap-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 @media (min-width: 1200px) {
     .footer {

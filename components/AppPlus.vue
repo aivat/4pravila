@@ -39,7 +39,7 @@
                         <div class="plus-circle"></div>
                         <div class="plus-item">
                             <div class="plus-item-left">
-                                <div class="plus-item-left-circle" v-bind:class="classObject(0)" v-on:click="setActive(1)">
+                                <div class="plus-item-left-circle" v-bind:class="classObject(0)" v-on:click="setActive(0)">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
                                         height="40px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
                                     <g id="Bounding_Boxes">
@@ -372,13 +372,13 @@ return top
     margin-bottom: 15px;
 }
 .plus-h2 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 500;
     color: #444;
     /* border-bottom: 1px solid rgb(217, 225, 233); */
     margin: 10px auto;
-    margin-bottom: 25px;
-    line-height: 30px;
+    margin-bottom: 15px;
+    /* line-height: 32px; */
     text-align: center;
     /* text-decoration: underline;
     text-decoration-color: rgb(217, 225, 233);
@@ -394,16 +394,21 @@ return top
     margin-bottom: 10px;
 }
 .plus-h3 {
-    margin: 24px 0;
+    margin: 20px 0;
     /* text-decoration-style: dashed; */
     border-bottom: 1px currentColor dashed;
-    line-height: 17px;
+    /* line-height: 17px; */
     display: inline-block;
     cursor: pointer;
+    font-size: 24px;
+
    
 }
 .plus-h3:active {
     color: rgba(129,34,25,1);
+}
+.plus-item {
+    font-weight: 300;
 }
 .plus-item-right {
     margin-left: 10px;

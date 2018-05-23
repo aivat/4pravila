@@ -7,9 +7,9 @@
                 </div>
                 <div class="contacts-body">
                     <div class="contacts-item">
-                        <p class="contacts-item-p">Адрес: <strong>г. Оренбург, ул. Салмышская, 43\2, офис № 707</strong></p>
-                        <p>Остановка: <strong>18 микрорайон, ТЦ "ОРЕОН"</strong></p>
-                        <p>Идут маршруты: <strong>18, 22, 25, 35, 48</strong></p>
+                        <p class="contacts-item-p">Адрес: <strong>г. Оренбург, ул. Терешковой, 263/2, офис № 209</strong></p>
+                        <p>Остановка: <strong>Хабаровская, Бизнес-центр "Премьер"</strong></p>
+                        <p>Идут маршруты: <strong>21, 41, 49Т, 51, 59, 61, 79, 158, 188, 4</strong></p>
                     </div>
                     <div class="contacts-item">
                         <p>Время работы: <strong>Пн-Пт: с 09:00 до 18:00</strong></p>
@@ -64,9 +64,11 @@ export default {
 .contacts {
     display: flex;
     background-color: rgb(242, 245, 248);
+    /* background-color: #fff; */
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
+    
 }
 .container {
     width: 100%; 
@@ -76,29 +78,35 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     background-color: rgb(242, 245, 248);
+    /* background-color: #fff; */
     padding: 0;
+    /* margin: 0 10px; */
     margin-bottom: 15px;
 }
 .contacts-h2 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 500;
     color: #444;
     border-bottom: 1px solid rgb(217, 225, 233);
     margin: 10px auto;
-    margin-bottom: 15px;
-    line-height: 30px;
+    margin-bottom: 25px;
+    /* line-height: 30px; */
 }
 
 .contacts-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 .contacts-body {
     font-weight: 300;
-    font-size: 18px;
-    padding: 0 10px;
+    font-size: 16px;
+    padding: 25px 15px;
+    padding-bottom: 0;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
 }
 strong {
     font-weight: 400;
