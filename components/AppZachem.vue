@@ -66,13 +66,13 @@ export default {
     /* margin-bottom: 15px; */
 }
 .zachem-h2 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 500;
     color: #444;
-    /* border-bottom: 1px solid rgb(217, 225, 233); */
+    border-bottom: 1px solid rgb(217, 225, 233);
     margin: 10px auto;
     margin-bottom: 25px;
-    line-height: 32px;
+    /* line-height: 32px; */
     text-align: center;
 }
 .service-item {
@@ -113,7 +113,7 @@ export default {
     margin: 10px 0;
 }
 .service-h3 {
-    font-size: 24px;
+    font-size: 20px;
     margin: 15px 0;
 }
 

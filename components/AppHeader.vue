@@ -24,27 +24,22 @@
                 <div class="header-menu-wrap">
                     <ul class="menu-list">
                         <li>
-                            <a href ="#test">О нас
+                            <a href ="#shag">Порядок работы
                             </a>
                         </li>
                         <li>
                             <a href ="#">
-                                Блог
+                                4 правила
                             </a>
                         </li>
                         <li>
-                            <a href ="#">
-                                Как мы работаем
+                            <a href ="#opinions">
+                                Отзывы
                             </a>
                         </li>
                         <li>
-                            <a href ="#">
+                            <a href ="#contacts">
                                 Контакты
-                            </a>
-                        </li>
-                        <li>
-                            <a href ="#">
-                                Цены
                             </a>
                         </li>
                     </ul>

@@ -182,6 +182,7 @@ z-index: -1; */
 }
 .submenu-link > svg {
     fill: currentColor;
+    fill: #444;
     width: 20px; 
     height: 20px;
 }

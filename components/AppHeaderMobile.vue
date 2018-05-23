@@ -127,7 +127,7 @@ li {
     padding-bottom: 9px;
     color: #213875;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 700;
     justify-content: space-between;
     -webkit-tap-highlight-color: rgba(0,0,0,0); 

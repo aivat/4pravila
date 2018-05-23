@@ -152,7 +152,7 @@ export default {
 }
 .slide-wrap-text-rule-rule {
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   padding: 10px 15px;
   /* background-color: #d32f2f;

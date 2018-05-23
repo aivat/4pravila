@@ -1,5 +1,6 @@
 <template>
     <div class="opinions">
+        <div class="link" id="opinions" href="#opinions"></div>
         <div class="container">
             <div class="opinions-wrap">
                 <div class="opinions-h2">
@@ -130,6 +131,10 @@ export default {
 </script>
  
 <style scoped>
+.link {
+    position: relative;
+    top: -50px;
+}
 .opinions {
     display: flex;
     background-color: rgb(242, 245, 248);
@@ -146,7 +151,7 @@ export default {
     margin-bottom: 15px;
 }
 .opinions-h2 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
     color: #444;
     border-bottom: 1px solid rgb(217, 225, 233);
@@ -189,6 +194,10 @@ export default {
         align-items: flex-end;
         justify-content: flex-start;
         margin-top: 3px;
+    }
+    .opinions-header-name {
+        font-size: 18px;
+        font-weight: 500;
     }
     .opinions-header-wrap-date {
         display: flex;

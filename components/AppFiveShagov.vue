@@ -1,8 +1,9 @@
 <template>
-    <div class="shag">
+    <div class="shag" >
+        <div class="link" id="shag" href="#shag"></div>
         <div class="container">
             <div class="shag-wrap">
-                <div class="shag-h2">
+                <div class="shag-h2" >
                     От звонка до сделки 4 шага
                 </div>
                 <div class="shag-list">
@@ -130,6 +131,10 @@ export default {
 </script>
  
 <style scoped>
+.link {
+    position: relative;
+    top: -50px;
+}
 .shag {
     display: flex;
     background-color: rgb(242, 245, 248);
@@ -146,11 +151,11 @@ export default {
     margin-bottom: 15px;
 }
 .shag-h2 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
     color: #444;
-    /* border-bottom: 1px solid rgb(217, 225, 233); */
-    margin: 10px auto;
+    border-bottom: 1px solid rgb(217, 225, 233);
+    margin: 0 auto;
     margin-bottom: 25px;
     /* line-height: 30px; */
     text-align: center;

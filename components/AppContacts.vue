@@ -1,5 +1,6 @@
 <template>
     <div class="contacts">
+        <div class="link" id="contacts" href="#contacts"></div>
         <div class="container">
             <div class="contacts-wrap">
                 <div class="contacts-h2">
@@ -7,14 +8,14 @@
                 </div>
                 <div class="contacts-body">
                     <div class="contacts-item">
-                        <p class="contacts-item-p">Адрес: <strong>г. Оренбург, ул. Терешковой, 263/2, офис № 209</strong></p>
-                        <p>Остановка: <strong>Хабаровская, Бизнес-центр "Премьер"</strong></p>
-                        <p>Идут маршруты: <strong>21, 41, 49Т, 51, 59, 61, 79, 158, 188, 4</strong></p>
+                        <div class="contacts-item-p">Адрес: <b>г. Оренбург, ул. Терешковой, 263/2, офис № 209</b></div>
+                        <div>Остановка: <b>Хабаровская, Бизнес-центр "Премьер"</b></div>
+                        <div>Идут маршруты: <b>21, 41, 49Т, 51, 59, 61, 79, 158, 188, 4</b></div>
                     </div>
                     <div class="contacts-item">
-                        <p>Время работы: <strong>Пн-Пт: с 09:00 до 18:00</strong></p>
-                        <p>Телефон: <strong>+7 (3532) 93-50-60</strong></p>
-                        <p>email: <strong>studia_56@mail.ru</strong></p>                        
+                        <div>Время работы: <b>Пн-Пт: с 09:00 до 18:00</b></div>
+                        <div>Телефон: <b>+7 (3532) 93-50-60</b></div>
+                        <div>email: <b>studia_56@mail.ru</b></div>                        
                     </div>                    
                 </div>
             </div>
@@ -61,6 +62,10 @@ export default {
 </script>
  
 <style scoped>
+.link {
+    position: relative;
+    top: -50px;
+}
 .contacts {
     display: flex;
     background-color: rgb(242, 245, 248);
@@ -84,7 +89,7 @@ export default {
     margin-bottom: 15px;
 }
 .contacts-h2 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
     color: #444;
     border-bottom: 1px solid rgb(217, 225, 233);
@@ -101,15 +106,18 @@ export default {
 .contacts-body {
     font-weight: 300;
     font-size: 16px;
-    padding: 25px 15px;
+    padding: 0 15px;
     padding-bottom: 0;
     margin: 0 10px;
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
 }
-strong {
-    font-weight: 400;
+b {
+    font-weight: 500;
+}
+.contacts-item>div {
+    margin: 16px 0;
 }
 .contacts-item-p {
     margin: 0;

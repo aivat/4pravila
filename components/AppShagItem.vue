@@ -41,10 +41,10 @@ export default {
     /* justify-content: center; */
     align-items: center;
     background-color: #fff;
-    padding: 35px 10px;
+    padding: 25px 10px;
     /* margin-bottom: 15px; */
     border-radius: 4px;
-    width: 240px;
+    width: 220px;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
 }
 .card-wrap:hover {
@@ -53,7 +53,7 @@ export default {
 .card-h3 {
     font-size: 16px;
     font-weight: 500;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .card-logo {
@@ -94,11 +94,11 @@ export default {
 }
 .card-h3>div{
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
 }
 ul {
     margin: 0;
-    margin-left: 30px;
+    margin-left: 40px;
     padding-left: 0;
 
 }

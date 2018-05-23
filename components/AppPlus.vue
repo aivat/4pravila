@@ -96,6 +96,7 @@
                                 </h3>
                                 <p v-show="1 == ind">
                                     Мы заранее обсудим с вами условия гарантии и в гарантийных случаях исполним свои обязательства
+                                    Мы заранее обсудим с вами условия гарантии и в гарантийных случаях исполним свои обязательства
                                 </p>
                             </div>
                         </div>
@@ -130,7 +131,7 @@
                                     Цена
                                 </h3>
                                 <p v-show="2 == ind">
-                                    Мы заранее обсудим с вами условия гарантии и в гарантийных случаях исполним свои обязательства
+                                    Мы заранее обсудим с вами условия гарантии и в гарантийных случаях исполним свои обязательства исполним свои обязательства
                                 </p>
                             </div>
                         </div>
@@ -200,7 +201,7 @@
                                     Время
                                 </h3>
                                 <p v-show="3 == ind">
-                                    Мы заранее обсудим с вами условия гарантии и в гарантийных случаях исполним свои обязательства
+                                    Мы заранее обсудим с вами условия гарантии и в гарантийных случаях исполним свои обязательства Мы заранее обсудим с вами условия
                                 </p>
                             </div>
                         </div> 
@@ -218,7 +219,7 @@
                                     Широкий выбор
                                 </h3>
                                 <p v-show="4 == ind">
-                                    Мы заранее обсудим с вами условия гарантии и в гарантийных случаях исполним свои обязательства
+                                    Мы заранее обсудим с вами условия гарантии и в гарантийных случаях исполним свои обязательства ы заранее обсудим с вами условия гарантии и в гарантийных случаях 
                                 </p>
                             </div>
                         </div>                         
@@ -369,10 +370,10 @@ return top
     justify-content: space-between;
     background-color: rgb(242, 245, 248);
     padding: 10px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 .plus-h2 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
     color: #444;
     /* border-bottom: 1px solid rgb(217, 225, 233); */
@@ -400,8 +401,9 @@ return top
     /* line-height: 17px; */
     display: inline-block;
     cursor: pointer;
-    font-size: 24px;
-
+    font-size: 20px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
    
 }
 .plus-h3:active {
@@ -423,6 +425,8 @@ return top
     align-items: center;
     background-color: #fff;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
 }
 .plus-item-left-circle>svg {
     fill: rgba(129,34,25,1);
