@@ -156,7 +156,7 @@ export default {
     }
     .zachem-wrap {
         align-items: center;
-        margin-bottom: 42px;
+        /* margin-bottom: 42px; */
         padding: 0;
     }
     .service {

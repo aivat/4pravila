@@ -173,7 +173,6 @@ export default {
 
 .header-item-href {
 	text-decoration: none;
-	/* border-bottom: 2px dashed #000000; */
     color: black;
     color: #676767;
     font-weight: 700;
@@ -198,11 +197,11 @@ export default {
     height: 40px;
 }
 li {
-    list-style-type: none; /* Убираем маркеры */
+    list-style-type: none;
 }
 ul {
-    margin-left: 0; /* Отступ слева в браузере IE и Opera */
-    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+    margin-left: 0;
+    padding-left: 0; 
 }
 .submenu-wrap {
     position: absolute;
@@ -217,39 +216,26 @@ ul {
 }
 .submenu {
     display: block;
-    /* position: absolute;
-    position: relative; */
     padding: 0;
     border-radius: 2px;
     background-color: white;
     padding: 10px 0;
-    
     opacity: 0;
-    
     transform: translateZ(0);
     color:#676767;
     outline: none;
     overflow: hidden;
-             top: 70px;
-             right:-10px;
-    /* right: 10px; */
-     opacity:1;
-     /* transition: 
-     right .2s cubic-bezier(0.0,0.0,0.2,1),
-     max-width .2s cubic-bezier(0.0,0.0,0.2,1),
-     max-height .2s cubic-bezier(0.0,0.0,0.2,1),
-     opacity .05s linear,
-     top .2s cubic-bezier(0.0,0.0,0.2,1);  */
+    top: 70px;
+    right:-10px;
+    opacity:1;
     box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 
     0 3px 14px 2px rgba(0,0,0,0.12), 
     0 5px 5px -3px rgba(0,0,0,0.2);
     display: block;
-    /* max-height: 300px; */
-
      max-width: 400px;
      max-width: 100%;
      width: 94%;
-  /* transition: background-color 1s cubic-bezier(0.1, 0.8, 0.5, 2), color 0.2s linear; */
+
 }
 
 
@@ -292,32 +278,8 @@ hr {
 }
 .menu-svg {
     cursor: pointer;
-    /* display: block; */
-    /* display: inline-block; */
 }
 
-
-/* .showsubmenu {
-         top: 70px;
-     opacity:1;
-    visibility: visible;
-      transition: 
-     right .2s cubic-bezier(0.0,0.0,0.2,1),
-     max-width .2s cubic-bezier(0.0,0.0,0.2,1),
-     max-height .2s cubic-bezier(0.0,0.0,0.2,1),
-     opacity .05s linear,
-     top .2s cubic-bezier(0.0,0.0,0.2,1);  
-    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 
-    0 3px 14px 2px rgba(0,0,0,0.12), 
-    0 5px 5px -3px rgba(0,0,0,0.2);
-    display: block;
-    max-height: 300px;
-
-     max-width: 400px;
-     max-width: 100%;
-     width: 94%;
-
-} */
 
 .svg-wrap {
     width: 48px;

@@ -125,14 +125,18 @@ b {
 @media (min-width: 1200px) {
     .contacts {
         justify-content: center;
+        padding: 0;
         /* height: 100px; */
+    }
+    .contacts-wrap {
+        margin-bottom: 35px;
     }
     .contacts-h2 {
         font-size: 32px;
         border-bottom: 1px solid rgb(217, 225, 233);
         margin: 42px 0;
         line-height: 47px;
-        margin: 40px auto;
+        margin: 42px auto;
     }
     .container {
         width: 1200px; 
@@ -142,6 +146,22 @@ b {
         align-items: flex-start;
         align-items: stretch;
         justify-content: center;
+    }
+    .contacts-body {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(242, 245, 248);
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+    .contacts-item {
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+        padding: 25px 35px;
+        width: 40%;
     }
 }
 </style>

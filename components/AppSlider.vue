@@ -56,7 +56,8 @@ export default {
             id: "1",
             name: "ПРАВИЛО № 1",
             info: "27 лет, Оренбург",
-            text: "ГАРАНТИРОВАННАЯ ПРОДАЖА КВАРТИРЫ ЗА 25 ДНЕЙ!",
+            // text: "ГАРАНТИРОВАННАЯ ПРОДАЖА КВАРТИРЫ ЗА 25 ДНЕЙ!",
+            text: "Гарантированная продажа квартиры за 25 дней!",
             link: "https://vk.com/id72506129",
             imgMobile: "1",
             imgDesktop: "1_2"
@@ -65,7 +66,8 @@ export default {
             id: "2",
             name: "ПРАВИЛО № 2",
             info: "31 год, Оренбург",
-            text: "ПОДБОР НЕДВИЖИМОСТИ ЗА 24 ЧАСА. ОФОРМЛЕНИЕ ИПОТЕЧНОЙ ЗАЯВКИ ЗА 2 ЧАСА. 15 БАНКОВ-ПАРТНЕРОВ!",
+            // text: "ПОДБОР НЕДВИЖИМОСТИ ЗА 24 ЧАСА. ОФОРМЛЕНИЕ ИПОТЕЧНОЙ ЗАЯВКИ ЗА 2 ЧАСА. 15 БАНКОВ-ПАРТНЕРОВ!",
+            text: 'Подбор недвижимости за 24 часа. Оформление ипотечной заявки за 2 часа. 15 банков-партнеров!',
             link: "https://vk.com/id58497687",
             imgMobile: "2",
             imgDesktop: "2_2"
@@ -74,7 +76,8 @@ export default {
             id: "3",
             name: "ПРАВИЛО № 3",
             info: "27 лет, Оренбург",
-            text: "ПРЕДОСТАВЛЕНИЕ ОТЧЕТА О ПРОДЕЛАННОЙ РАБОТЕ ЗА 14 ДНЕЙ!",
+            // text: "ПРЕДОСТАВЛЕНИЕ ОТЧЕТА О ПРОДЕЛАННОЙ РАБОТЕ ЗА 14 ДНЕЙ!",
+            text: 'Предоставление отчета о проделанной работе за 14 дней!',
             link: "https://vk.com/id150409915",
             imgMobile: "3",
             imgDesktop: "3_2"
@@ -83,7 +86,8 @@ export default {
             id: "4",
             name: "ПРАВИЛО № 4",
             info: "27 лет, Оренбург",
-            text: "ПРОДАЖА НЕДВИЖИМОСТИ В ОРЕНБУРГСКОЙ ОБЛАСТИ",
+            // text: "ПРОДАЖА НЕДВИЖИМОСТИ В ОРЕНБУРГСКОЙ ОБЛАСТИ",
+            text: 'Продажа недвижимости в оренбургской области',
             link: "https://vk.com/id150409915",
             imgMobile: "4",
             imgDesktop: "4_2"
@@ -147,17 +151,18 @@ export default {
 }
 .slide-wrap-text-rule-h3 {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   color: black;
 }
 .slide-wrap-text-rule-rule {
   border-radius: 4px;
   font-size: 20px;
-  font-weight: 500;
-  padding: 10px 15px;
+  font-weight: 700;
+  padding: 10px 20px;
   /* background-color: #d32f2f;
   background-color: #812319; */
-  background-color: #d32f2f;
+  background-color: #540F08;
+  background-color:#612C26;
 }
 .slide-wrap-text-rule-wrap {
   display: flex;
@@ -190,6 +195,13 @@ export default {
 
 .slide-wrap-text-rule-link:hover {
   background-color: rgba(129, 34, 25, .8);
+}
+
+@media (min-width: 370px) {
+  .slide-wrap-text-rule-rule {
+    font-size: 24px;
+    padding: 15px 20px;
+  }
 }
 @media (min-width: 800px) {
   .button-next-individ {
@@ -239,7 +251,7 @@ export default {
     width: 600px;
   }
   .slide-timer {
-    margin-top: 70px;
+    margin-top: 79px;
   }
 }
 

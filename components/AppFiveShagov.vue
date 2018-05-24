@@ -199,7 +199,7 @@ export default {
         border-bottom: 1px solid rgb(217, 225, 233);
         margin: 42px 0;
         line-height: 47px;
-        margin: 40px auto;
+        margin: 42px auto;
     }
     .container {
         width: 1200px; 
@@ -220,6 +220,7 @@ export default {
     }
     .shag-wrap {
         padding: 0;
+        margin: 0;
     }
 }
 </style>

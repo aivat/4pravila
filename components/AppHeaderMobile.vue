@@ -3,31 +3,25 @@
     <ul class="header-icon-wrap-submenu">
         <hr>
         <li>
-            <a href="#test" class="submenu-link" v-on:click="nextLink()">О нас<svg viewBox="0 0 24 24">
+            <a href="#shag" class="submenu-link" v-on:click="nextLink()">Порядок работы<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
         </li>
         <li>
-            <a href="#" class="submenu-link">Блог<svg viewBox="0 0 24 24">
+            <a href="#" class="submenu-link" v-on:click="nextLink()">4 правила<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
         </li>
         <li>
-            <a href="#" class="submenu-link">Как мы работаем<svg viewBox="0 0 24 24">
+            <a href="#opinions" class="submenu-link" v-on:click="nextLink()">Отзывы<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
         </li>
         <li>
-            <a href="#" class="submenu-link">Контакты<svg viewBox="0 0 24 24">
-                    <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
-                </svg>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="submenu-link">Цены<svg viewBox="0 0 24 24">
+            <a href="#contacts" class="submenu-link" v-on:click="nextLink()">Контакты<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
@@ -103,6 +97,11 @@ export default {
     background-color: #fff;
     transition: all .3s ease;
     color: #213875;
+    color: #444;
+    color: rgba(129,34,25,1);
+    color: #612C26;
+    /* color: #540F08; */
+    /* color: #C0736B; */
     font-size: 16px;
     /* overflow: scroll; */
     overflow: auto;
@@ -125,7 +124,8 @@ li {
     display: flex;
     padding-top: 7px;
     padding-bottom: 9px;
-    color: #213875;
+    /* color: #213875; */
+     color: inherit;
     text-decoration: none;
     font-size: 24px;
     font-weight: 700;
@@ -202,6 +202,7 @@ hr {
 }
 .contact-p-time>svg {
     fill: #213875;
+    fill: #612C26;
     margin-right: 5px;
 }
 .social-list {
@@ -215,9 +216,11 @@ hr {
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
     -webkit-tap-highlight-color: transparent;
     color: #213875;
+    color: #612C26;
 }
 .social:active {
     color: #213775b6;
+    color: rgba(97, 44, 38, 0.8);
 }
 .social>svg {
     fill: currentColor;

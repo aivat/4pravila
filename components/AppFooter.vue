@@ -3,45 +3,40 @@
         <div class="container">
             <div class="footer-wrap">
                 <ul class="header-icon-wrap-submenu">
-                    <hr>
+                    <hr class="hr">
+                    <h2 class="contact-h2 contact-h2-menu">МЕНЮ</h2>
                     <li>
-                        <a href="#test" class="submenu-link">О нас<svg viewBox="0 0 24 24">
+                        <a href="#shag" class="submenu-link">Порядок работы<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="submenu-link">Блог<svg viewBox="0 0 24 24">
+                        <a href="#" class="submenu-link">4 правила<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="submenu-link">Как мы работаем<svg viewBox="0 0 24 24">
+                        <a href="#opinions" class="submenu-link">Отзывы<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="submenu-link">Контакты<svg viewBox="0 0 24 24">
-                                <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="submenu-link">Цены<svg viewBox="0 0 24 24">
+                        <a href="#contacts" class="submenu-link">Контакты<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
                     </li>
                     <div class="submenu-hr"></div>  
                 </ul>
-                <hr>
+                <hr class="hr">
                 <div class="header-icon-wrap-contact">
                     
                     <h2 class="contact-h2">КАК С НАМИ СВЯЗАТЬСЯ</h2>
                     <p class="contact-p">studia_56@mail.ru</p>
-                    <p class="contact-p">+ 7 (3532) 93-50-60</p>
+                    <a href="tel: +7(3532)93-50-60" class="contact-p-a">+ 7 (3532) 93-50-60</a>
                     <p class="contact-p contact-p-time">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                             <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
@@ -51,7 +46,7 @@
                         09:00 - 18:00
                     </p>
                 </div>
-                <hr>
+                <hr class="hr">
                 <div class="header-icon-wrap-social">
                     <h2 class="contact-h2 social-h2">МЫ В СОЦСЕТЯХ</h2>
                     <ul class="social-list">
@@ -69,6 +64,7 @@
                 </div>
                 <p class="footer-p">© 2018 ИП Даутов М.М., ИНН 561214827465</p>                  
             </div>
+            <p class="footer-p-desc">© 2018 ИП Даутов М.М., ИНН 561214827465</p>
         </div>
     </div>
 </template>
@@ -183,6 +179,7 @@ z-index: -1; */
 .submenu-link > svg {
     fill: currentColor;
     fill: #444;
+    /* fill:rgba(129,34,25,1); */
     width: 20px; 
     height: 20px;
 }
@@ -209,6 +206,17 @@ hr {
     padding: 0 30px;  
     vertical-align: center;
 }
+.contact-p-a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dashed black;
+    font-size: 16px;
+}
+.contact-p-a:hover {
+ color: rgba(129,34,25,1);
+ border-color:  rgba(129,34,25,1);
+}
 .contact-p-time {
     display: flex;
     align-items: center;
@@ -216,6 +224,7 @@ hr {
 .contact-p-time>svg {
     fill: #213875;
     fill: currentColor;
+    fill: #444;
     margin-right: 5px;
 }
 .social-list {
@@ -237,6 +246,8 @@ hr {
 }
 .social>svg {
     fill: currentColor;
+    fill: #444;
+    /* fill:rgba(129,34,25,1); */
 }
 button:active, button:focus {
   outline: none;
@@ -269,6 +280,13 @@ button::-moz-focus-inner {
     flex-direction: column;
     align-items: center;
 }
+.footer-p-desc {
+    display: none;
+}
+
+.contact-h2-menu {
+    display: none;
+}
 @media (min-width: 1200px) {
     .footer {
         justify-content: center;
@@ -276,6 +294,39 @@ button::-moz-focus-inner {
     }
     .container {
         width: 1200px; 
+    }
+    .footer-wrap {
+        flex-direction: row;
+        padding: 0;
+        margin-top: 42px;
+    }
+    .footer-p {
+        display: none;
+    }
+    .footer-p-desc {
+        display: block;
+        margin-top: 40px;
+        font-size: 12px;
+        color: #6e6e6e;
+        text-align: center;
+    }
+    .hr {
+        display: none;
+    }
+    .contact-h2 {
+        margin-top: 0;
+    }
+    .submenu-link>svg {
+        display: none;
+    }
+    .submenu-link:hover {
+        color: rgba(129,34,25,1);
+    }
+    .contact-h2-menu {
+        display: block;
+    }
+    .social>svg:hover {
+        fill: rgba(129,34,25,1);
     }
 }
 </style>
