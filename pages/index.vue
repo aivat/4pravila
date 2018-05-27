@@ -6,6 +6,7 @@
     <AppZachem/>
     <AppPlus/>
     <AppFiveShagov/>
+    <AppPravila/>
     <AppOpinions/>
     <AppContacts/>
     <AppFooter/>
@@ -23,6 +24,7 @@ import AppFiveShagov from '~/components/AppFiveShagov.vue'
 import AppOpinions from '~/components/AppOpinions.vue'
 import AppContacts from '~/components/AppContacts.vue'
 import AppFooter from '~/components/AppFooter.vue'
+import AppPravila from '~/components/AppPravila.vue'
 
 export default {
   components: {
@@ -35,7 +37,8 @@ export default {
     AppFiveShagov,
     AppOpinions,
     AppContacts,
-    AppFooter
+    AppFooter,
+    AppPravila
   }
 }
 </script>

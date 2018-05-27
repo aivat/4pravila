@@ -64,7 +64,7 @@ export default {
 <style scoped>
 .link {
     position: relative;
-    top: -50px;
+    top: -60px;
 }
 .contacts {
     display: flex;

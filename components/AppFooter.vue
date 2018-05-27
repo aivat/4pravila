@@ -12,7 +12,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="submenu-link">4 правила<svg viewBox="0 0 24 24">
+                        <a href="#pravila" class="submenu-link">4 правила<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>

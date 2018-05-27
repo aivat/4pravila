@@ -9,7 +9,7 @@
                 </div>
                 <div class="header-icon">
                     <button id="show-submenu" @click="showSubmenu = !showSubmenu">
-                        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"  >
+                        <svg fill="#000000" height="30" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"  >
                             <path d="M0 0h24v24H0z" fill="none"/>
                             <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
                         </svg>
@@ -28,7 +28,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href ="#">
+                            <a href ="#pravila">
                                 4 правила
                             </a>
                         </li>
@@ -103,13 +103,16 @@ export default {
 .header-wrap {
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    align-items: center;
+    height: 60px;
     background-color: #fff;
 }
 .header-logo {
     padding: 0 5px;
     padding-left: 15px;
     padding-top: 5px;
+    padding: 0;
+    padding-left: 15px;
 }
 
 
@@ -129,6 +132,7 @@ export default {
     height: 48px;
     position: relative;
     color: #213875;
+    color: #444;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
     -webkit-tap-highlight-color: transparent;

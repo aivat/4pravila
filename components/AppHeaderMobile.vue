@@ -9,7 +9,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="submenu-link" v-on:click="nextLink()">4 правила<svg viewBox="0 0 24 24">
+            <a href="#pravila" class="submenu-link" v-on:click="nextLink()">4 правила<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
@@ -99,7 +99,7 @@ export default {
     color: #213875;
     color: #444;
     color: rgba(129,34,25,1);
-    color: #612C26;
+    /* color: #612C26; */
     /* color: #540F08; */
     /* color: #C0736B; */
     font-size: 16px;
@@ -238,8 +238,8 @@ button::-moz-focus-inner {
     height: 68px;
     align-items: center;
     justify-content: center;
-    background-color: rgba(230, 230, 230, 0.1);
-    color: rgba(168, 168, 168, 0.6);
+    background-color: rgba(230, 230, 230, 0.3);
+    color: rgba(168, 168, 168, 0.7);
     cursor: pointer;
     outline: none;
     border: 0;
