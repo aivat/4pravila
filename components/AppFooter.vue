@@ -198,6 +198,8 @@ hr {
     font-weight: 600;
     margin: 25px 0 10px 0;
     padding: 0 30px;
+    width: 160px;
+    text-align: center;
 }
 .contact-p {
     font-size: 16px;
@@ -205,6 +207,8 @@ hr {
     /* line-height: 28px; */
     padding: 0 30px;  
     vertical-align: center;
+    width: 160px;
+    text-align: center;
 }
 .contact-p-a {
     display: inline-block;
@@ -212,6 +216,8 @@ hr {
     text-decoration: none;
     border-bottom: 1px dashed black;
     font-size: 16px;
+        width: 160px;
+    text-align: center;
 }
 .contact-p-a:hover {
  color: rgba(129,34,25,1);
@@ -220,6 +226,9 @@ hr {
 .contact-p-time {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 160px;
+    text-align: center;
 }
 .contact-p-time>svg {
     fill: #213875;

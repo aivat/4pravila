@@ -56,12 +56,16 @@
                     </div>
                 </div>
             </header>
+            <div class="">
+                <AppModalCall v-if="showModal" v-on:close="showModal = false"></AppModalCall>
+            </div>
         </div>
     </header>
 </template>
 
 <script>
 import AppHeaderMobile  from '~/components/AppHeaderMobile.vue'
+import AppModalCall  from '~/components/AppModalCall.vue'
 
 export default {
     data () {
@@ -74,11 +78,12 @@ export default {
     methods:{
     },
     components: {
-        AppHeaderMobile
+        AppHeaderMobile,
+        AppModalCall
     },
     created () {
-    }
   }
+}
 </script>
 
 <style scoped>
