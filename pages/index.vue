@@ -2,11 +2,11 @@
   <div class="content-wrap">
     <AppHeaderTop/>
     <AppHeader/>
-    <AppSlider/>
+    <AppSlider v-on:actived-tab="activedTabRule"></AppSlider>
     <AppZachem/>
     <AppPlus/>
     <AppFiveShagov/>
-    <AppPravila/>
+    <AppPravila v-bind:initialactive="qwe.initialactive"></AppPravila>
     <AppOpinions/>
     <AppContacts/>
     <AppFooter/>
@@ -27,6 +27,13 @@ import AppFooter from '~/components/AppFooter.vue'
 import AppPravila from '~/components/AppPravila.vue'
 
 export default {
+  data() {
+    return {
+      qwe: {
+        initialactive: 0
+      }
+    }
+  },
   components: {
     AppHeaderMenuMain,
     AppHeader,
@@ -39,6 +46,12 @@ export default {
     AppContacts,
     AppFooter,
     AppPravila
+  },
+  methods: {
+      activedTabRule: function (index) {
+        this.qwe.initialactive = index - 1
+        console.log('qwe=', this.qwe.initialactive)
+    }
   }
 }
 </script>

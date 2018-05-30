@@ -14,7 +14,7 @@
                           <div class="slide-wrap-text-rule-wrap">
                             <h3 class="slide-wrap-text-rule-h3">{{ banner.name }}</h3>
                             <div class="slide-wrap-text-rule-rule">{{ banner.text }}</div>
-                            <a class="slide-wrap-text-rule-link" href="#">Подробнее
+                            <a class="slide-wrap-text-rule-link" href="#pravila" v-on:click="$emit('actived-tab', banner.id)">Подробнее
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
                                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                                 <path d="M0 0h24v24H0z" fill="none"/>

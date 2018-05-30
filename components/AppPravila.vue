@@ -70,15 +70,32 @@ P.S. : иногда люди усложняют процесс, когда мо�
 <script>
 
 export default {
+    props: ['initialactive'],
     data() {
       return {
-          active: 0,
-          dashoffset: 0
+        active: this.initialactive
+        //   dashoffset: 0
       }
+    },
+    computed: {
+        dashoffset: function () {
+            return  -(100 / 4) * this.active
+        },
+        activeX: {
+            get: function () {
+                // this.activeX = this.initialactive
+                // console.log('zxc=',this.activeX)
+                return this.initialactive
+            },
+            set: function (newValue) {
+                this.active = this.initialactive
+                this.initialactive = newValue
+            }
+        }
     },
     methods: {
         tab: function (index) {
-            this.dashoffset = -(100 / 4) * index
+            // this.dashoffset = -(100 / 4) * index
             this.active = index
         }
     }
