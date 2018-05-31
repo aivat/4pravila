@@ -37,14 +37,14 @@
                     <h2 class="contact-h2">КАК С НАМИ СВЯЗАТЬСЯ</h2>
                     <p class="contact-p">studia_56@mail.ru</p>
                     <a href="tel: +7(3532)93-50-60" class="contact-p-a">+ 7 (3532) 93-50-60</a>
-                    <p class="contact-p contact-p-time">
+                    <div class="contact-p contact-p-time">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                             <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
                             <path d="M0 0h24v24H0z" fill="none"/>
                             <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
                         </svg>
                         09:00 - 18:00
-                    </p>
+                    </div>
                 </div>
                 <hr class="hr">
                 <div class="header-icon-wrap-social">
@@ -71,6 +71,9 @@
 <script>
 export default {
     data() {
+        return {
+
+        }
     }
   }
 </script>
@@ -209,6 +212,7 @@ hr {
     vertical-align: center;
     width: 160px;
     text-align: center;
+    margin: 18px 0;
 }
 .contact-p-a {
     display: inline-block;
@@ -216,12 +220,12 @@ hr {
     text-decoration: none;
     border-bottom: 1px dashed black;
     font-size: 16px;
-        width: 160px;
+    width: 155px;
     text-align: center;
 }
 .contact-p-a:hover {
- color: rgba(129,34,25,1);
- border-color:  rgba(129,34,25,1);
+    color: rgba(129,34,25,1);
+    border-color:  rgba(129,34,25,1);
 }
 .contact-p-time {
     display: flex;
@@ -294,6 +298,7 @@ button::-moz-focus-inner {
 }
 
 .contact-h2-menu {
+    text-align: left;
     display: none;
 }
 @media (min-width: 1200px) {
@@ -336,6 +341,9 @@ button::-moz-focus-inner {
     }
     .social>svg:hover {
         fill: rgba(129,34,25,1);
+    }
+    .contact-p-a {
+        width: 142px;
     }
 }
 </style>

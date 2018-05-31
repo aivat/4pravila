@@ -14,7 +14,7 @@
                     </div>
                     <div class="contacts-item">
                         <div>Время работы: <b>Пн-Пт: с 09:00 до 18:00</b></div>
-                        <div>Телефон: <b>+7 (3532) 93-50-60</b></div>
+                        <div>Телефон: <a class="contacts-item-link" href="tel:+7 (3532) 93-50-60">+7 (3532) 93-50-60</a></div>
                         <div>email: <b>studia_56@mail.ru</b></div>                        
                     </div>                    
                 </div>
@@ -97,7 +97,13 @@ export default {
     margin-bottom: 25px;
     /* line-height: 30px; */
 }
-
+.contacts-item-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    border-bottom: 1px dashed black;
+}
 .contacts-list {
     display: flex;
     flex-direction: column;
@@ -123,6 +129,9 @@ b {
     margin: 0;
 }
 @media (min-width: 1200px) {
+    .link {
+        top: -45px;
+    }
     .contacts {
         justify-content: center;
         padding: 0;

@@ -14,12 +14,16 @@
                           <div class="slide-wrap-text-rule-wrap">
                             <h3 class="slide-wrap-text-rule-h3">{{ banner.name }}</h3>
                             <div class="slide-wrap-text-rule-rule">{{ banner.text }}</div>
-                            <a class="slide-wrap-text-rule-link" href="#pravila" v-on:click="$emit('actived-tab', banner.id)">Подробнее
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
-                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                                <path d="M0 0h24v24H0z" fill="none"/>
-                            </svg>
-                            </a>    
+                            <div class="slide-wrap-text-cont">
+                              <a class="slide-wrap-text-rule-link" href="#pravila" v-on:click="$emit('actived-tab', banner.id)">Подробнее
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
+                                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                                  <path d="M0 0h24v24H0z" fill="none"/>
+                              </svg>
+                              </a>
+                              <a class="slide-wrap-text-rule-link slide-button" @click="showModal = true">Заказать звонок
+                              </a>
+                            </div>
                           </div>
                           <div class="slide-timer">
                             <AppTimer />
@@ -34,10 +38,14 @@
             <div class="swiper-button-prev button-prev-individ" slot="button-prev"></div>
             <div class="swiper-button-next button-next-individ" slot="button-next"></div>
         </div>
+        <div class="">
+          <AppModalCall v-if="showModal" v-on:close="showModal = false"></AppModalCall>
+        </div>
     </div>
 </template>
 
 <script>
+import AppModalCall  from '~/components/AppModalCall.vue'
 import AppTimer from '~/components/AppTimer.vue'
 import Vue from 'vue'
 import 'swiper/dist/css/swiper.css'
@@ -47,12 +55,14 @@ if (process.browser) {
 }
 export default {
     components: {
-      AppTimer
+      AppTimer,
+      AppModalCall
     },
     data() {
       return {
+        showModal: false,
         banners: {
-          1: {
+          0: {
             id: "1",
             name: "ПРАВИЛО № 1",
             info: "27 лет, Оренбург",
@@ -62,7 +72,7 @@ export default {
             imgMobile: "1",
             imgDesktop: "1_2"
           },	  	  
-          2: {
+          1: {
             id: "2",
             name: "ПРАВИЛО № 2",
             info: "31 год, Оренбург",
@@ -72,7 +82,7 @@ export default {
             imgMobile: "2",
             imgDesktop: "2_2"
           },
-          3: {
+          2: {
             id: "3",
             name: "ПРАВИЛО № 3",
             info: "27 лет, Оренбург",
@@ -82,7 +92,7 @@ export default {
             imgMobile: "3",
             imgDesktop: "3_2"
           },
-          4: {
+          3: {
             id: "4",
             name: "ПРАВИЛО № 4",
             info: "27 лет, Оренбург",
@@ -196,7 +206,23 @@ export default {
 .slide-wrap-text-rule-link:hover {
   background-color: rgba(129, 34, 25, .8);
 }
-
+.slide-wrap-text-cont {
+  display: flex;
+}
+.slide-button {
+  margin-left: 5px;
+  background-color: none;
+  background: rgba(129, 34, 25, .6);
+  background-image: linear-gradient(to right, rgba(3, 3, 3, 0.6) 0%, rgba(0, 0, 0, 0.5) 100%);
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+  -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none; 
+  -webkit-user-select: none;
+    -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 @media (min-width: 370px) {
   .slide-wrap-text-rule-rule {
     font-size: 24px;
@@ -204,6 +230,7 @@ export default {
   }
 }
 @media (min-width: 800px) {
+
   .button-next-individ {
     display: block;
     outline: none;
@@ -224,6 +251,9 @@ export default {
 }
 
 @media (min-width: 1200px) {
+    .slide-button {
+    display: none;
+  }
   .slide-wrap-text-rule {
     display: flex;
     flex-direction: row;

@@ -6,7 +6,7 @@
     <AppZachem/>
     <AppPlus/>
     <AppFiveShagov/>
-    <AppPravila v-bind:initialactive="qwe.initialactive"></AppPravila>
+    <AppPravila v-bind:initialactive="initialactive"></AppPravila>
     <AppOpinions/>
     <AppContacts/>
     <AppFooter/>
@@ -29,9 +29,8 @@ import AppPravila from '~/components/AppPravila.vue'
 export default {
   data() {
     return {
-      qwe: {
-        initialactive: 0
-      }
+        initialactive: 0,
+        initial: 0
     }
   },
   components: {
@@ -49,8 +48,9 @@ export default {
   },
   methods: {
       activedTabRule: function (index) {
-        this.qwe.initialactive = index - 1
-        console.log('qwe=', this.qwe.initialactive)
+        // this.initialactive = index - 1
+        this.initial = index - 1
+        // console.log('qwe=', this.qwe.initialactive)
     }
   }
 }

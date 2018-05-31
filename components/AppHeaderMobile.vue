@@ -31,16 +31,31 @@
     <div class="header-icon-wrap-contact">
         <hr>
         <h2 class="contact-h2">КАК С НАМИ СВЯЗАТЬСЯ</h2>
-        <p class="contact-p">studia_56@mail.ru</p>
-        <p class="contact-p">+ 7 (3532) 93-50-60</p>
-        <p class="contact-p contact-p-time">
+        <div class="contact-p contact-p-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>studia_56@mail.ru
+        </div>
+        <a href="tel:+7 (3532) 93-50-60" class="contact-p contact-p-time contact-p-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            </svg><div>+ 7 (3532) 93-50-60</div>
+        </a>
+        <a href="#contacts" v-on:click="nextLink()" class="contact-p contact-p-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg><div>г. Оренбург, ул. Терешковой, 263/2</div>
+        </a>
+        <div class="contact-p contact-p-time">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                 <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
                 <path d="M0 0h24v24H0z" fill="none"/>
                 <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-            </svg>
-            09:00 - 18:00
-        </p>
+            </svg><div>09:00 - 18:00</div>
+        </div>
     </div>
     <div class="header-icon-wrap-social">
         <hr>
@@ -185,16 +200,19 @@ hr {
 
 .contact-h2 {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 25px 0 10px 0;
     padding: 0 30px;
 }
 .contact-p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 35px;
     padding: 0 30px;  
     vertical-align: center;
+    margin: 18px 0;
+    text-decoration: none;
+    color: inherit;
 }
 .contact-p-time {
     display: flex;
@@ -204,6 +222,8 @@ hr {
     fill: #213875;
     fill: #612C26;
     margin-right: 5px;
+}
+.contact-p-link {
 }
 .social-list {
     display: flex;

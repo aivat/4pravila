@@ -133,7 +133,7 @@ export default {
 <style scoped>
 .link {
     position: relative;
-    top: -50px;
+    top: -60px;
 }
 .shag {
     display: flex;
@@ -190,6 +190,9 @@ export default {
     fill:rgba(129,34,25,1);
 }
 @media (min-width: 1200px) {
+    .link {
+        top: -30px;
+    }
     .shag {
         justify-content: center;
         /* height: 100px; */
@@ -199,7 +202,7 @@ export default {
         border-bottom: 1px solid rgb(217, 225, 233);
         margin: 42px 0;
         line-height: 47px;
-        margin: 42px auto;
+        margin: 60px auto;
     }
     .container {
         width: 1200px; 
