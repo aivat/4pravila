@@ -1,6 +1,6 @@
 <template>
   <div class="content-wrap">
-    <AppHeaderTop/>
+    <!-- <AppHeaderTop/> -->
     <AppHeader/>
     <AppSlider v-on:actived-tab="activedTabRule"></AppSlider>
     <AppZachem/>
@@ -10,6 +10,7 @@
     <AppOpinions/>
     <AppContacts/>
     <AppFooter/>
+    <AppMenuRight/>
   </div>
 </template>
 
@@ -25,6 +26,7 @@ import AppOpinions from '~/components/AppOpinions.vue'
 import AppContacts from '~/components/AppContacts.vue'
 import AppFooter from '~/components/AppFooter.vue'
 import AppPravila from '~/components/AppPravila.vue'
+import AppMenuRight from '~/components/AppMenuRight.vue'
 
 export default {
   data() {
@@ -44,7 +46,8 @@ export default {
     AppOpinions,
     AppContacts,
     AppFooter,
-    AppPravila
+    AppPravila,
+    AppMenuRight
   },
   methods: {
       activedTabRule: function (index) {
