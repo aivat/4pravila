@@ -1,6 +1,7 @@
 <template>
     <div class="contacts">
-        <div class="link" id="contacts" href="#contacts" v-smoothscroll="{ duration : 500 }"></div>
+        <!-- <div class="link" id="contacts" href="#contacts"></div> -->
+        <div class="link" id="contacts"></div>
         <div class="container">
             <div class="contacts-wrap">
                 <div class="contacts-h2">

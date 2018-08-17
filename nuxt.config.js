@@ -34,6 +34,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: ['axios', 'vue-smooth-scroll']
   }
+  // plugins: ['~plugins/vue-smooth-scroll']
 }

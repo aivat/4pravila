@@ -1,6 +1,6 @@
 <template>
     <div class="shag" >
-        <div class="link" id="shag" href="#shag"></div>
+        <div class="link" id="shag"></div>
         <div class="container">
             <div class="shag-wrap">
                 <div class="shag-h2" >

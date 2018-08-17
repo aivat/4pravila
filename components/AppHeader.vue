@@ -24,21 +24,22 @@
                 <div class="header-menu-wrap">
                     <ul class="menu-list">
                         <li>
-                            <a href ="#shag">Порядок работы
+                            <a href ="#shag" v-smooth-scroll>Порядок работы
                             </a>
+                            <!-- <div id="#shag"></div> -->
                         </li>
                         <li>
-                            <a href ="#pravila">
+                            <a href ="#pravila" v-smooth-scroll>
                                 4 правила
                             </a>
                         </li>
                         <li>
-                            <a href ="#opinions">
+                            <a href ="#opinions" v-smooth-scroll>
                                 Отзывы
                             </a>
                         </li>
                         <li>
-                            <a href ="#contacts">
+                            <a href ="#contacts" v-smooth-scroll>
                                 Контакты
                             </a>
                         </li>
@@ -66,6 +67,9 @@
 <script>
 import AppHeaderMobile  from '~/components/AppHeaderMobile.vue'
 import AppModalCall  from '~/components/AppModalCall.vue'
+import Vue from 'vue'
+import vueSmoothScroll from 'vue-smooth-scroll'
+Vue.use(vueSmoothScroll)
 
 export default {
     data () {
