@@ -3,14 +3,21 @@
     <!-- <AppHeaderTop/> -->
     <AppHeader/>
     <AppSlider v-on:actived-tab="activedTabRule"></AppSlider>
+    <AppMarat/>
+    <AppProblems/>
+    <AppProgress/>
+    <AppSale/>
+    <AppOt/>
+    <AppBanki/>
+    <AppWork/>
+    <AppContacts/>
     <AppZachem/>
     <AppPlus/>
     <AppFiveShagov/>
     <AppPravila v-bind:initialactive="initialactive"></AppPravila>
     <AppOpinions/>
-    <AppContacts/>
     <AppFooter/>
-    <AppMenuRight/>
+    <AppMenuRight class="act"></AppMenuRight>
   </div>
 </template>
 
@@ -27,6 +34,13 @@ import AppContacts from '~/components/AppContacts.vue'
 import AppFooter from '~/components/AppFooter.vue'
 import AppPravila from '~/components/AppPravila.vue'
 import AppMenuRight from '~/components/AppMenuRight.vue'
+import AppMarat from '~/components/AppMarat.vue'
+import AppProblems from '~/components/AppProblems.vue'
+import AppProgress from '~/components/AppProgress.vue'
+import AppSale from '~/components/AppSale.vue'
+import AppOt from '~/components/AppOt.vue'
+import AppBanki from '~/components/AppBanki.vue'
+import AppWork from '~/components/AppWork.vue'
 
 export default {
   data() {
@@ -47,7 +61,14 @@ export default {
     AppContacts,
     AppFooter,
     AppPravila,
-    AppMenuRight
+    AppMenuRight,
+    AppMarat,
+    AppProblems,
+    AppProgress,
+    AppSale,
+    AppOt,
+    AppBanki,
+    AppWork
   },
   methods: {
       activedTabRule: function (index) {
@@ -68,12 +89,39 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
 
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,600,700,800'); */
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url('~/static/fonts/Raleway-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url('~/static/fonts/Raleway-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Raleway-Medium';
+  src: url('~/static/fonts/Raleway-Medium.ttf') format('truetype');
+}
+
+/* @font-face {
+  font-family: 'AvantGardeGothicC';
+  src: url('~/static/fonts/AVG65.pfm') format('PFM');
+  src: url('~/static/fonts/AVG65.PFB') format('PFB');
+} */
+
 body {
-  font-family:  'roboto', 'EB Garamond','Yanone Kaffeesatz', 'Roboto Condensed', 'Arimo', 'Open Sans', Source Sans Pro, Arial;
+  font-family:  'Raleway-Light','roboto', 'EB Garamond','Yanone Kaffeesatz', 'Roboto Condensed', 'Arimo', 'Open Sans', Source Sans Pro, Arial;
   font-size: 16px;
 }
 .test {
   height: 500px;
   background-color: rgb(180, 180, 180)
+}
+.act {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .act {
+    display: block;
+  }
 }
 </style>

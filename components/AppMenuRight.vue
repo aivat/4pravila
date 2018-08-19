@@ -151,50 +151,55 @@ export default {
 </script>
 
 <style scoped>
-.active {
-   background-color: rgba(129, 34, 25, 1) 
-}
 .menu-right {
-    position: fixed;
-    right: 40px;
-    top: 80px;
-    height: 100vh;
-    /* margin: auto; */
-    padding: 0;
-    /* box-shadow: 0 -1px 8px rgba(0,0,0,.3); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+    display: none;
 }
-.menu-right-list {
-    /* z-index: 9999; */
-    padding: 0;
-}
+@media (min-width: 1024px) {
+    .active {
+    background-color: rgba(129, 34, 25, 1) 
+    }
+    .menu-right {
+        position: fixed;
+        right: 40px;
+        top: 80px;
+        height: 100vh;
+        /* margin: auto; */
+        padding: 0;
+        /* box-shadow: 0 -1px 8px rgba(0,0,0,.3); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    .menu-right-list {
+        /* z-index: 9999; */
+        padding: 0;
+    }
 
-.menu-right-list>li {
-    list-style-type: none;
-    margin-bottom: 15px;
-}
+    .menu-right-list>li {
+        list-style-type: none;
+        margin-bottom: 15px;
+    }
 
-.menu-right-list>ul {
-    margin-left: 0;
-    padding-left: 0;
-}
+    .menu-right-list>ul {
+        margin-left: 0;
+        padding-left: 0;
+    }
 
-.menu-right-list-link {
-    display: block;
-    border: 2px solid rgba(129, 34, 25, 1);
-    border-radius: 50%;
-    width: 8px;
-    height: 8px;
-    z-index: 9999999999;
-}
-.menu-right-list-link:hover {
-    background-color: rgba(129, 34, 25, .2)
-}
+    .menu-right-list-link {
+        display: block;
+        border: 2px solid rgba(129, 34, 25, 1);
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        z-index: 9999999999;
+    }
+    .menu-right-list-link:hover {
+        background-color: rgba(129, 34, 25, .2)
+    }
 
-.menu-right-list-link:active {
-    background-color: rgba(129, 34, 25, 1)
+    .menu-right-list-link:active {
+        background-color: rgba(129, 34, 25, 1)
+    }
 }
 </style>

@@ -223,8 +223,8 @@ hr {
     fill: #612C26;
     margin-right: 5px;
 }
-.contact-p-link {
-}
+/* .contact-p-link {
+} */
 .social-list {
     display: flex;
     padding: 0 30px;  

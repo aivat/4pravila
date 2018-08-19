@@ -4,16 +4,25 @@
         <div class="link" id="contacts"></div>
         <div class="container">
             <div class="contacts-wrap">
-                <div class="contacts-h2">
-                    Контакты
+                <div class="progress-wrap-caption">
+                    <picture>
+                        <source srcset="~/assets/img/1x/1.jpg" media="(min-width: 480px)" >
+                        <img src='~/assets/img/1x/1_2.jpg'>
+                    </picture>
+                    <div class="progress-h2" >Контакты</div>
+                    
                 </div>
+                <picture class="contacts-picture">
+                    <source srcset="~/assets/img/build.jpg" media="(min-width: 480px)">
+                    <img src='~/assets/img/build_2.jpg'>
+                </picture>
                 <div class="contacts-body">
                     <div class="contacts-item">
                         <div class="contacts-item-p">Адрес: <b>г. Оренбург, ул. Терешковой, 263/2, офис № 209</b></div>
                         <div>Остановка: <b>Хабаровская, Бизнес-центр "Премьер"</b></div>
                         <div>Идут маршруты: <b>21, 41, 49Т, 51, 59, 61, 79, 158, 188, 4</b></div>
                     </div>
-                    <div class="contacts-item">
+                    <div class="contacts-item contacts-item-rigth">
                         <div>Время работы: <b>Пн-Пт: с 09:00 до 18:00</b></div>
                         <div>Телефон: <a class="contacts-item-link" href="tel:+7 (3532) 93-50-60">+7 (3532) 93-50-60</a></div>
                         <div>email: <b>studia_56@mail.ru</b></div>                        
@@ -69,7 +78,7 @@ export default {
 }
 .contacts {
     display: flex;
-    background-color: rgb(242, 245, 248);
+    /* background-color: rgb(242, 245, 248); */
     /* background-color: #fff; */
     flex-direction: column;
     align-items: center;
@@ -83,7 +92,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(242, 245, 248);
+    /* background-color: rgb(242, 245, 248); */
     /* background-color: #fff; */
     padding: 0;
     /* margin: 0 10px; */
@@ -93,7 +102,7 @@ export default {
     font-size: 24px;
     font-weight: 500;
     color: #444;
-    border-bottom: 1px solid rgb(217, 225, 233);
+    /* border-bottom: 1px solid rgb(217, 225, 233); */
     margin: 10px auto;
     margin-bottom: 25px;
     /* line-height: 30px; */
@@ -118,7 +127,7 @@ export default {
     margin: 0 10px;
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+    /* box-shadow: 0 1px 4px 0 rgba(0,0,0,.14); */
 }
 b {
     font-weight: 500;
@@ -129,7 +138,57 @@ b {
 .contacts-item-p {
     margin: 0;
 }
+.progress-wrap-caption {
+    width:  314px;
+    position: relative;
+    align-self: center;
+    margin-bottom: 25px; 
+}
+.progress-h2 {
+    /* font-size: 24px;
+    font-weight: 500;
+    color: #444;
+    border-bottom: 1px solid rgb(217, 225, 233);
+    margin: 0 auto;
+    margin-bottom: 25px;
+     text-align: center; 
+
+      font-size:20px;
+      /* line-height: 15px; */
+      font-size:22px;
+  font-family: 'Raleway-Bold';
+  margin: 0;
+  font-weight: 500;
+  color: white;
+  /* color: #444; */
+  position: absolute;
+  top: 10px;
+  left: 95px;
+  /* background-image: url('~/assets/img/1x/1.jpg'); */
+  /* height: 68px; */
+  text-align: center;
+  /* margin-top: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* align-self: center; */
+}
+.contacts-picture {
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 480px) {
+    .progress-wrap-caption {
+        width:  426px;
+    }
+    .progress-h2 {
+        font-size: 32px;
+    }
+}
 @media (min-width: 1200px) {
+    .contacts-item-rigth {
+
+    }
     .link {
         top: -45px;
     }
@@ -143,7 +202,7 @@ b {
     }
     .contacts-h2 {
         font-size: 32px;
-        border-bottom: 1px solid rgb(217, 225, 233);
+        /* border-bottom: 1px solid rgb(217, 225, 233); */
         margin: 42px 0;
         line-height: 47px;
         margin: 42px auto;
@@ -160,7 +219,8 @@ b {
     .contacts-body {
         display: flex;
         justify-content: space-between;
-        background-color: rgb(242, 245, 248);
+        justify-content: space-around;
+        /* background-color: rgb(242, 245, 248); */
         border-radius: 0;
         box-shadow: none;
         padding: 0;
@@ -169,9 +229,15 @@ b {
     .contacts-item {
         background-color: #fff;
         border-radius: 4px;
-        box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+        /* box-shadow: 0 1px 4px 0 rgba(0,0,0,.14); */
         padding: 25px 35px;
-        width: 40%;
+        /* width: 40%; */
+    }
+    .progress-h2 {
+        font-size: 32px;
+        margin: 42px 0;
+        top: -30px;
+        left: 140px;
     }
 }
 </style>

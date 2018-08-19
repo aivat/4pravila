@@ -5,28 +5,44 @@
             <div class="swiper-slide" v-for="banner in banners" :key="banner.id">
                 <div class="banner">
                     <div class="slide-wrap">
-                      <picture>
+                      <!-- <picture>
                         <source :srcset="path(banner.imgDesktop)" media="(min-width: 480px)" alt="banner.name">
                         <img :src="path(banner.imgMobile)" alt="banner.name" height="460px">
-                      </picture>
+                      </picture> -->
                       <div class="slide-wrap-text">
                         <div class="slide-wrap-text-rule">
                           <div class="slide-wrap-text-rule-wrap">
-                            <h3 class="slide-wrap-text-rule-h3">{{ banner.name }}</h3>
+                            <div class="slide-wrap-rule">
+                              <div class="slide-wrap-rule-top">
+                                <picture>
+                                  <source srcset="~/assets/img/1x/1.jpg" media="(min-width: 480px)" alt="banner.name">
+                                  <img src='~/assets/img/1x/1_2.jpg' :alt="banner.name">
+                                </picture>
+                                <h3 class="slide-wrap-text-rule-h3">{{ banner.name }}</h3>
+                              </div>
+                              <picture class="slide-picture">
+                                  <source :srcset="path(banner.imgDesktop)" media="(min-width: 480px)" :alt="banner.name">
+                                  <img :src="path(banner.imgMobile)" :alt="banner.name">
+                              </picture>
+                            </div>
                             <div class="slide-wrap-text-rule-rule">{{ banner.text }}</div>
+                            <div class="slide-wrap-text-rule-rule-desc">{{ banner.desc }}</div>
                             <div class="slide-wrap-text-cont">
-                              <a class="slide-wrap-text-rule-link" href="#pravila" v-on:click="$emit('actived-tab', banner.id)">Подробнее
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
+                              <a v-if="banner.isActiveButton" class="slide-wrap-text-rule-link" href="#pravila" v-on:click="$emit('actived-tab', banner.id)">{{ banner.buttonText }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
                                   <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                                   <path d="M0 0h24v24H0z" fill="none"/>
                               </svg>
                               </a>
-                              <a class="slide-wrap-text-rule-link slide-button" @click="showModal = true">Заказать звонок
-                              </a>
+                              <!-- <a class="slide-wrap-text-rule-link slide-button" @click="showModal = true">Заказать звонок
+                              </a> -->
                             </div>
                           </div>
                           <div class="slide-timer">
-                            <AppTimer />
+                              <picture class="slide-picture-right">
+                                  <source :srcset="path(banner.imgDesktop)" media="(min-width: 480px)" :alt="banner.name">
+                                  <img :src="path(banner.imgMobile)" :alt="banner.name">
+                              </picture>
+                            <!-- <AppTimer /> -->
                           </div>
                         </div>
                       </div>
@@ -65,42 +81,42 @@ export default {
           0: {
             id: "1",
             name: "ПРАВИЛО № 1",
-            info: "27 лет, Оренбург",
-            // text: "ГАРАНТИРОВАННАЯ ПРОДАЖА КВАРТИРЫ ЗА 25 ДНЕЙ!",
-            text: "Гарантированная продажа квартиры за 25 дней!",
-            link: "https://vk.com/id72506129",
-            imgMobile: "1",
-            imgDesktop: "1_2"
+            isActiveButton: true,
+            text: "Мы продадим Вашу недвижимость за 25  дней или стоимость наших услуг уменьшится до 50%",
+            desc: "",
+            buttonText: "Продать недвижимость за 25 дней",
+            imgMobile: "slide1_2",
+            imgDesktop: "slide1"
           },	  	  
           1: {
             id: "2",
             name: "ПРАВИЛО № 2",
-            info: "31 год, Оренбург",
-            // text: "ПОДБОР НЕДВИЖИМОСТИ ЗА 24 ЧАСА. ОФОРМЛЕНИЕ ИПОТЕЧНОЙ ЗАЯВКИ ЗА 2 ЧАСА. 15 БАНКОВ-ПАРТНЕРОВ!",
-            text: 'Подбор недвижимости за 24 часа. Оформление ипотечной заявки за 2 часа. 15 банков-партнеров!',
-            link: "https://vk.com/id58497687",
-            imgMobile: "2",
-            imgDesktop: "2_2"
+            isActiveButton: true,
+            text: 'Бесплатный подбор недвижимости и сопровождение сделки юристом',
+            desc: "",
+            buttonText: "Купить квартиру БЕСПЛАТНО и безопасно",
+            imgMobile: "slide2_2",
+            imgDesktop: "slide2"
           },
           2: {
             id: "3",
             name: "ПРАВИЛО № 3",
-            info: "27 лет, Оренбург",
-            // text: "ПРЕДОСТАВЛЕНИЕ ОТЧЕТА О ПРОДЕЛАННОЙ РАБОТЕ ЗА 14 ДНЕЙ!",
-            text: 'Предоставление отчета о проделанной работе за 14 дней!',
-            link: "https://vk.com/id150409915",
-            imgMobile: "3",
-            imgDesktop: "3_2"
+            isActiveButton: false,
+            text: 'Профессиональная фото и видео съемка недвижимости. Увеличение количество просмотров покупателей в 2 раза* AVITO',
+            desc: "Фотосъемка недвижимости на на зеркальный фотооаппрат Сanon 100D c широкоформатным объективом. Видиосъемка квартиры в формате FULL HD и профессиональный монтаж.",
+            buttonText: "",
+            imgMobile: "slide3_2",
+            imgDesktop: "slide3"
           },
           3: {
             id: "4",
             name: "ПРАВИЛО № 4",
-            info: "27 лет, Оренбург",
-            // text: "ПРОДАЖА НЕДВИЖИМОСТИ В ОРЕНБУРГСКОЙ ОБЛАСТИ",
-            text: 'Продажа недвижимости в оренбургской области',
-            link: "https://vk.com/id150409915",
-            imgMobile: "4",
-            imgDesktop: "4_2"
+            isActiveButton: false,
+            text: 'Предоставление отчета о проделанной работе каждые 10 дней',
+            desc: "",
+            buttonText: "",
+            imgMobile: "slide4_2",
+            imgDesktop: "slide4"
           }
         },
         swiperOption: {
@@ -120,15 +136,15 @@ export default {
     },
     methods: {
         path(name) {
-            return require('~/assets/' + name + '.jpg')
+            return require('~/assets/img/1x/' + name + '.jpg')
         }
     }
   }
 </script>
  
 <style scoped>
-.slider {
-  height: 460px;
+.slider, .banner {
+  height: 575px;
 }
 .slide-wrap {
   position: relative;
@@ -138,7 +154,7 @@ export default {
 
 .slide-wrap-text {
   width: 100vw;
-  height: 460px;
+  /* height: 460px; */
   position: absolute;
   top: 0px;
    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
@@ -147,32 +163,78 @@ export default {
 .button-prev-individ, .button-next-individ {
   display: none;
 }
+.slide-picture {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.slide-picture-right {
+  display: none;
+}
 .slide-wrap-text-rule {
   /* margin-top: 50px; */
   height: 100%;
   box-sizing: border-box;
-  padding: 10px 15px 30px 15px;
+  padding: 20px 5px 30px 5px;
   font-weight: 300;
   color: #444;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
+}
+.slide-wrap-rule {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.slide-wrap-rule-top {
+  position: relative;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .slide-wrap-text-rule-h3 {
-  font-size: 18px;
-  font-weight: 400;
-  color: black;
+  font-size:20px;
+  font-family: 'Raleway-Bold';
+  margin: 0;
+  font-weight: 500;
+  color: white;
+  /* color: #444; */
+  position: absolute;
+  top: 10px;
+  /* background-image: url('~/assets/img/1x/1.jpg'); */
+  /* height: 68px; */
+  text-align: center;
+  /* margin-top: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .slide-wrap-text-rule-rule {
+  text-align: center;
   border-radius: 4px;
   font-size: 20px;
-  font-weight: 700;
+  font-family: 'Raleway-Bold';
+  font-weight: 500;
   padding: 10px 20px;
+  align-self: center;
   /* background-color: #d32f2f;
   background-color: #812319; */
-  background-color: #540F08;
-  background-color:#612C26;
+  /* background-color: #540F08;
+  background-color:#612C26; */
+  color: #6D6E71;
+}
+.slide-wrap-text-rule-rule-desc {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #6D6E71;
+  text-align: center;
 }
 .slide-wrap-text-rule-wrap {
   display: flex;
@@ -183,6 +245,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
 }
 .slide-wrap-text-rule-link {
   margin-top: 20px;
@@ -197,7 +260,7 @@ export default {
   color: #fff;
   background-color: rgb(129, 34, 25);
   border-radius: 4px;
-  padding: 12px 25px;
+  padding: 12px 12px;
 }
 .slide-wrap-text-rule-link>svg {
   fill: currentColor;
@@ -208,6 +271,7 @@ export default {
 }
 .slide-wrap-text-cont {
   display: flex;
+  align-self: center;
 }
 .slide-button {
   margin-left: 5px;
@@ -223,11 +287,29 @@ export default {
       -ms-user-select: none;
           user-select: none;
 }
-@media (min-width: 370px) {
+@media (min-width: 1030px) {
   .slide-wrap-text-rule-rule {
     font-size: 24px;
     padding: 15px 20px;
   }
+  .slider, .banner {
+    height: 570px;
+  }
+  .slide-wrap-text-rule-link {
+    padding: 12px 25px;
+  }
+  .slide-wrap-text-rule {
+    padding: 20px 15px 30px 15px; 
+  }
+  .slide-wrap-text-cont {
+    align-self: auto;
+  }
+}
+
+@media (min-width: 420px) {
+  /* .slider, .banner {
+    height: 540px;
+  } */
 }
 @media (min-width: 800px) {
 
@@ -244,15 +326,28 @@ export default {
   .button-prev-individ:active {
     outline: none;
   }
-  .slide-wrap-text-rule {
-     /* padding: 0 50px; */
-  }
+  /* .slide-wrap-text-rule {
+     padding: 0 50px;
+  }  */
 
 }
 
 @media (min-width: 1200px) {
+  .slider, .banner {
+    height: 410px;
+  }
     .slide-button {
     display: none;
+  }
+  .slide-wrap-rule {
+    width: auto;
+   
+  }
+  .slide-picture {
+    display: none;
+  }
+  .slide-picture-right {
+    display: block;
   }
   .slide-wrap-text-rule {
     display: flex;
@@ -262,6 +357,12 @@ export default {
     padding-top: 50px;
     width: 1200px;
     /* padding: 0; */
+  }
+  .slide-wrap-text-rule-rule {
+    text-align: start;
+  }
+  .slide-wrap-text-rule-rule-desc {
+    text-align: start;
   }
   .slide-wrap-text {
     display: flex;
@@ -273,15 +374,18 @@ export default {
   }
   .slide-wrap-text-rule-h3 {
     font-size: 36px;
+    /* font-size: 44px; */
     font-weight: 500;
     margin-top: 0;
   }
   .slide-wrap-text-rule-rule {
     font-size: 36px;
+    font-size: 24px;
     width: 600px;
   }
   .slide-timer {
-    margin-top: 79px;
+    margin-right: 130px;
+    /* margin-top: 79px; */
   }
 }
 

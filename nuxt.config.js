@@ -10,8 +10,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'web site agent' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700' }
     ]
   },
   /*

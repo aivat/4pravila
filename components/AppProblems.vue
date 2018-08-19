@@ -1,0 +1,204 @@
+<template>
+    <div class="problems" >
+        <div class="problems">
+            <div class="problems-wrap">
+                <div class="problems-h2" >
+                    Помогаем  клиентам решить свои проблемы
+                </div>
+                <ul class="problems-list" >
+                    <li class="problems-item" v-for="item in problems" :key="item.id">{{ item.text }}</li>
+                </ul>
+                <div class="call-wrap">
+                    <div class="call" @click="showModal = true">
+                        Хочу решить проблему
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <AppModalCall v-if="showModal" v-on:close="showModal = false"></AppModalCall>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+import AppModalCall  from '~/components/AppModalCall.vue'
+export default {
+    data() {
+      return {
+          problems: {
+            0: { id: "1", text: "нет времени, чтобы ездить и показывать покупателям недвижимость" },	  	  
+            1: { id: "2",text: 'мой риэлтор никак не может продать мою недвижимость' },
+            2: {id: "3",text: 'нужно срочно продать' },
+            3: { id: "4",text: 'хочу продать дороже' },
+            4: {  id: "5",text: 'нет времени разбираться в тонкостях продажи недвижимости'},
+            5: { id: "6",text: 'хочу безопасно провести сделку ' },
+            6: {id: "7",text: 'подал объявление о продаже, а звонков и просмотров нет'},
+            7: { id: "8",text: 'не знаю с чего начать' },
+            8: {  id: "9",text: 'моя квартира в ипотеке'}
+          },
+        showModal: false
+      }
+    },
+    components: {
+
+        AppModalCall
+    },
+  }
+</script>
+ 
+<style scoped>
+.problems {
+    display: flex;
+    /* background-color: rgb(242, 245, 248); */
+}
+.container {
+    width: 100%; 
+}
+.problems-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: rgb(242, 245, 248); */
+    padding: 10px;
+    margin-bottom: 15px;
+    /* background-image: url('~assets/img/marat2.jpg');
+    background-repeat: no-repeat;
+    height: 500px; */
+}
+.problems-h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #444;
+    /* border-bottom: 1px solid rgb(217, 225, 233); */
+    margin: 0 auto;
+    margin-bottom: 25px;
+    /* line-height: 30px; */
+    text-align: center;
+}
+.problems-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    /* width: 1100px; */
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+}
+.problems-item {
+    list-style-type: none;
+    /* width: 550px; */
+    text-align: center;
+    margin: 7px 0;
+    font-family: Raleway-Medium;
+    color: rgba(0, 0, 0, .6);
+    transition: all 1s ease-out;
+    cursor: default;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 4px;
+    padding: 10px 25px;
+    background: linear-gradient(to right, rgba(26, 9, 9, 0.6) 0%, rgba(6, 7, 6, 0.6) 100%);
+    background-color: rgba(129,34,25,1);
+    background-color: #009cde;
+    background-color: rgb(187, 48, 36);
+    background-image: radial-gradient(circle farthest-side at 95px 95px,rgb(187, 48, 36),rgba(129,34,25,1) 125%);
+    background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+    background-color: #fff;
+    background-image: none;
+    align-items: flex-start; */
+}
+
+
+.problems-item:nth-child(3n+2) {
+    font-family: Raleway-Bold;
+    font-size: 22px;
+    color: rgba(0, 0, 0, .9);
+}
+
+.problems-item:nth-child(5n+6), .problems-item:last-child {
+    font-family: Raleway-Medium;
+    font-size: 26px;
+    color: rgba(0, 0, 0, .4);
+}
+.problems-item:nth-child(4) {
+    font-family: Raleway-Medium;
+    font-size: 18px;
+    color: rgba(129, 34, 25, .6);
+}
+.problems-item:hover {
+-webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  color: #76281B;
+}
+.problems-info {
+    /* margin-top: 1px; */
+}
+picture {
+    margin-left: -25px;
+}
+.call-wrap {
+    display: flex;
+    justify-content: center;
+}
+.call {
+    /* font-family: Raleway-Medium; */
+    /* color: #76281B; */
+    margin-top: 15px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 16px;
+    cursor: pointer;
+    background-color:rgb(129, 34, 25);
+    align-self: center;
+    border-radius: 4px;
+}
+.call:hover {
+    background-color: rgba(129, 34, 25, .8);
+}
+
+@media (min-width: 1200px) {
+
+    .problems {
+        justify-content: center;
+        /* height: 100px; */
+    }
+    .problems-h2 {
+        font-size: 32px;
+        border-bottom: 1px solid rgb(217, 225, 233);
+        margin: 42px 0;
+        line-height: 47px;
+        margin: 60px auto;
+    }
+    .container {
+        width: 1200px; 
+    }
+    .problems-list {
+        width: 1100px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .problems-item {
+        width: 550px;
+    }
+    .problems-item:first-child {
+        width: 1100px;
+    }
+    
+    .problems-item:nth-child(2) {
+        width: 650px;
+    }
+
+    .problems-item:nth-child(3) {
+        width: 350px;
+    }
+    .problems-item:nth-child(4) {
+        width: 250px;
+    }
+    .problems-item:nth-child(5) {
+        width: 750px;
+    }
+
+}
+</style>

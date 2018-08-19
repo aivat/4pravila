@@ -1,7 +1,7 @@
 
 <template>
     <div name="modal">
-        <div class="modal-mask">
+        <div class="modal-mask" @click.self="$emit('close')">
                 <div class="modal-container">
             <div class="modal-wrapper">
  
