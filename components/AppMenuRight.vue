@@ -2,24 +2,54 @@
     <div class="menu-right">
         <ul class="menu-right-list">
             <li >
-                <a class="menu-right-list-link" href ="#shag" v-bind:class="{ active: isAvtive1 }" v-smooth-scroll>
+                <a class="menu-right-list-link" href ="#slider" v-bind:class="{ active: isAvtive1 }" v-smooth-scroll>
                 </a>
             </li>
             <li>
-                <a class="menu-right-list-link" href ="#pravila" v-bind:class="{ active: isAvtive2 }" v-smooth-scroll>
+                <a class="menu-right-list-link" href ="#marat" v-bind:class="{ active: isAvtive2 }" v-smooth-scroll>
                     
                 </a>
             </li>
             <li>
-                <a class="menu-right-list-link" href ="#opinions" v-bind:class="{ active: isAvtive3 }" v-smooth-scroll>
+                <a class="menu-right-list-link" href ="#problems" v-bind:class="{ active: isAvtive3 }" v-smooth-scroll>
                     
                 </a>
             </li>
             <li>
-                <a class="menu-right-list-link" href ="#contacts" v-bind:class="{ active: isAvtive4 }" v-smooth-scroll>
+                <a class="menu-right-list-link" href ="#progress" v-bind:class="{ active: isAvtive4 }" v-smooth-scroll>
                     
                 </a>
             </li>
+            <li>
+                <a class="menu-right-list-link" href ="#sale" v-bind:class="{ active: isAvtive5 }" v-smooth-scroll>
+                    
+                </a>
+            </li>
+            <li>
+                <a class="menu-right-list-link" href ="#ot" v-bind:class="{ active: isAvtive6 }" v-smooth-scroll>
+                    
+                </a>
+            </li>
+            <li>
+                <a class="menu-right-list-link" href ="#banki" v-bind:class="{ active: isAvtive7 }" v-smooth-scroll>
+                    
+                </a>
+            </li>
+            <li>
+                <a class="menu-right-list-link" href ="#work" v-bind:class="{ active: isAvtive8 }" v-smooth-scroll>
+                    
+                </a>
+            </li>
+            <li>
+                <a class="menu-right-list-link" href ="#contacts" v-bind:class="{ active: isAvtive9 }" v-smooth-scroll>
+                    
+                </a>
+            </li>
+            <!-- <li>
+                <a class="menu-right-list-link" href ="#footer" v-bind:class="{ active: isAvtive10 }" v-smooth-scroll>
+                    
+                </a>
+            </li> -->
         </ul>
     </div>   
 </template>
@@ -34,6 +64,12 @@ export default {
         isAvtive2: false,
         isAvtive3: false,
         isAvtive4: false,
+        isAvtive5: false,
+        isAvtive6: false,
+        isAvtive7: false,
+        isAvtive8: false,
+        isAvtive9: false,
+        // isAvtive10: false,
         elem1: '',
         elemHeight1: '',
         elem2: '',
@@ -41,7 +77,19 @@ export default {
         elem3: '',
         elemHeight3: '',
         elem4: '',
-        elemHeight4: ''
+        elemHeight4: '',
+        elem5: '',
+        elemHeight5: '',
+        elem6: '',
+        elemHeight6: '',
+        elem7: '',
+        elemHeight7: '',
+        elem8: '',
+        elemHeight8: '',
+        elem9: '',
+        elemHeight9: ''
+        // elem10: '',
+        // elemHeight10: ''
       }
     },
     methods:{
@@ -53,22 +101,47 @@ export default {
 
     },
     mounted() {
-        let el1 = document.getElementsByClassName('shag')
+        let el1 = document.getElementsByClassName('slider')
         this.elem1 = el1['0']
         console.log('this.elem1=',this.elem1)
         this.elemHeight1 = this.elem1.clientHeight
 
-        let el2 = document.getElementsByClassName('pravila')
+        let el2 = document.getElementsByClassName('marat')
         this.elem2 = el2['0']
         this.elemHeight2 = this.elem2.clientHeight
 
-        let el3 = document.getElementsByClassName('opinions')
+        let el3 = document.getElementsByClassName('problems')
         this.elem3 = el3['0']
         this.elemHeight3 = this.elem3.clientHeight
 
-        let el4 = document.getElementsByClassName('contacts')
+        let el4 = document.getElementsByClassName('progress')
         this.elem4 = el4['0']
         this.elemHeight4 = this.elem4.clientHeight
+
+        let el5 = document.getElementsByClassName('sale')
+        this.elem5 = el5['0']
+        this.elemHeight5 = this.elem5.clientHeight
+
+        let el6 = document.getElementsByClassName('ot')
+        this.elem6 = el6['0']
+        this.elemHeight6 = this.elem6.clientHeight
+
+        let el7 = document.getElementsByClassName('banki')
+        this.elem7 = el7['0']
+        this.elemHeight7 = this.elem7.clientHeight
+
+        let el8 = document.getElementsByClassName('work')
+        this.elem8 = el8['0']
+        this.elemHeight8 = this.elem8.clientHeight
+
+        let el9 = document.getElementsByClassName('contacts')
+        this.elem9 = el9['0']
+        this.elemHeight9 = this.elem9.clientHeight
+
+
+        // let el10 = document.getElementsByClassName('footer')
+        // this.elem10 = el10['0']
+        // this.elemHeight10 = this.elem10.clientHeight
     },
     destroyed () {
         // window.removeEventListener('scroll', this.handleScroll)
@@ -79,72 +152,131 @@ export default {
             let box2 = this.elem2.getBoundingClientRect()
             let box3 = this.elem3.getBoundingClientRect()
             let box4 = this.elem4.getBoundingClientRect()
+            let box5 = this.elem5.getBoundingClientRect()
+            let box6 = this.elem6.getBoundingClientRect()
+            let box7 = this.elem7.getBoundingClientRect()
+            let box8 = this.elem8.getBoundingClientRect()
+            let box9 = this.elem9.getBoundingClientRect()
+            // let box10 = this.elem10.getBoundingClientRect()
 
             let scrollTop = window.pageYOffset
                         console.log('box1.top = '+ box1.top);
              console.log('box2.top = '+ box2.top);
-            console.log('box3.top = '+ box3.top);
-             console.log('box4.top = '+ box4.top);
+            // console.log('box3.top = '+ box3.top);
+            //  console.log('box4.top = '+ box4.top);
             // console.log('elem1.clientHeight = '+ this.elem1.clientHeight);
-            if ( Math.abs(box1.top) < 47 ) {
+            if ( Math.abs(box1.top) < 65 ) {
                 this.isAvtive1 = true
                 this.isAvtive2 = false
                 this.isAvtive3 = false
                 this.isAvtive4 = false
+                this.isAvtive5 = false
+                this.isAvtive6 = false
+                this.isAvtive7 = false
+                this.isAvtive8 = false
+                this.isAvtive9 = false
             } 
-            // if ( this.isAvtive1 ) {
-            //     if ( this.elemHeight1 < Math.abs(box1.top))  {
-            //          this.isAvtive1 = false
-            //     }
-            // }
 
-            if ( Math.abs(box2.top) < 47 ) {
+            if ( Math.abs(box2.top) < 65 ) {
                 this.isAvtive1 = false
                 this.isAvtive2 = true
                 this.isAvtive3 = false
+                this.isAvtive4 = false
+                this.isAvtive5 = false
+                this.isAvtive6 = false
+                this.isAvtive7 = false
+                this.isAvtive8 = false
+                this.isAvtive9 = false
             } 
-            // if ( this.isAvtive2 ) {
-            //     if ( this.elemHeight2 < Math.abs(box2.top))  {
-            //          this.isAvtive2 = false
-            //     }
-            // }
 
-            if ( Math.abs(box3.top) < 47 ) {
+            if ( Math.abs(box3.top) < 65 ) {
+                this.isAvtive1 = false
                 this.isAvtive2 = false
                 this.isAvtive3 = true
                 this.isAvtive4 = false
+                this.isAvtive5 = false
+                this.isAvtive6 = false
+                this.isAvtive7 = false
+                this.isAvtive8 = false
+                this.isAvtive9 = false
             } 
-            // if ( this.isAvtive3 ) {
-            //     if ( this.elemHeight3 < Math.abs(box3.top))  {
-            //          this.isAvtive3 = false
-            //     }
-            // }
 
-            if ( Math.abs(box4.top) < 47 ) {
+            if ( Math.abs(box4.top) < 65 ) {
+                this.isAvtive1 = false
                 this.isAvtive2 = false
                 this.isAvtive3 = false
                 this.isAvtive4 = true
+                this.isAvtive5 = false
+                this.isAvtive6 = false
+                this.isAvtive7 = false
+                this.isAvtive8 = false
+                this.isAvtive9 = false
             } 
-            // if ( this.isAvtive4 ) {
-            //     if ( this.elemHeight4 < Math.abs(box4.top))  {
-            //          this.isAvtive4 = false
-            //     }
-            // }
-            // let listOffsetHeight = document.body.offsetHeight
-            let listScrollHeight = document.body.scrollHeight
-            let listOffsetHeight = document.documentElement.clientHeight
-            // let diffHeight = listScrollHeight - listOffsetHeight
-            let scrollHeight = Math.max(
-                document.body.scrollHeight, document.documentElement.scrollHeight,
-                document.body.offsetHeight, document.documentElement.offsetHeight,
-                document.body.clientHeight, document.documentElement.clientHeight
-            );
-            let diffHeight = scrollHeight - listOffsetHeight
 
-            // if (diffHeight <= (scrollTop+200) ) {
-                
-            //     console.log('йцуывава = '+ this.lastSecret);
-            // }
+            if ( Math.abs(box5.top) < 65 ) {
+                this.isAvtive1 = false
+                this.isAvtive2 = false
+                this.isAvtive3 = false
+                this.isAvtive4 = false
+                this.isAvtive5 = true
+                this.isAvtive6 = false
+                this.isAvtive7 = false
+                this.isAvtive8 = false
+                this.isAvtive9 = false
+            } 
+
+            if ( Math.abs(box6.top) < 65 ) {
+                this.isAvtive1 = false
+                this.isAvtive2 = false
+                this.isAvtive3 = false
+                this.isAvtive4 = false
+                this.isAvtive5 = false
+                this.isAvtive6 = true
+                this.isAvtive7 = false
+                this.isAvtive8 = false
+                this.isAvtive9 = false
+            } 
+
+            if ( Math.abs(box7.top) < 65 ) {
+                this.isAvtive1 = false
+                this.isAvtive2 = false
+                this.isAvtive3 = false
+                this.isAvtive4 = false
+                this.isAvtive5 = false
+                this.isAvtive6 = false
+                this.isAvtive7 = true
+                this.isAvtive8 = false
+                this.isAvtive9 = false
+            } 
+
+            if ( Math.abs(box8.top) < 65 ) {
+                this.isAvtive1 = false
+                this.isAvtive2 = false
+                this.isAvtive3 = false
+                this.isAvtive4 = false
+                this.isAvtive5 = false
+                this.isAvtive6 = false
+                this.isAvtive7 = false
+                this.isAvtive8 = true
+                this.isAvtive9 = false
+            } 
+
+            if ( Math.abs(box9.top) < 65 ) {
+                this.isAvtive1 = false
+                this.isAvtive2 = false
+                this.isAvtive3 = false
+                this.isAvtive4 = false
+                this.isAvtive5 = false
+                this.isAvtive6 = false
+                this.isAvtive7 = false
+                this.isAvtive8 = false
+                this.isAvtive9 = true
+                // this.isAvtive10 = false
+            } 
+            // if ( Math.abs(box10.top) < 47 ) {
+            //     this.isAvtive9 = false
+            //     this.isAvtive10 = true
+            // } 
         }
     }    
 }

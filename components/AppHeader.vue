@@ -24,17 +24,17 @@
                 <div class="header-menu-wrap">
                     <ul class="menu-list">
                         <li>
-                            <a href ="#shag" v-smooth-scroll>Порядок работы
+                            <a href ="#work" v-smooth-scroll>Порядок работы
                             </a>
                             <!-- <div id="#shag"></div> -->
                         </li>
                         <li>
-                            <a href ="#pravila" v-smooth-scroll>
-                                4 правила
+                            <a href ="#banki" v-smooth-scroll>
+                                Партнеры
                             </a>
                         </li>
                         <li>
-                            <a href ="#opinions" v-smooth-scroll>
+                            <a href ="#ot" v-smooth-scroll>
                                 Отзывы
                             </a>
                         </li>
@@ -193,6 +193,7 @@ export default {
         justify-content: center;
         /* height: 100px; */
     }
+
     .container {
         width: 1200px; 
     }

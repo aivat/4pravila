@@ -1,5 +1,6 @@
 <template>
-    <div class="progress" >
+    <div class="banki" >
+        <div class="link" id="banki"></div>
         <div class="container">
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
@@ -42,6 +43,7 @@ export default {
 </script>
  
 <style scoped>
+
 .ot-picture > img {
     /* width: 80vw; */
     border-radius: 4px;
@@ -54,7 +56,7 @@ mark {
 .solution {
     margin: 15px 0;
 }
-.progress {
+.banki {
     display: flex;
     /* background-color: rgb(242, 245, 248); */
 }
@@ -174,8 +176,10 @@ picture {
     }
 }
 @media (min-width: 1200px) {
-
-    .progress {
+    .progress-wrap-caption {
+       margin: 30px 0;
+    }
+    .banki {
         justify-content: center;
         /* height: 100px; */
     }

@@ -1,21 +1,25 @@
 <template>
-    <div class="problems" >
+    <div class="call-actions" >
         <div class="link" id="problems"></div>
         <div class="container">
             <div class="problems-wrap">
                 <div class="progress-wrap-caption">
                     <picture>
-                        <source  srcset="~/assets/img/1x/back2.jpg" media="(min-width: 480px)">
+                        <source srcset="~/assets/img/1x/back2.jpg" media="(min-width: 480px)">
                         <img src='~/assets/img/1x/back2_2.jpg'>
                     </picture>
-                    <div class="progress-h2" >Помогаем  клиентам решить свои проблемы</div>
+                    <div class="progress-h2"> Закажите обратный звонок</div>
                 </div>
-                <ul class="problems-list" >
-                    <li class="problems-item" v-for="item in problems" :key="item.id">{{ item.text }}</li>
-                </ul>
+                <div class="progress-h2-desc" >
+                    Если мы не перезвоним вам в течении 30 минут, то вы получите скидку 20% на услуги нашей компании.
+                </div>
                 <div class="call-wrap">
                     <div class="call" @click="showModal = true">
-                        Хочу решить проблему
+                        <svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Заказать звонок
                     </div>
                 </div>
             </div>
@@ -56,10 +60,16 @@ export default {
     width:  314px;
     position: relative;
     align-self: center;
-    margin: 15px 0;
 }
-
-.problems {
+.progress-h2-desc {
+    margin-top: 10px;
+    color: #76281B;
+    font-family: 'Raleway-Bold';
+    font-size: 18px;
+    text-align: center;
+    margin: 25px 0;
+}
+.call-actions {
     display: flex;
     /* background-color: rgb(242, 245, 248); */
 }
@@ -147,30 +157,40 @@ export default {
 .problems-info {
     /* margin-top: 1px; */
 }
-
-/* img, source {
-    margin-left: -25px;
-
-} */
+picture {
+    /* margin-left: -25px; */
+}
 .call-wrap {
     display: flex;
     justify-content: center;
 }
+
 .call {
-    /* font-family: Raleway-Medium; */
-    /* color: #76281B; */
-    margin-top: 15px;
-    color: white;
-    font-size: 16px;
-    padding: 12px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(129,34,25,1);
+    padding: 12px 20px;
+    color: rgba(129,34,25,1);
     cursor: pointer;
-    background-color:rgb(129, 34, 25);
-    /* background-color: #B55031; */
-    align-self: center;
-    border-radius: 4px;
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 2px;
+    font-size: 18px;
 }
+.call>svg {
+    margin-right: 5px;
+    fill:currentColor;
+}
+
 .call:hover {
-    background-color: rgba(129, 34, 25, .8);
+    background-color:rgba(129,34,25,1);
+    color: #fff;
+}
+
+.call:active {
+    background-color:rgba(129, 34, 25, 0.7);
 }
 picture {
     /* align-self: center; */
@@ -186,8 +206,8 @@ picture {
   color: white;
   /* color: #444; */
   position: absolute;
-  top: 25px;
-  left:-10px;
+  top: 35px;
+  left:20px;
 
   text-align: center;
 
@@ -213,7 +233,10 @@ picture {
         top: -15px;
         left: 0px;
     }
-    .problems {
+            .progress-h2-desc {
+        font-size: 24px;
+    }
+    .call-actions {
         justify-content: center;
         /* height: 100px; */
     }

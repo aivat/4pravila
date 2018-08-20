@@ -11,11 +11,12 @@
     <AppBanki/>
     <AppWork/>
     <AppContacts/>
-    <AppZachem/>
+    <AppCallActions/>
+    <!-- <AppZachem/>
     <AppPlus/>
     <AppFiveShagov/>
     <AppPravila v-bind:initialactive="initialactive"></AppPravila>
-    <AppOpinions/>
+    <AppOpinions/> -->
     <AppFooter/>
     <AppMenuRight class="act"></AppMenuRight>
   </div>
@@ -41,7 +42,7 @@ import AppSale from '~/components/AppSale.vue'
 import AppOt from '~/components/AppOt.vue'
 import AppBanki from '~/components/AppBanki.vue'
 import AppWork from '~/components/AppWork.vue'
-
+import AppCallActions from '~/components/AppCallActions.vue'
 export default {
   data() {
     return {
@@ -68,7 +69,8 @@ export default {
     AppSale,
     AppOt,
     AppBanki,
-    AppWork
+    AppWork,
+    AppCallActions
   },
   methods: {
       activedTabRule: function (index) {
@@ -107,7 +109,10 @@ export default {
   src: url('~/static/fonts/AVG65.pfm') format('PFM');
   src: url('~/static/fonts/AVG65.PFB') format('PFB');
 } */
-
+.link {
+    position: relative;
+    top: -60px;
+}
 body {
   font-family:  'Raleway-Light','roboto', 'EB Garamond','Yanone Kaffeesatz', 'Roboto Condensed', 'Arimo', 'Open Sans', Source Sans Pro, Arial;
   font-size: 16px;

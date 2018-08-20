@@ -3,19 +3,19 @@
     <ul class="header-icon-wrap-submenu">
         <hr>
         <li>
-            <a href="#shag" class="submenu-link" v-on:click="nextLink()">Порядок работы<svg viewBox="0 0 24 24">
+            <a href="#work" class="submenu-link" v-on:click="nextLink()">Порядок работы<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
         </li>
         <li>
-            <a href="#pravila" class="submenu-link" v-on:click="nextLink()">4 правила<svg viewBox="0 0 24 24">
+            <a href="#banki" class="submenu-link" v-on:click="nextLink()">Партнеры<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
         </li>
         <li>
-            <a href="#opinions" class="submenu-link" v-on:click="nextLink()">Отзывы<svg viewBox="0 0 24 24">
+            <a href="#ot" class="submenu-link" v-on:click="nextLink()">Отзывы<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
@@ -35,7 +35,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 <path d="M0 0h24v24H0z" fill="none"/>
-            </svg>studia_56@mail.ru
+            </svg>4pravila@mail.ru
         </div>
         <a href="tel:+7 (3532) 93-50-60" class="contact-p contact-p-time contact-p-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">

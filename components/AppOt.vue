@@ -1,5 +1,6 @@
 <template>
-    <div class="progress" >
+    <div class="ot" >
+        <div class="link" id="ot"></div>
         <div class="container">
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
@@ -64,7 +65,7 @@ mark {
 .solution {
     margin: 15px 0;
 }
-.progress {
+.ot {
     display: flex;
     /* background-color: rgb(242, 245, 248); */
 }
@@ -184,8 +185,10 @@ picture {
     }
 }
 @media (min-width: 1200px) {
-
-    .progress {
+    .progress-wrap-caption {
+       margin: 30px 0;
+    }
+    .ot {
         justify-content: center;
         /* height: 100px; */
     }

@@ -1,24 +1,25 @@
 <template>
     <div class="footer">
+        <div class="link" id="fotter"></div>
         <div class="container">
             <div class="footer-wrap">
                 <ul class="header-icon-wrap-submenu">
                     <hr class="hr">
                     <h2 class="contact-h2 contact-h2-menu">МЕНЮ</h2>
                     <li>
-                        <a href="#shag" class="submenu-link">Порядок работы<svg viewBox="0 0 24 24">
+                        <a href="#work" class="submenu-link">Порядок работы<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#pravila" class="submenu-link">4 правила<svg viewBox="0 0 24 24">
+                        <a href="#banki" class="submenu-link">Партнеры<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#opinions" class="submenu-link">Отзывы<svg viewBox="0 0 24 24">
+                        <a href="#ot" class="submenu-link">Отзывы<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
@@ -35,7 +36,7 @@
                 <div class="header-icon-wrap-contact">
                     
                     <h2 class="contact-h2">КАК С НАМИ СВЯЗАТЬСЯ</h2>
-                    <p class="contact-p">studia_56@mail.ru</p>
+                    <p class="contact-p">4pravila@mail.ru</p>
                     <a href="tel: +7(3532)93-50-60" class="contact-p-a">+ 7 (3532) 93-50-60</a>
                     <div class="contact-p contact-p-time">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
@@ -81,7 +82,7 @@ export default {
 <style scoped>
 .footer {
     display: flex;
-    background-color: rgb(242, 245, 248);
+    /* background-color: rgb(242, 245, 248); */
     /* background-color: #fff; */
     /* background-color: rgb(51, 51, 51); */
     flex-direction: column;
@@ -94,7 +95,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(242, 245, 248);
+    /* background-color: rgb(242, 245, 248); */
     /* background-color: #fff; */
     /* background-color:rgb(51, 51, 51); */
     padding: 0;

@@ -1,5 +1,6 @@
 <template>
     <div class="slider slider-background">
+        <div class="link" id="slider"></div>
         <div v-swiper:mySwiper="swiperOption">
             <div class="swiper-wrapper swiper-wrapper-grad">
             <div class="swiper-slide" v-for="banner in banners" :key="banner.id">
@@ -334,7 +335,7 @@ export default {
 
 @media (min-width: 1200px) {
   .slider, .banner {
-    height: 410px;
+    height: 430px;
   }
     .slide-button {
     display: none;

@@ -1,5 +1,6 @@
 <template>
     <div class="progress" >
+        <div class="link" id="progress"></div>
         <div class="container">
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
@@ -185,7 +186,9 @@ picture {
     }
 }
 @media (min-width: 1200px) {
-
+    .progress-wrap-caption {
+       margin: 30px 0;
+    }
     .progress {
         justify-content: center;
         /* height: 100px; */

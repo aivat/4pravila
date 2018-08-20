@@ -1,5 +1,6 @@
 <template>
     <div class="marat" >
+        <div class="link" id="marat"></div>
         <div class="container">
             <div class="marat-wrap">
                 <!-- <div class="marat-h2" >
@@ -11,7 +12,7 @@
                     <div class="marat-desc">основатель компании«4 правила»</div>
                 </div>
                 <picture>
-                    <source srcset="~assets/img/mr2.png" media="(min-width: 480px)" alt="Марат Даутов">
+                    <source srcset="~assets/img/mr33.png" media="(min-width: 480px)" alt="Марат Даутов">
                     <img src='~assets/img/mr3.png' alt="Марат Даутов">
                 </picture>
                 
@@ -43,7 +44,8 @@ export default {
     justify-content: space-between;
     background-color: rgb(242, 245, 248);
     padding: 10px;
-    margin-bottom: 15px;
+    padding-bottom: 0;
+    margin-bottom: 0;
     /* background-image: url('~assets/img/marat2.jpg');
     background-repeat: no-repeat;
     height: 500px; */
@@ -81,6 +83,9 @@ export default {
 }
 picture {
     margin-left: -25px;
+}
+img, source {
+    display: block;
 }
 .marat-slogan {
     font-family: Raleway-Medium;
