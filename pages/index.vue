@@ -91,7 +91,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
 
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,600,700,800'); */
-@font-face {
+/* @font-face {
   font-family: 'Raleway-Bold';
   src: url('~/static/fonts/Raleway-Bold.ttf') format('truetype');
 }
@@ -102,7 +102,7 @@ export default {
 @font-face {
   font-family: 'Raleway-Medium';
   src: url('~/static/fonts/Raleway-Medium.ttf') format('truetype');
-}
+} */
 
 /* @font-face {
   font-family: 'AvantGardeGothicC';
@@ -114,7 +114,7 @@ export default {
     top: -60px;
 }
 body {
-  font-family:  'Raleway-Light','roboto', 'EB Garamond','Yanone Kaffeesatz', 'Roboto Condensed', 'Arimo', 'Open Sans', Source Sans Pro, Arial;
+  font-family:  'roboto', 'EB Garamond','Yanone Kaffeesatz', 'Roboto Condensed', 'Arimo', 'Open Sans', Source Sans Pro, Arial;
   font-size: 16px;
 }
 .test {

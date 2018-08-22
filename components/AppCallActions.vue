@@ -64,7 +64,8 @@ export default {
 .progress-h2-desc {
     margin-top: 10px;
     color: #76281B;
-    font-family: 'Raleway-Bold';
+    /* font-family: 'Raleway-Bold'; */
+    font-weight: 700;
     font-size: 18px;
     text-align: center;
     margin: 25px 0;
@@ -110,7 +111,8 @@ export default {
     /* width: 550px; */
     text-align: center;
     margin: 7px 0;
-    font-family: Raleway-Medium;
+    /* font-family: Raleway-Medium; */
+    font-weight: 500;
     color: rgba(0, 0, 0, .6);
     transition: all 1s ease-out;
     cursor: default;
@@ -133,7 +135,8 @@ export default {
 
 
 .problems-item:nth-child(3n+2) {
-    font-family: Raleway-Bold;
+    /* font-family: Raleway-Bold; */
+    font-weight: 700;
     font-size: 22px;
     color: rgba(0, 0, 0, .9);
 }
@@ -200,9 +203,9 @@ picture {
 .progress-h2 {
       font-size:20px;
 
-  font-family: 'Raleway-Bold';
+  /* font-family: 'Raleway-Bold'; */
   margin: 0;
-  font-weight: 500;
+  font-weight: 700;
   color: white;
   /* color: #444; */
   position: absolute;

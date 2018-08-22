@@ -51,7 +51,8 @@ export default {
 mark {
     background-color: transparent;
     color: #76281B;
-    font-family: Raleway-Bold;
+    /* font-family: Raleway-Bold; */
+    font-size: 700;
 }
 .solution {
     margin: 15px 0;
@@ -86,7 +87,8 @@ mark {
 
       font-size:20px;
       /* line-height: 15px; */
-  font-family: 'Raleway-Bold';
+  /* font-family: 'Raleway-Bold'; */
+  font-size: 700;
   margin: 0;
   font-weight: 500;
   color: white;
@@ -117,6 +119,7 @@ mark {
     /* text-align: center; */
     margin: 10px 0;
     /* font-family: Raleway-Medium; */
+    font-size: 500;
     color: rgba(0, 0, 0, .6);
     color: #58595B;
     transition: all 1s ease-out;
@@ -181,6 +184,7 @@ picture {
     }
     .banki {
         justify-content: center;
+        margin-top: 35px;
         /* height: 100px; */
     }
     .progress-h2 {
@@ -197,6 +201,7 @@ picture {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        padding: 35px 0;
     }
     .progress-item {
         font-size: 24px;

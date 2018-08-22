@@ -100,7 +100,7 @@ export default {
     /* width: 550px; */
     text-align: center;
     margin: 7px 0;
-    font-family: Raleway-Medium;
+    /* font-family: Raleway-Medium; */
     color: rgba(0, 0, 0, .6);
     transition: all 1s ease-out;
     cursor: default;
@@ -123,18 +123,22 @@ export default {
 
 
 .problems-item:nth-child(3n+2) {
-    font-family: Raleway-Bold;
+    /* font-family: Raleway-Bold; */
+    font-weight: 700;
     font-size: 22px;
+
     color: rgba(0, 0, 0, .9);
 }
 
 .problems-item:nth-child(5n+6), .problems-item:last-child {
-    font-family: Raleway-Medium;
+    /* font-family: Raleway-Medium; */
+    font-weight: 500;
     font-size: 26px;
     color: rgba(0, 0, 0, .4);
 }
 .problems-item:nth-child(4) {
-    font-family: Raleway-Medium;
+    /* font-family: Raleway-Medium; */
+    font-weight: 500;
     font-size: 18px;
     color: rgba(129, 34, 25, .6);
 }
@@ -159,6 +163,7 @@ export default {
 .call {
     /* font-family: Raleway-Medium; */
     /* color: #76281B; */
+    font-weight: 500;
     margin-top: 15px;
     color: white;
     font-size: 16px;
@@ -170,7 +175,7 @@ export default {
     border-radius: 4px;
 }
 .call:hover {
-    background-color: rgba(129, 34, 25, .8);
+    background-color: rgba(129, 34, 25, .9);
 }
 picture {
     /* align-self: center; */
@@ -180,9 +185,10 @@ picture {
 .progress-h2 {
       font-size:20px;
 
-  font-family: 'Raleway-Bold';
+  /* font-family: 'Raleway-Bold'; */
+  font-weight: 700;
   margin: 0;
-  font-weight: 500;
+  /* font-weight: 500; */
   color: white;
   /* color: #444; */
   position: absolute;
@@ -215,6 +221,7 @@ picture {
     }
     .problems {
         justify-content: center;
+        margin-top: 30px;
         /* height: 100px; */
     }
     .problems-h2 {
@@ -231,6 +238,7 @@ picture {
         width: 1100px;
         flex-direction: row;
         flex-wrap: wrap;
+        padding: 25px 0;
     }
     .problems-item {
         width: 550px;
@@ -252,6 +260,29 @@ picture {
     .problems-item:nth-child(5) {
         width: 750px;
     }
+    .problems-item:nth-child(3n+2) {
+        font-size: 22px;
+        line-height: 38px;
+    }
 
+    .problems-item:nth-child(5n+6), .problems-item:last-child {
+        font-size: 26px;
+        line-height: 42px;
+    }
+    .problems-item:nth-child(4) {
+        font-size: 18px;
+        line-height: 36px;
+    }
+    .call {
+        margin-top: 25px;
+        color: white;
+        font-size: 20px;
+        padding: 12px 20px;
+        cursor: pointer;
+        background-color:rgb(129, 34, 25);
+        /* background-color: #B55031; */
+        align-self: center;
+        border-radius: 4px;
+    }
 }
 </style>

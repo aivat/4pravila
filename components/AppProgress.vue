@@ -13,7 +13,7 @@
 
                 <!-- <div class="progress-h2" >в цифрах</div> -->
                 <ul class="progress-list" >
-                    <div class="progress-list-item">
+                    <div class="progress-list-item progress-list-item-left">
                         
                         <li class="progress-item">
                             <div class="progress-item-svg">
@@ -105,9 +105,10 @@ export default {
 
       font-size:20px;
       /* line-height: 15px; */
-  font-family: 'Raleway-Bold';
+  /* font-family: 'Raleway-Bold'; */
+  font-weight: 700;
   margin: 0;
-  font-weight: 500;
+  /* font-weight: 500; */
   color: white;
   /* color: #444; */
   position: absolute;
@@ -134,7 +135,8 @@ export default {
     /* width: 550px; */
     /* text-align: center; */
     margin: 7px 0;
-    font-family: Raleway-Medium;
+    /* font-family: Raleway-Medium; */
+    font-weight: 500;
     color: rgba(0, 0, 0, .6);
     color: #58595B;
     transition: all 1s ease-out;
@@ -191,6 +193,7 @@ picture {
     }
     .progress {
         justify-content: center;
+        margin-top: 75px;
         /* height: 100px; */
     }
     .progress-h2 {
@@ -204,11 +207,22 @@ picture {
     }
     .progress-list {
         flex-direction: row;
+        justify-content: center;
+        padding: 50px 0;
     }
     .progress-item {
-        font-size: 24px;
+        font-size: 32px;
+        align-items: flex-start;
+        /* flex-grow:1; */
+        /* flex-shrink: 1; */
+         margin-bottom: 45px;
     }
-
-
+    .progress-list-item-left {
+        margin-right: 50px;
+    }
+    .progress-list-item {
+       
+        /* width: 600px; */
+    }
 }
 </style>

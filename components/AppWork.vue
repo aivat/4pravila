@@ -79,12 +79,14 @@ export default {
 mark {
     background-color: transparent;
     color: #76281B;
-    font-family: Raleway-Bold;
+    /* font-family: Raleway-Bold; */
+    font-weight: 700;
 }
 .progress-h2-desc {
     margin-top: 10px;
     color: #76281B;
-    font-family: 'Raleway-Bold';
+    /* font-family: 'Raleway-Bold'; */
+    font-weight: 700;
     font-size: 18px;
     text-align: center;
 }
@@ -131,9 +133,9 @@ mark {
       font-size:20px;
       /* line-height: 15px; */
       font-size:22px;
-  font-family: 'Raleway-Bold';
+  /* font-family: 'Raleway-Bold'; */
   margin: 0;
-  font-weight: 500;
+  font-weight: 700;
   color: white;
   /* color: #444; */
   position: absolute;
@@ -236,6 +238,7 @@ picture {
     }
     .work {
         justify-content: center;
+        margin-top: 25px;
         /* height: 100px; */
     }
     .progress-h2 {

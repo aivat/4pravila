@@ -12,7 +12,7 @@
                     <div class="marat-desc">основатель компании«4 правила»</div>
                 </div>
                 <picture>
-                    <source srcset="~assets/img/mr33.png" media="(min-width: 480px)" alt="Марат Даутов">
+                    <source srcset="~assets/img/mr333.png" media="(min-width: 480px)" alt="Марат Даутов">
                     <img src='~assets/img/mr3.png' alt="Марат Даутов">
                 </picture>
                 
@@ -88,13 +88,15 @@ img, source {
     display: block;
 }
 .marat-slogan {
-    font-family: Raleway-Medium;
+    /* font-family: Raleway-Medium; */
+    font-weight: 500;
     color: #76281B;
     font-size: 18px;
     margin: 20px 0;
 }
 .marat-name {
-    font-family: Raleway-Bold;
+    /* font-family: Raleway-Bold; */
+    font-weight: 700;
     font-size: 14px;
 }
 .marat-desc {
@@ -120,6 +122,7 @@ img, source {
 
     .marat {
         justify-content: center;
+        margin-top: 30px;
         /* height: 100px; */
     }
     .marat-h2 {
@@ -133,6 +136,13 @@ img, source {
         width: 1200px; 
     }
 
-
+    .marat-wrap {
+        height: 660px;;
+    }
+    picture {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 }
 </style>

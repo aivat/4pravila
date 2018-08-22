@@ -227,7 +227,8 @@ b {
     margin: 0;
     display: flex;
     align-items: center;
-    font-family: Raleway-Medium;
+    /* font-family: Raleway-Medium; */
+    font-weight: 500;
 }
 .contacts-item-p svg {
     margin-right: 5px;
@@ -251,9 +252,9 @@ b {
       font-size:20px;
       /* line-height: 15px; */
       font-size:22px;
-  font-family: 'Raleway-Bold';
+  /* font-family: 'Raleway-Bold'; */
   margin: 0;
-  font-weight: 500;
+  font-weight: 700;
   color: white;
   /* color: #444; */
   position: absolute;

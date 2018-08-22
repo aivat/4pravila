@@ -202,7 +202,7 @@ export default {
 }
 .slide-wrap-text-rule-h3 {
   font-size:20px;
-  font-family: 'Raleway-Bold';
+  /* font-family: 'Raleway-Bold'; */
   margin: 0;
   font-weight: 500;
   color: white;
@@ -221,7 +221,7 @@ export default {
   text-align: center;
   border-radius: 4px;
   font-size: 20px;
-  font-family: 'Raleway-Bold';
+  /* font-family: 'Raleway-Bold'; */
   font-weight: 500;
   padding: 10px 20px;
   align-self: center;
@@ -268,7 +268,7 @@ export default {
 }
 
 .slide-wrap-text-rule-link:hover {
-  background-color: rgba(129, 34, 25, .8);
+  background-color: rgba(129, 34, 25, .9);
 }
 .slide-wrap-text-cont {
   display: flex;
@@ -288,24 +288,9 @@ export default {
       -ms-user-select: none;
           user-select: none;
 }
-@media (min-width: 1030px) {
-  .slide-wrap-text-rule-rule {
-    font-size: 24px;
-    padding: 15px 20px;
-  }
-  .slider, .banner {
-    height: 570px;
-  }
-  .slide-wrap-text-rule-link {
-    padding: 12px 25px;
-  }
-  .slide-wrap-text-rule {
-    padding: 20px 15px 30px 15px; 
-  }
-  .slide-wrap-text-cont {
-    align-self: auto;
-  }
-}
+/* @media (min-width: 1030px) {
+
+} */
 
 @media (min-width: 420px) {
   /* .slider, .banner {
@@ -334,8 +319,27 @@ export default {
 }
 
 @media (min-width: 1200px) {
+  .slide-wrap-text-rule-rule {
+    font-size: 24px;
+    padding: 15px 20px;
+  }
   .slider, .banner {
-    height: 430px;
+    /* height: 570px;
+    height: 700px; */
+  }
+  .slide-wrap-text-rule-link {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .slide-wrap-text-rule {
+    padding: 20px 15px 30px 15px; 
+  }
+  .slide-wrap-text-cont {
+    align-self: auto;
+  }
+  .slider, .banner {
+    height: 640px;
   }
     .slide-button {
     display: none;
@@ -355,8 +359,9 @@ export default {
     flex-direction: row;
     align-items: flex-start;
     padding: 0 50px;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     width: 1200px;
+    align-items: center;
     /* padding: 0; */
   }
   .slide-wrap-text-rule-rule {
@@ -368,7 +373,8 @@ export default {
   .slide-wrap-text {
     display: flex;
     justify-content: center;
-    
+    height: 640px;
+    align-items: center;
   }
   .slide-wrap-text-rule-link {
      margin-top: 40px;
@@ -381,8 +387,9 @@ export default {
   }
   .slide-wrap-text-rule-rule {
     font-size: 36px;
-    font-size: 24px;
+    font-size: 32px;
     width: 600px;
+    padding: 50px 20px;
   }
   .slide-timer {
     margin-right: 130px;
@@ -393,7 +400,7 @@ export default {
 @media (min-width: 1440px) {
   .slide-wrap-text-rule {
     padding: 0;
-    padding-top: 50px;
+    /* padding-top: 50px; */
   }
 }
 </style>
