@@ -193,7 +193,7 @@ picture {
   /* color: #444; */
   position: absolute;
   top: 25px;
-  left:-10px;
+  left:0px;
 
   text-align: center;
 
@@ -276,7 +276,7 @@ picture {
     .call {
         margin-top: 25px;
         color: white;
-        font-size: 20px;
+        font-size: 26px;
         padding: 12px 20px;
         cursor: pointer;
         background-color:rgb(129, 34, 25);

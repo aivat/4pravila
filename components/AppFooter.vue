@@ -221,7 +221,7 @@ hr {
     text-decoration: none;
     border-bottom: 1px dashed black;
     font-size: 16px;
-    width: 155px;
+    width: 142px;
     text-align: center;
 }
 .contact-p-a:hover {

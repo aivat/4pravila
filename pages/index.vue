@@ -7,11 +7,13 @@
     <AppProblems/>
     <AppProgress/>
     <AppSale/>
+    <AppTypeService/>
     <AppOt/>
     <AppBanki/>
     <AppWork/>
     <AppContacts/>
     <AppCallActions/>
+    
     <!-- <AppZachem/>
     <AppPlus/>
     <AppFiveShagov/>
@@ -43,6 +45,8 @@ import AppOt from '~/components/AppOt.vue'
 import AppBanki from '~/components/AppBanki.vue'
 import AppWork from '~/components/AppWork.vue'
 import AppCallActions from '~/components/AppCallActions.vue'
+import AppTypeService from '~/components/AppTypeService.vue'
+
 export default {
   data() {
     return {
@@ -70,7 +74,8 @@ export default {
     AppOt,
     AppBanki,
     AppWork,
-    AppCallActions
+    AppCallActions,
+    AppTypeService
   },
   methods: {
       activedTabRule: function (index) {

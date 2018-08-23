@@ -4,7 +4,11 @@
             <header class="header-wrap">
                 <div class="header-logo">
                     <a  href="/" class="header-logo-link">
-                        <img src="~static/logo.png" alt="Логотип 4 ПРАВИЛА"  class="header-logo-img">
+                        <!-- <img src="~static/logo.png" alt="Логотип 4 ПРАВИЛА"  class="header-logo-img"> -->
+                        <picture>
+                            <source class="header-logo-img" srcset="~static/logo11.png" media="(min-width: 480px)">
+                            <img class="header-logo-img" src='~static/logo11.png'>
+                        </picture>
                     </a>
                 </div>
                 <div class="header-icon">
@@ -202,8 +206,14 @@ export default {
     }
     .header-wrap {
         padding: 15px 0;
+        padding: 0;
         height: auto;
         align-items: center;
+    }
+
+    .header-logo-img {
+        height: 55px;
+        margin: 11px 0;
     }
     .header-icon {
         display: none;
