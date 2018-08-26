@@ -166,7 +166,7 @@ export default {
     font-weight: 500;
     margin-top: 15px;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     padding: 12px 16px;
     cursor: pointer;
     background-color:rgb(129, 34, 25);
@@ -175,6 +175,10 @@ export default {
     /* background-color: #B55031; */
     align-self: center;
     border-radius: 4px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
 }
 .call:hover {
     background-color: rgba(129, 34, 25, .9);

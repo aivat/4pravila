@@ -201,6 +201,10 @@ picture {
     -webkit-tap-highlight-color: transparent;
     border-radius: 2px;
     font-size: 18px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
 }
 .call>svg {
     margin-right: 5px;
@@ -258,6 +262,10 @@ picture {
     cursor: pointer;
     background-color: rgb(247, 56, 56);
      background-color: rgb(218, 9, 9);
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
 }
 .vacancy:hover{
     background-color: rgba(129,34,25,.9);

@@ -174,7 +174,7 @@ export default {
      /* background-color: rgba(118,40,27,1); */
      border: 1px solid rgba(118,40,27,1);
      flex-direction: column;
-     padding: 15px 0;
+     padding: 15px 5px;
      /* background-color: rgba(118,40,27, .1); */
         /* background-image: radial-gradient(rgba(187, 48, 36, .3),rgba(118,40,27,1) 125%); */
     /* background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%); */
@@ -240,6 +240,10 @@ picture {
     -webkit-tap-highlight-color: transparent;
     border-radius: 2px;
     font-size: 18px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
 }
 .call>svg {
     margin-right: 5px;

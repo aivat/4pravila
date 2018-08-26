@@ -29,7 +29,7 @@
                             <div class="slide-wrap-text-rule-rule">{{ banner.text }}</div>
                             <div class="slide-wrap-text-rule-rule-desc">{{ banner.desc }}</div>
                             <div class="slide-wrap-text-cont">
-                              <a v-if="banner.isActiveButton" class="slide-wrap-text-rule-link" href="#pravila" v-on:click="$emit('actived-tab', banner.id)">{{ banner.buttonText }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
+                              <a v-if="banner.isActiveButton" class="slide-wrap-text-rule-link" href="#pravila" @click="showModal = true">{{ banner.buttonText }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
                                   <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                                   <path d="M0 0h24v24H0z" fill="none"/>
                               </svg>
@@ -252,6 +252,7 @@ export default {
   margin-top: 20px;
   display: flex;
   align-items: center;
+  text-align: center;
   /* align-items: center;
   align-content: flex-start;
   justify-content: flex-start; */
@@ -262,6 +263,10 @@ export default {
   background-color: rgb(129, 34, 25);
   border-radius: 4px;
   padding: 12px 12px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
 }
 .slide-wrap-text-rule-link>svg {
   fill: currentColor;

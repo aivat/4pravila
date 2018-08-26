@@ -173,7 +173,7 @@ picture {
     justify-content: center;
 }
 .progress-wrap-caption {
-    width:  314px;
+    width:  290px;
     position: relative;
     align-self: center;
 }
