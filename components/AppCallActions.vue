@@ -10,8 +10,11 @@
                     </picture>
                     <div class="progress-h2"> Закажите обратный звонок</div>
                 </div>
-                <div class="progress-h2-desc" >
+                <div class="progress-h2-desc" v-if="isWorkingDay">
                     Если мы не перезвоним вам в течении 30 минут, то вы получите скидку 20% на услуги нашей компании.
+                </div>
+                <div class="progress-h2-desc" v-if="!isWorkingDay">
+                   В настоящее время наш рабочий день закончен. Оставьте свой телефон и мы Вам перезвоним в ближайшее время! 
                 </div>
                 <div class="call-wrap">
                     <div class="call" @click="showModal = true">
@@ -22,36 +25,53 @@
                         Заказать звонок
                     </div>
                 </div>
+                <div class="tel">
+                    8 (3532) 93-50-60
+                </div>
+                <div @click="showModalVacancy = true" class="vacancy">
+                    Стать частью команды
+                </div>
             </div>
             <div class="">
                 <AppModalCall v-if="showModal" v-on:close="showModal = false"></AppModalCall>
+            </div>
+            <div class="">
+                <AppVacancy v-if="showModalVacancy" v-on:close="showModalVacancy = false"></AppVacancy>
             </div>
         </div>
     </div>
 </template>
 <script>
 import AppModalCall  from '~/components/AppModalCall.vue'
+import AppVacancy  from '~/components/AppVacancy.vue'
 export default {
     data() {
       return {
-          problems: {
-            0: { id: "1", text: "нет времени, чтобы ездить и показывать покупателям недвижимость" },	  	  
-            1: { id: "2",text: 'мой риэлтор никак не может продать мою недвижимость' },
-            2: {id: "3",text: 'нужно срочно продать' },
-            3: { id: "4",text: 'хочу продать дороже' },
-            4: {  id: "5",text: 'нет времени разбираться в тонкостях продажи недвижимости'},
-            5: { id: "6",text: 'хочу безопасно провести сделку ' },
-            6: {id: "7",text: 'подал объявление о продаже, а звонков и просмотров нет'},
-            7: { id: "8",text: 'не знаю с чего начать' },
-            8: {  id: "9",text: 'моя квартира в ипотеке'}
-          },
-        showModal: false
+        showModal: false,
+        isWorkingDay: true,
+        showModalVacancy: false        
       }
     },
     components: {
-
+        AppVacancy,
         AppModalCall
     },
+    methods: {
+        getWorkingDay() {
+            let date = new Date()
+            let dayWeek = date.getDay()
+            let time = date.getHours()
+            if ( (dayWeek ==  0) || (dayWeek ==  6) ) {
+                this.isWorkingDay = false
+            }
+            if ( (time >  18) || (time <  8) ) {
+                this.isWorkingDay = false
+            }
+        }
+    },
+    created() {
+        this.getWorkingDay()
+    }
   }
 </script>
  
@@ -218,6 +238,31 @@ picture {
   align-items: center;
   justify-content: center;
 }
+
+.tel {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: rgba(129,34,25,1);
+    font-weight: 700;
+}
+.vacancy {
+    background-color: rgba(129,34,25,1);
+    padding: 12px 25px;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 120px;
+    cursor: pointer;
+    background-color: rgb(247, 56, 56);
+     background-color: rgb(218, 9, 9);
+}
+.vacancy:hover{
+    background-color: rgba(129,34,25,.9);
+    background-color: rgba(247, 56, 56, .9);
+}
 @media (min-width: 480px) {
     .progress-wrap-caption {
         width:  426px;
@@ -234,7 +279,7 @@ picture {
         font-size: 32px;
         margin: 42px 0;
         top: -15px;
-        left: 0px;
+        left: 20px;
     }
             .progress-h2-desc {
         font-size: 24px;
@@ -278,6 +323,9 @@ picture {
     .problems-item:nth-child(5) {
         width: 750px;
     }
-
+    .tel {
+        margin-top: 30px;
+        font-size: 32px;
+    }
 }
 </style>

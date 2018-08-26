@@ -170,12 +170,15 @@ export default {
     padding: 12px 16px;
     cursor: pointer;
     background-color:rgb(129, 34, 25);
+     background-color: rgb(218, 9, 9);
+    /* background-color: rgb(247, 56, 56); */
     /* background-color: #B55031; */
     align-self: center;
     border-radius: 4px;
 }
 .call:hover {
     background-color: rgba(129, 34, 25, .9);
+     background-color: rgba(218, 9, 9, .8);
 }
 picture {
     /* align-self: center; */
@@ -279,7 +282,7 @@ picture {
         font-size: 26px;
         padding: 12px 20px;
         cursor: pointer;
-        background-color:rgb(129, 34, 25);
+        /* background-color:rgb(129, 34, 25); */
         /* background-color: #B55031; */
         align-self: center;
         border-radius: 4px;

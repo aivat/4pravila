@@ -130,7 +130,7 @@ mark {
     font-weight: 300;
     color: rgba(0, 0, 0, .6);
     color: #58595B;
-    transition: all 1s ease-out;
+    transition: all .35s ease-out;
     cursor: default;
     display: flex;
     font-size: 16px;

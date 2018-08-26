@@ -1,6 +1,6 @@
 <template>
-    <div class="progress" >
-        <div class="link" id="progress"></div>
+    <div class="typeService" >
+        <div class="link" id="typeService"></div>
         <div class="container">
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
@@ -17,25 +17,66 @@
                         
                         <li class="progress-item">
                             <div class="progress-item-logo">Продажа недвижимости</div>
+                            <div class="call-wrap">
+                                <div class="call" @click="showModal = true">
+                                    <svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                    Хочу продать
+                                </div>
+                            </div>
                         </li>
                         <li class="progress-item">
-                            <div class="progress-item-logo">Покупка недвижимости</div>                           
+                            <div class="progress-item-logo">Покупка недвижимости</div> 
+                            <div class="call-wrap">
+                                <div class="call" @click="showModal = true">
+                                    <svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                    Хочу купить
+                                </div>
+                            </div>                         
                         </li>
                     </div>
-                    <div class="progress-list-item">
+                    <div class="progress-list-item progress-list-item-right">
                         <li class="progress-item">
                             <div class="progress-item-logo">Оформление ипотеки </div>
+                            <div class="call-wrap">
+                                <div class="call" @click="showModal = true">
+                                    <svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                    Хочу оформить ипотеку
+                                </div>
+                            </div>
                         </li>
                         <li class="progress-item">
                             <div class="progress-item-logo">Юридическое сопровождение сделок и оформление недвижимости</div>
+                            <div class="call-wrap">
+                                <div class="call" @click="showModal = true">
+                                    <svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                    Нужен юрист
+                                </div>
+                            </div>
                         </li>
                     </div>
                 </ul>
+            </div>
+            <div class="">
+                <AppModalCall v-if="showModal" v-on:close="showModal = false"></AppModalCall>
             </div>
         </div>
     </div>
 </template>
 <script>
+import AppModalCall  from '~/components/AppModalCall.vue'
+
 export default {
     data() {
       return {
@@ -44,14 +85,18 @@ export default {
             1: { id: "2", text: 'Каждая 7 квартира продана с первого показа' },
             2: { id: "3", text: 'Продажа квартиры на 150 000 рублей дороже изначальной цены' },
             3: { id: "4", text: 'Средний срок продажи квартир 15 дней' }
-          }
+          },
+          showModal: false
       }
-    }
+    },
+    components: {
+        AppModalCall
+    },
   }
 </script>
  
 <style scoped>
-.progress {
+.typeService {
     display: flex;
     /* background-color: rgb(242, 245, 248); */
 }
@@ -116,17 +161,22 @@ export default {
     font-weight: 500;
     color: rgba(0, 0, 0, .6);
     color: #58595B;
-    transition: all 1s ease-out;
+    transition: all .35s ease-out;
     cursor: default;
     display: flex;
-    font-size: 16px;
+    font-size: 18px;
     align-items: center;
     justify-content: center;
      color: white;
+     color: rgba(118,40,27,1);
      height: 100px;
      border-radius: 4px;
-     background-color: rgba(118,40,27,1);
-        background-image: radial-gradient(rgba(187, 48, 36, .3),rgba(118,40,27,1) 125%);
+     /* background-color: rgba(118,40,27,1); */
+     border: 1px solid rgba(118,40,27,1);
+     flex-direction: column;
+     padding: 15px 0;
+     /* background-color: rgba(118,40,27, .1); */
+        /* background-image: radial-gradient(rgba(187, 48, 36, .3),rgba(118,40,27,1) 125%); */
     /* background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%); */
     /* display: flex;
     flex-direction: column;
@@ -146,10 +196,11 @@ export default {
 }
 
 .progress-item-logo {
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 .progress-item-svg {
     width: 50px;
@@ -170,6 +221,39 @@ picture {
     align-self: center;
 }
 
+.call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgba(129,34,25,1); */
+    padding: 12px 20px;
+    color: rgba(129,34,25,1);
+    color: white;
+    transition: all .35s ease-out;
+    /* border: 1px solid rgba(255,255,255,1); */
+    /* background-color: white; */
+    background-color:rgba(129,34,25,1);
+    background-color: rgb(218, 9, 9);
+    cursor: pointer;
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 2px;
+    font-size: 18px;
+}
+.call>svg {
+    margin-right: 5px;
+    fill:currentColor;
+}
+
+.call:hover {
+    background-color:rgba(129,34,25,1);
+    color: #fff;
+}
+
+.call:active {
+    background-color:rgba(129, 34, 25, 0.7);
+}
 @media (min-width: 480px) {
     .progress-wrap-caption {
         width:  426px;
@@ -182,7 +266,7 @@ picture {
     .progress-wrap-caption {
        margin: 30px 0;
     }
-    .progress {
+    .typeService {
         justify-content: center;
         margin-top: 75px;
         /* height: 100px; */
@@ -190,30 +274,62 @@ picture {
     .progress-h2 {
         font-size: 32px;
         margin: 42px 0;
-        top: -30px;
+        top: -20px;
         left: 70px;
     }
     .container {
         width: 1200px; 
     }
+    .progress-wrap {
+        padding: 0;
+    }
     .progress-list {
         flex-direction: row;
         justify-content: center;
         padding: 50px 0;
-    }
-    .progress-item {
-        font-size: 32px;
-        align-items: flex-start;
-        /* flex-grow:1; */
-        /* flex-shrink: 1; */
-         margin-bottom: 45px;
-    }
+        padding-top: 0;
+        margin-top: 25px;    }
+
     .progress-list-item-left {
         margin-right: 50px;
     }
     .progress-list-item {
-       
-        /* width: 600px; */
+       margin:0;
+        width: 600px;
     }
+    .progress-item {
+        font-size: 28px;
+        align-items: flex-start;
+        margin: 0;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        /* margin-left: 10px; */
+        /* padding: 10px; */
+        background-color: white;
+        color:  rgba(118,40,27,1);
+        border: 2px solid rgba(118,40,27,1);
+        /* flex-grow:1; */
+        /* flex-shrink: 1; */
+         /* margin-bottom: 45px; */
+    }
+
+    .progress-item:hover {
+        background-color: rgba(118,40,27,1);
+        color:  white;
+        /* border: 4px solid rgba(118,40,27,1); */
+    }
+    .progress-item:hover>.call-wrap>.call {
+        background-color:white;
+        color: rgba(118,40,27,1);
+    }
+    .progress-list-item-right>.progress-item {
+        margin-left: 10px;
+    }
+    /* .call:hover {
+        background-color:white;
+        color: #fff;
+    } */
 }
 </style>

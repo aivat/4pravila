@@ -26,6 +26,12 @@
                 </a>
             </li>
             <li>
+                <a class="menu-right-list-link" href ="#typeService" v-bind:class="{ active: isAvtive10 }" v-smooth-scroll>
+                    
+                </a>
+            </li>
+            
+            <li>
                 <a class="menu-right-list-link" href ="#ot" v-bind:class="{ active: isAvtive6 }" v-smooth-scroll>
                     
                 </a>
@@ -69,7 +75,7 @@ export default {
         isAvtive7: false,
         isAvtive8: false,
         isAvtive9: false,
-        // isAvtive10: false,
+        isAvtive10: false,
         elem1: '',
         elemHeight1: '',
         elem2: '',
@@ -87,9 +93,9 @@ export default {
         elem8: '',
         elemHeight8: '',
         elem9: '',
-        elemHeight9: ''
-        // elem10: '',
-        // elemHeight10: ''
+        elemHeight9: '',
+        elem10: '',
+        elemHeight10: ''
       }
     },
     methods:{
@@ -103,7 +109,7 @@ export default {
     mounted() {
         let el1 = document.getElementsByClassName('slider')
         this.elem1 = el1['0']
-        console.log('this.elem1=',this.elem1)
+        // console.log('this.elem1=',this.elem1)
         this.elemHeight1 = this.elem1.clientHeight
 
         let el2 = document.getElementsByClassName('marat')
@@ -121,6 +127,10 @@ export default {
         let el5 = document.getElementsByClassName('sale')
         this.elem5 = el5['0']
         this.elemHeight5 = this.elem5.clientHeight
+
+        let el10 = document.getElementsByClassName('typeService')
+        this.elem10 = el10['0']
+        this.elemHeight10 = this.elem10.clientHeight
 
         let el6 = document.getElementsByClassName('ot')
         this.elem6 = el6['0']
@@ -157,11 +167,12 @@ export default {
             let box7 = this.elem7.getBoundingClientRect()
             let box8 = this.elem8.getBoundingClientRect()
             let box9 = this.elem9.getBoundingClientRect()
+            let box10 = this.elem10.getBoundingClientRect()
             // let box10 = this.elem10.getBoundingClientRect()
 
             let scrollTop = window.pageYOffset
-                        console.log('box1.top = '+ box1.top);
-             console.log('box2.top = '+ box2.top);
+                        // console.log('box1.top = '+ box1.top);
+            //  console.log('box2.top = '+ box2.top);
             // console.log('box3.top = '+ box3.top);
             //  console.log('box4.top = '+ box4.top);
             // console.log('elem1.clientHeight = '+ this.elem1.clientHeight);
@@ -175,6 +186,7 @@ export default {
                 this.isAvtive7 = false
                 this.isAvtive8 = false
                 this.isAvtive9 = false
+                this.isAvtive10 = false
             } 
 
             if ( Math.abs(box2.top) < 65 ) {
@@ -187,6 +199,7 @@ export default {
                 this.isAvtive7 = false
                 this.isAvtive8 = false
                 this.isAvtive9 = false
+                this.isAvtive10 = false
             } 
 
             if ( Math.abs(box3.top) < 65 ) {
@@ -199,6 +212,7 @@ export default {
                 this.isAvtive7 = false
                 this.isAvtive8 = false
                 this.isAvtive9 = false
+                this.isAvtive10 = false
             } 
 
             if ( Math.abs(box4.top) < 65 ) {
@@ -211,6 +225,7 @@ export default {
                 this.isAvtive7 = false
                 this.isAvtive8 = false
                 this.isAvtive9 = false
+                this.isAvtive10 = false
             } 
 
             if ( Math.abs(box5.top) < 65 ) {
@@ -223,6 +238,7 @@ export default {
                 this.isAvtive7 = false
                 this.isAvtive8 = false
                 this.isAvtive9 = false
+                this.isAvtive10 = false
             } 
 
             if ( Math.abs(box6.top) < 65 ) {
@@ -235,6 +251,7 @@ export default {
                 this.isAvtive7 = false
                 this.isAvtive8 = false
                 this.isAvtive9 = false
+                this.isAvtive10 = false
             } 
 
             if ( Math.abs(box7.top) < 65 ) {
@@ -247,6 +264,7 @@ export default {
                 this.isAvtive7 = true
                 this.isAvtive8 = false
                 this.isAvtive9 = false
+                this.isAvtive10 = false
             } 
 
             if ( Math.abs(box8.top) < 65 ) {
@@ -259,6 +277,7 @@ export default {
                 this.isAvtive7 = false
                 this.isAvtive8 = true
                 this.isAvtive9 = false
+                this.isAvtive10 = false
             } 
 
             if ( Math.abs(box9.top) < 65 ) {
@@ -271,12 +290,22 @@ export default {
                 this.isAvtive7 = false
                 this.isAvtive8 = false
                 this.isAvtive9 = true
+                this.isAvtive10 = false
                 // this.isAvtive10 = false
             } 
-            // if ( Math.abs(box10.top) < 47 ) {
-            //     this.isAvtive9 = false
-            //     this.isAvtive10 = true
-            // } 
+            if ( Math.abs(box10.top) < 65 ) {
+                this.isAvtive1 = false
+                this.isAvtive2 = false
+                this.isAvtive3 = false
+                this.isAvtive4 = false
+                this.isAvtive5 = false
+                this.isAvtive6 = false
+                this.isAvtive7 = false
+                this.isAvtive8 = false
+                this.isAvtive9 = false
+                this.isAvtive10 = true
+                // this.isAvtive10 = false
+            } 
         }
     }    
 }
