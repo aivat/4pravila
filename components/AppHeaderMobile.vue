@@ -3,7 +3,7 @@
     <ul class="header-icon-wrap-submenu">
         <hr>
         <li>
-            <a href="#work" class="submenu-link" v-on:click="nextLink()">Порядок работы<svg viewBox="0 0 24 24">
+            <a href="#ot" class="submenu-link" v-on:click="nextLink()">Отзывы<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
@@ -15,7 +15,7 @@
             </a>
         </li>
         <li>
-            <a href="#ot" class="submenu-link" v-on:click="nextLink()">Отзывы<svg viewBox="0 0 24 24">
+            <a href="#work" class="submenu-link" v-on:click="nextLink()">Порядок работы<svg viewBox="0 0 24 24">
                     <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                 </svg>
             </a>
@@ -54,7 +54,7 @@
                 <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
                 <path d="M0 0h24v24H0z" fill="none"/>
                 <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-            </svg><div>09:00 - 18:00</div>
+            </svg><div>09:00 - 19:00</div>
         </div>
     </div>
     <div class="header-icon-wrap-social">

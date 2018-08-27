@@ -119,7 +119,7 @@
         </div>
         <div class="map-wrapper">
             <yandex-map 
-            :coords="[51.827540, 55.158256]"
+            :coords="[51.816440, 55.106567]"
             zoom="16"
             style="width: 98vw; height: 600px;"
             :cluster-options="{
@@ -131,10 +131,10 @@
                 <ymap-marker 
                 marker-id='1'
                 marker-type="placemark"
-                :coords="[51.827540, 55.158256]"
-                hint-content="Юридическое бюро 'Ваш Советник', ул. Салмышская, д. 34/5, офис № 207"
-                :balloon="{header: 'Юридическое бюро Ваш Советник', body: 'Оренбург, ул. Салмышская, д. 34/5, офис № 207<br> Тел.: 608-464', footer: 'Пн-Пт: с 09:00 до 19:00'}"
-                :icon="{color: 'blue', glyph: 'court'}"
+                :coords="[51.816440, 55.106567]"
+                hint-content="Риэлторская компания '4 Правила', ул. Терешковой, д. 263/2, офис № 209"
+                :balloon="{header: 'Риэлторская компания 4 Правила', body: 'г. Оренбург, ул. Терешковой, д. 263/2, офис № 209<br> Тел.: 8 (3532) 93-50-60', footer: 'Пн-Пт: с 09:00 до 19:00'}"
+                :icon="{color: 'blue', glyph: 'pocket'}"
                 cluster-name="1"
                 ></ymap-marker>
             </yandex-map>

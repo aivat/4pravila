@@ -9,7 +9,7 @@
                 <div class="marat-info">
                     <div class="marat-slogan">«Мы не являемся риэлторской компанией №1, поэтому мы работаем больше...» </div>
                     <div class="marat-name">Марат Даутов</div>
-                    <div class="marat-desc">основатель компании«4 правила»</div>
+                    <div class="marat-desc">основатель компании «4 Правила»</div>
                 </div>
                 <picture>
                     <source srcset="~assets/img/mr333.png" media="(min-width: 480px)" alt="Марат Даутов">

@@ -28,9 +28,9 @@
                 <div class="header-menu-wrap">
                     <ul class="menu-list">
                         <li>
-                            <a href ="#work" v-smooth-scroll>Порядок работы
+                            <a href ="#ot" v-smooth-scroll>
+                                Отзывы
                             </a>
-                            <!-- <div id="#shag"></div> -->
                         </li>
                         <li>
                             <a href ="#banki" v-smooth-scroll>
@@ -38,9 +38,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href ="#ot" v-smooth-scroll>
-                                Отзывы
+                            <a href ="#work" v-smooth-scroll>Порядок работы
                             </a>
+                            <!-- <div id="#shag"></div> -->
                         </li>
                         <li>
                             <a href ="#contacts" v-smooth-scroll>
@@ -52,11 +52,14 @@
                 <div class="header-call-wrap">
                     <div class="call-wrap">
                         <div class="call" @click="showModal = true">
-                            <svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <svg fill="black" height="34" viewBox="0 0 24 24" width="34" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 0h24v24H0z" fill="none"/>
                                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                             </svg>
-                            Заказать звонок
+                            <div class="call-wrap-get">
+                                <div class="call-get">Заказать звонок</div>
+                                <div class="call-tel">8 (3532) 93-50-60</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -235,7 +238,7 @@ export default {
         justify-content: center;
         align-items: center;
         border: 1px solid rgba(129,34,25,1);
-        padding: 12px 20px;
+        padding: 5px 20px;
         color: rgba(129,34,25,1);
         cursor: pointer;
         text-align: center;
@@ -245,7 +248,7 @@ export default {
         font-size: 18px;
     }
     .call>svg {
-        margin-right: 5px;
+        margin-right: 10px;
         fill:currentColor;
     }
 
@@ -291,6 +294,22 @@ export default {
     .menu-list>li>a:hover{
          border-bottom: 2px solid rgba(129,34,25,1);
          color: rgba(129,34,25,1);
+    }
+    .call-wrap-get {
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+    }
+    .call-tel {
+        /* font-size: 16px; */
+        /* font-weight: 500; */
+        /* padding-right: 5px; */
+    }
+    .call-get {
+        padding-right: 5px;
+        /* font-size: 16px; */
     }
 }
 </style>

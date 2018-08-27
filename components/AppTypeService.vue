@@ -153,11 +153,7 @@ export default {
 }
 .progress-item {
     list-style-type: none;
-    /* width: 550px; */
-    /* text-align: center; */
-    /* margin: 7px 0; */
     margin-bottom: 10px;
-    /* font-family: Raleway-Medium; */
     font-weight: 500;
     color: rgba(0, 0, 0, .6);
     color: #58595B;
@@ -168,31 +164,14 @@ export default {
     align-items: center;
     justify-content: center;
      color: white;
-     color: rgba(118,40,27,1);
+     /* color: rgba(118,40,27,1); */
+     background-color: rgba(118,40,27,1);
      height: 100px;
-     border-radius: 4px;
+     border-radius: 2px;
      /* background-color: rgba(118,40,27,1); */
      border: 1px solid rgba(118,40,27,1);
      flex-direction: column;
      padding: 15px 5px;
-     /* background-color: rgba(118,40,27, .1); */
-        /* background-image: radial-gradient(rgba(187, 48, 36, .3),rgba(118,40,27,1) 125%); */
-    /* background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%); */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 4px;
-    padding: 10px 25px;
-    background: linear-gradient(to right, rgba(26, 9, 9, 0.6) 0%, rgba(6, 7, 6, 0.6) 100%);
-    background-color: rgba(129,34,25,1);
-    background-color: #009cde;
-    background-color: rgb(187, 48, 36);
-    background-image: radial-gradient(circle farthest-side at 95px 95px,rgb(187, 48, 36),rgba(129,34,25,1) 125%);
-    background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%);
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
-    background-color: #fff;
-    background-image: none;
-    align-items: flex-start; */
 }
 
 .progress-item-logo {
@@ -228,12 +207,14 @@ picture {
     /* border: 1px solid rgba(129,34,25,1); */
     padding: 12px 20px;
     color: rgba(129,34,25,1);
-    color: white;
+    color: rgb(218, 9, 9);
+    /* color: white; */
     transition: all .35s ease-out;
     /* border: 1px solid rgba(255,255,255,1); */
     /* background-color: white; */
     background-color:rgba(129,34,25,1);
     background-color: rgb(218, 9, 9);
+    background-color: white;
     cursor: pointer;
     text-align: center;
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
@@ -257,6 +238,7 @@ picture {
 
 .call:active {
     background-color:rgba(129, 34, 25, 0.7);
+    background-color: rgb(218, 9, 9);
 }
 @media (min-width: 480px) {
     .progress-wrap-caption {
@@ -292,7 +274,8 @@ picture {
         justify-content: center;
         padding: 50px 0;
         padding-top: 0;
-        margin-top: 25px;    }
+        margin-top: 25px;    
+    }
 
     .progress-list-item-left {
         margin-right: 50px;
@@ -311,9 +294,9 @@ picture {
         margin-bottom: 10px;
         /* margin-left: 10px; */
         /* padding: 10px; */
-        background-color: white;
-        color:  rgba(118,40,27,1);
-        border: 2px solid rgba(118,40,27,1);
+        /* background-color: white; */
+        /* color:  rgba(118,40,27,1); */
+        border: 1px solid rgba(118,40,27,1);
         /* flex-grow:1; */
         /* flex-shrink: 1; */
          /* margin-bottom: 45px; */
@@ -321,12 +304,14 @@ picture {
 
     .progress-item:hover {
         background-color: rgba(118,40,27,1);
-        color:  white;
+        background-color: white;
+        color:  rgba(118,40,27,1);
         /* border: 4px solid rgba(118,40,27,1); */
     }
     .progress-item:hover>.call-wrap>.call {
         background-color:white;
-        color: rgba(118,40,27,1);
+        background-color: rgb(218, 9, 9);
+        color: white;
     }
     .progress-list-item-right>.progress-item {
         margin-left: 10px;

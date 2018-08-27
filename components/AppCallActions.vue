@@ -28,32 +28,32 @@
                 <div class="tel">
                     8 (3532) 93-50-60
                 </div>
-                <div @click="showModalVacancy = true" class="vacancy">
+                <!-- <div @click="showModalVacancy = true" class="vacancy">
                     Стать частью команды
-                </div>
+                </div> -->
             </div>
             <div class="">
                 <AppModalCall v-if="showModal" v-on:close="showModal = false"></AppModalCall>
             </div>
-            <div class="">
+            <!-- <div class="">
                 <AppVacancy v-if="showModalVacancy" v-on:close="showModalVacancy = false"></AppVacancy>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
 <script>
 import AppModalCall  from '~/components/AppModalCall.vue'
-import AppVacancy  from '~/components/AppVacancy.vue'
+// import AppVacancy  from '~/components/AppVacancy.vue'
 export default {
     data() {
       return {
         showModal: false,
-        isWorkingDay: true,
-        showModalVacancy: false        
+        isWorkingDay: true
+        // showModalVacancy: false        
       }
     },
     components: {
-        AppVacancy,
+        // AppVacancy,
         AppModalCall
     },
     methods: {

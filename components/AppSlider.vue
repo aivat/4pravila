@@ -29,7 +29,7 @@
                             <div class="slide-wrap-text-rule-rule">{{ banner.text }}</div>
                             <div class="slide-wrap-text-rule-rule-desc">{{ banner.desc }}</div>
                             <div class="slide-wrap-text-cont">
-                              <a v-if="banner.isActiveButton" class="slide-wrap-text-rule-link" href="#pravila" @click="showModal = true">{{ banner.buttonText }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
+                              <a v-show="banner.isActiveButton" class="slide-wrap-text-rule-link" href="#pravila" @click="showModal = true">{{ banner.buttonText }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
                                   <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                                   <path d="M0 0h24v24H0z" fill="none"/>
                               </svg>
@@ -83,7 +83,7 @@ export default {
             id: "1",
             name: "ПРАВИЛО № 1",
             isActiveButton: true,
-            text: "Мы продадим Вашу недвижимость за 25  дней или стоимость наших услуг уменьшится до 50%",
+            text: "Мы продадим Вашу недвижимость в Оренбурге за 25 дней или стоимость наших услуг уменьшится до 50%",
             desc: "",
             buttonText: "Продать недвижимость за 25 дней",
             imgMobile: "slide1_2",
@@ -93,7 +93,7 @@ export default {
             id: "2",
             name: "ПРАВИЛО № 2",
             isActiveButton: true,
-            text: 'Бесплатный подбор недвижимости и сопровождение сделки юристом',
+            text: 'Бесплатный подбор недвижимости в Оренбурге и сопровождение сделки юристом',
             desc: "",
             buttonText: "Купить квартиру БЕСПЛАТНО и безопасно",
             imgMobile: "slide2_2",
