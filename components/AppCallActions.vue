@@ -61,10 +61,14 @@ export default {
             let date = new Date()
             let dayWeek = date.getDay()
             let time = date.getHours()
+            let timeUTC = date.getUTCHours()
+    // console.log('date=', date)
+            console.log('time=', time)
+            console.log('timeUTC=', timeUTC)
             if ( (dayWeek ==  0) || (dayWeek ==  6) ) {
                 this.isWorkingDay = false
             }
-            if ( (time >  18) || (time <  8) ) {
+            if ( (timeUTC >  13) || (time <  3) ) {
                 this.isWorkingDay = false
             }
         }
