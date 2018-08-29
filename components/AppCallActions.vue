@@ -68,7 +68,7 @@ export default {
             if ( (dayWeek ==  0) || (dayWeek ==  6) ) {
                 this.isWorkingDay = false
             }
-            if ( (timeUTC >  13) || (time <  3) ) {
+            if ( (timeUTC >  13) || (timeUTC <  3) ) {
                 this.isWorkingDay = false
             }
         }
