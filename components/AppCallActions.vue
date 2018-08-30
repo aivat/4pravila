@@ -63,8 +63,8 @@ export default {
             let time = date.getHours()
             let timeUTC = date.getUTCHours()
     // console.log('date=', date)
-            console.log('time=', time)
-            console.log('timeUTC=', timeUTC)
+            // console.log('time=', time)
+            // console.log('timeUTC=', timeUTC)
             if ( (dayWeek ==  0) || (dayWeek ==  6) ) {
                 this.isWorkingDay = false
             }

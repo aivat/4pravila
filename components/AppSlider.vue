@@ -29,11 +29,11 @@
                             <div class="slide-wrap-text-rule-rule">{{ banner.text }}</div>
                             <div class="slide-wrap-text-rule-rule-desc">{{ banner.desc }}</div>
                             <div class="slide-wrap-text-cont">
-                              <a v-show="banner.isActiveButton" class="slide-wrap-text-rule-link" href="#pravila" @click="showModal = true">{{ banner.buttonText }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
+                              <div v-show="banner.isActiveButton" class="slide-wrap-text-rule-link" @click="showModal = true">{{ banner.buttonText }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
                                   <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                                   <path d="M0 0h24v24H0z" fill="none"/>
                               </svg>
-                              </a>
+                              </div>
                               <!-- <a class="slide-wrap-text-rule-link slide-button" @click="showModal = true">Заказать звонок
                               </a> -->
                             </div>
@@ -267,6 +267,7 @@ export default {
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;  
+  cursor: pointer;
 }
 .slide-wrap-text-rule-link>svg {
   fill: currentColor;
