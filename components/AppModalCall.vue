@@ -59,7 +59,7 @@ export default {
     methods: {  
             postClient () {
                 if ( this.isValid ) {
-                    axios.post('http://4-pravila.ru/api/crm_int.php', this.client)
+                    axios.post('https://4-pravila.ru/api/crm_int.php', this.client)
                     .then(response => {
                         console.log('данные =', response);
                         // router.push({ path: '/' })
