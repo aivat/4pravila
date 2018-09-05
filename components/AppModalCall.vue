@@ -16,7 +16,8 @@
                             <input class="modal-input-input" type="tel" v-model="client.tel" placeholder="8 (906) 888-77-66">
                         </div>
                         <div class="modal-actions-error" v-if="error">
-                            Заполните все поля!
+                            <p>Заполните все поля правильно!</p>
+                            <p>Формат телефона: 8 (906) 888 77 99</p>
                         </div>
                         <div class="modal-wrap-action">
                             <button @click="$emit('close')" class="modal-wrap-action-button">Закрыть</button>
@@ -51,7 +52,13 @@ export default {
     },
     computed: {
         isValid: function () {
-            if ( this.client.name == '' || this.client.tel == '') {
+            let regex = /^[0-9]{11}?$/
+            let regex2 = /\d/g
+            console.log('value.match(regex2)=', this.client.tel.match(regex2))
+            if ( this.client.tel.match(regex2) === null ) {
+                return false
+            }
+            if ( this.client.name == '' || this.client.tel == '' || this.client.tel.match(regex2).length != 11) {
                 return false
             } else return true
         }
@@ -132,6 +139,10 @@ export default {
     margin-bottom: 7px;
     text-align: center;
     color: rgb(247, 56, 56);
+}
+.modal-actions-error p {
+    margin: 0;
+    text-align: center;
 }
 .modal-input-input {
     border: 1px solid rgba(34, 36, 38, 0.25);
