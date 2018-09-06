@@ -139,6 +139,9 @@ export default {
         path(name) {
             return require('~/assets/img/1x/' + name + '.jpg')
         }
+    },
+    mounted() {
+      this.mySwiper.slideTo(2, 500, false)
     }
   }
 </script>
