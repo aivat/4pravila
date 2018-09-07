@@ -3,7 +3,7 @@
         <div class="link" id="slider"></div>
         <div v-swiper:mySwiper="swiperOption">
             <div class="swiper-wrapper swiper-wrapper-grad">
-            <div class="swiper-slide" v-for="banner in banners" :key="banner.id">
+            <div class="swiper-slide" v-for="banner in banners" :key="banner.id" >
                 <div class="banner">
                     <div class="slide-wrap">
                       <!-- <picture>
@@ -131,7 +131,10 @@ export default {
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
-          }
+          },
+          autoplay: {
+            delay: 8000,
+          },
         }
       }
     },
@@ -141,7 +144,17 @@ export default {
         }
     },
     mounted() {
-      this.mySwiper.slideTo(2, 500, false)
+      // var i = 0
+      // setInterval((i) => {
+      //   i++
+      //   console.log('i=', i)
+      //   this.mySwiper.slideTo(i, 1000, false)
+      //   if ( i == 4 ) {
+      //     i = 1
+      //   }
+        
+      // }, 1200)
+      
     }
   }
 </script>
