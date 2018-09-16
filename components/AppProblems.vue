@@ -1,6 +1,6 @@
 <template>
-    <div class="problems" >
-        <div class="link" id="problems"></div>
+    <div class="problems" id="problems">
+        <!-- <div class="link" id="problems"></div> -->
         <div class="container">
             <div class="problems-wrap">
                 <div class="progress-wrap-caption">
@@ -218,7 +218,8 @@ picture {
 }
 @media (min-width: 1200px) {
     .progress-wrap-caption {
-       margin: 30px 0;
+       margin: 0;
+       margin-bottom: 30px;
     }
     .progress-h2 {
         font-size: 32px;
@@ -228,8 +229,12 @@ picture {
     }
     .problems {
         justify-content: center;
-        margin-top: 30px;
+        /* margin-top: 120px; */
+        padding-top: 90px;
         /* height: 100px; */
+    }
+    .problems-wrap {
+        padding: 0;
     }
     .problems-h2 {
         font-size: 32px;

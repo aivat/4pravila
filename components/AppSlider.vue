@@ -1,6 +1,6 @@
 <template>
-    <div class="slider slider-background">
-        <div class="link" id="slider"></div>
+    <div class="slider slider-background" id="slider">
+        <!-- <div class="link" id="slider"></div> -->
         <div v-swiper:mySwiper="swiperOption">
             <div class="swiper-wrapper swiper-wrapper-grad">
             <div class="swiper-slide" v-for="banner in banners" :key="banner.id" >

@@ -1,6 +1,6 @@
 <template>
-    <div class="ot" >
-        <div class="link" id="ot"></div>
+    <div class="ot" id="ot">
+        <!-- <div class="link" id="ot"></div> -->
         <div class="container">
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
@@ -68,6 +68,7 @@ mark {
 }
 .ot {
     display: flex;
+    padding-top: 65px;
     /* background-color: rgb(242, 245, 248); */
 }
 .container {
@@ -79,7 +80,8 @@ mark {
     justify-content: space-between;
     /* background-color: rgb(242, 245, 248); */
     padding: 10px;
-    margin-bottom: 15px;
+    padding-bottom: 0;
+    /* margin-bottom: 15px; */
     /* background-image: url('~assets/img/marat2.jpg');
     background-repeat: no-repeat;
     height: 500px; */
@@ -116,6 +118,7 @@ mark {
 .progress-list {
     display: flex;
     margin: 25px 0;
+    margin-bottom: 0;
     padding: 0;
     /* width: 1100px; */
     /* flex-wrap: wrap; */
@@ -138,6 +141,7 @@ mark {
     flex-direction: column;
     padding: 10px 15px;
     border-radius: 4px;
+    margin-bottom: 0;
     /* display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -188,10 +192,12 @@ picture {
 }
 @media (min-width: 1200px) {
     .progress-wrap-caption {
-       margin: 30px 0;
+       margin: 0;
+       margin-bottom: 30px;
     }
     .ot {
         justify-content: center;
+        padding-top: 90px;
         /* height: 100px; */
     }
     .progress-h2 {
@@ -200,12 +206,16 @@ picture {
         top: -30px;
         left: 140px;
     }
+    .progress-wrap {
+        padding: 0;
+    }
     .container {
         width: 1200px; 
     }
     .progress-list {
         flex-direction: row;
         flex-wrap: wrap;
+        margin-bottom: 0;
     }
     .progress-item {
         font-size: 24px;

@@ -1,6 +1,6 @@
 <template>
-    <div class="banki" >
-        <div class="link" id="banki"></div>
+    <div class="banki" id="banki">
+        <!-- <div class="link" ></div> -->
         <div class="container">
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
@@ -59,6 +59,8 @@ mark {
 }
 .banki {
     display: flex;
+    padding-top: 65px;
+    /* flex-direction: column; */
     /* background-color: rgb(242, 245, 248); */
 }
 .container {
@@ -71,6 +73,8 @@ mark {
     /* background-color: rgb(242, 245, 248); */
     padding: 10px;
     margin-bottom: 15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
     /* background-image: url('~assets/img/marat2.jpg');
     background-repeat: no-repeat;
     height: 500px; */
@@ -112,6 +116,7 @@ mark {
     /* width: 1100px; */
     /* flex-wrap: wrap; */
     flex-direction: column;
+    margin-bottom: 0;
 }
 .progress-item {
     /* list-style-type: none; */
@@ -130,6 +135,7 @@ mark {
     flex-direction: column;
     padding: 10px 15px;
     border-radius: 4px;
+    margin-bottom: 0;
     /* display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -180,12 +186,16 @@ picture {
 }
 @media (min-width: 1200px) {
     .progress-wrap-caption {
-       margin: 30px 0;
+       margin: 0;
+       margin-bottom: 30px;
     }
     .banki {
         justify-content: center;
-        margin-top: 35px;
+        padding-top: 90px;
         /* height: 100px; */
+    }
+   .progress-wrap {
+        padding: 0;
     }
     .progress-h2 {
         font-size: 32px;

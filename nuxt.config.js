@@ -35,7 +35,7 @@ module.exports = {
         })
       }
     },
-    vendor: ['axios', 'vue-smooth-scroll']
+    // vendor: ['axios', 'vue-smooth-scroll']
   },
   modules: [
     ['@nuxtjs/yandex-metrika',
@@ -44,5 +44,26 @@ module.exports = {
         webvisor: true,
         clickmap:true
       }]
-  ]
+  ],
+  router: {
+    scrollBehavior(to, from, savedPosition) {
+      // savedPosition is only available for popstate navigations (back button)
+      if (to.hash) {
+        return {
+          selector: to.hash
+          // , offset: { x: 0, y: 10 }
+        }
+      }
+      if (savedPosition) {
+        return savedPosition
+      }
+      return { x: 0, y: 0 }
+    }
+  },
+  // plugins: [
+  //   { src: '~/plugins/swiper.js', ssr: false },
+  // ],
+  // css: [
+  //   'swiper/dist/css/swiper.css'
+  // ]
 }

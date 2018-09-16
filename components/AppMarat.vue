@@ -1,6 +1,6 @@
 <template>
-    <div class="marat" >
-        <div class="link" id="marat"></div>
+    <div class="marat" id="marat">
+        <!-- <div class="link" ></div> -->
         <div class="container">
             <div class="marat-wrap">
                 <!-- <div class="marat-h2" >
@@ -122,7 +122,8 @@ img, source {
 
     .marat {
         justify-content: center;
-        margin-top: 30px;
+        padding-top: 90px;
+        /* margin-top: 30px; */
         /* height: 100px; */
     }
     .marat-h2 {
@@ -137,7 +138,8 @@ img, source {
     }
 
     .marat-wrap {
-        height: 660px;;
+        height: 660px;
+        padding: 0;
     }
     picture {
         display: flex;

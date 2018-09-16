@@ -1,7 +1,7 @@
 <template>
-    <div class="contacts">
+    <div class="contacts" id="contacts">
         <!-- <div class="link" id="contacts" href="#contacts"></div> -->
-        <div class="link" id="contacts"></div>
+        <!-- <div class="link" ></div> -->
         <div class="container">
             <div class="contacts-wrap">
                 <div class="progress-wrap-caption">
@@ -171,6 +171,7 @@ export default {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
+    padding-top: 65px;
     
 }
 .container {
@@ -283,7 +284,8 @@ b {
 }
 @media (min-width: 1200px) {
     .progress-wrap-caption {
-       margin: 40px 0;
+       margin: 0;
+       margin-bottom: 30px;
     }
     .link {
         top: -45px;
@@ -291,8 +293,10 @@ b {
     .contacts {
         justify-content: center;
         padding: 0;
+         padding-top: 90px;
         /* height: 100px; */
     }
+
     .contacts-wrap {
         margin-bottom: 35px;
     }

@@ -1,6 +1,6 @@
 <template>
-    <div class="typeService" >
-        <div class="link" id="typeService"></div>
+    <div class="typeService" id="typeService">
+        <!-- <div class="link" id="typeService"></div> -->
         <div class="container">
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
@@ -109,7 +109,8 @@ export default {
     justify-content: space-between;
     /* background-color: rgb(242, 245, 248); */
     padding: 10px;
-    margin-bottom: 15px;
+    padding-bottom: 0;
+    /* margin-bottom: 15px; */
     /* background-image: url('~assets/img/marat2.jpg');
     background-repeat: no-repeat;
     height: 500px; */
@@ -147,6 +148,7 @@ export default {
     display: flex;
     margin: 25px 0;
     padding: 0;
+    margin-bottom: 0;
     /* width: 1100px; */
     /* flex-wrap: wrap; */
     flex-direction: column;
@@ -250,11 +252,14 @@ picture {
 }
 @media (min-width: 1200px) {
     .progress-wrap-caption {
-       margin: 30px 0;
+       margin: 0;
+       margin-bottom: 30px;
+       
     }
     .typeService {
         justify-content: center;
-        margin-top: 75px;
+        /* margin-top: 75px; */
+        padding-top: 90px;
         /* height: 100px; */
     }
     .progress-h2 {
@@ -274,6 +279,7 @@ picture {
         justify-content: center;
         padding: 50px 0;
         padding-top: 0;
+        padding: 0;
         margin-top: 25px;    
     }
 

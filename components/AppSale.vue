@@ -1,6 +1,6 @@
 <template>
-    <div class="sale" >
-        <div class="link" id="sale"></div>
+    <div class="sale" id="sale">
+        <!-- <div class="link" id="sale"></div> -->
         <div class="container">
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
@@ -188,11 +188,13 @@ picture {
 }
 @media (min-width: 1200px) {
     .progress-wrap-caption {
-       margin: 30px 0;
+       margin: 0;
+       margin-bottom: 30px;
     }
     .sale {
         justify-content: center;
-        margin-top: 35px;
+        /* margin-top: 35px; */
+        padding-top: 90px;
         /* height: 100px; */
     }
     .progress-h2 {
@@ -200,6 +202,9 @@ picture {
         margin: 42px 0;
         top: -30px;
         left: 0px;
+    }
+    .progress-wrap {
+        padding: 0;
     }
     .container {
         width: 1200px; 
