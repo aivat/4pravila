@@ -7,6 +7,7 @@
     <AppMarat/>
     <AppProblems/>
     <AppProgress/>
+    <AppSwiper/>
     <AppSale/>
     <AppTypeService/>
     <AppOt/>
@@ -47,6 +48,8 @@ import AppBanki from '~/components/AppBanki.vue'
 import AppWork from '~/components/AppWork.vue'
 import AppCallActions from '~/components/AppCallActions.vue'
 import AppTypeService from '~/components/AppTypeService.vue'
+import AppSwiper from '~/components/AppSwiper.vue'
+
 
 export default {
   data() {
@@ -76,7 +79,8 @@ export default {
     AppBanki,
     AppWork,
     AppCallActions,
-    AppTypeService
+    AppTypeService,
+    AppSwiper
   },
   methods: {
       activedTabRule: function (index) {
