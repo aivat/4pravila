@@ -1,5 +1,5 @@
 <template>
-    <div class="ot" id="ot">
+    <div class="swiperes" id="swiperes">
         <div class="container">
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
@@ -18,7 +18,7 @@
                                 <img :src="path(banner.id)" :alt="banner.ud">
                             </div>
                             <div class="team-hero">
-                                <div class="team-name">{{ banner.name }}</div>
+                                <div class="team-name">{{ banner.name.toUpperCase() }}</div>
                                 <div class="team-description">{{ banner.desc }}</div>
                             </div> 
                             <!-- <div class="slider-wrap">
@@ -44,9 +44,14 @@
                         <div class="sl">Slide8</div>
                         <div class="sl">Slide9</div>
                     </div> -->
-                    <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
-                    <div class="swiper-button-prev button-prev-individ" slot="button-prev"></div>
-                    <div class="swiper-button-next button-next-individ" slot="button-next"></div>
+                    
+                    <div class="swiper-pagination" slot="pagination"></div>
+                    <div class="swiper-pag-wrap">
+                        <div class="swiper-button-prev button-prev-individ sw-but-prev" slot="button-prev"></div>
+                        <div class="swiper-button-next button-next-individ" slot="button-next"></div>
+                    </div>
+                    
+                    
                 </div>
                 </div>
                 <!-- <div class="swipers-container">
@@ -163,7 +168,7 @@ export default {
  
 <style scoped>
 .swiper-wrap {
-    height: 50px;
+    /* height: 50px; */
 }
 .ot-picture > img {
     width: 80vw;
@@ -178,10 +183,10 @@ mark {
 .solution {
     margin: 15px 0;
 }
-.ot {
+.swiperes {
     display: flex;
     padding-top: 65px;
-    height: 650px;
+    /* height: 650px; */
 }
 .container {
     width: 100%; 
@@ -332,9 +337,77 @@ transition: all .25s ease-out;
     align-items: center;
     width: 140px;
     text-align: center;
-    margin-bottom: 140px;
+    /* margin-bottom: 140px; */
     transition: all 250ms cubic-bezier(.16,.08,.355,1);
 }
+.team-hero {
+    display: none;
+    margin-bottom: 40px;
+}
+.swiper-slide-next .team-hero {
+     
+     display: none;
+     transition: all 250ms cubic-bezier(.16,.08,.355,1);
+     width: 300px;
+     opacity: 0;
+}
+.team-name {
+    
+}
+.swiper-slide-next .team-hero {
+    display: block;
+    opacity: 1;
+}
+.team-name {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .05em; 
+}
+.team-description {
+    text-align: center;
+    color: rgb(15, 28, 55);
+    margin-top: .625rem;
+    font-size: 18px; 
+    height: 45px;
+}
+.sw-but-prev {
+    /* left: 50px; */
+
+}
+.swiper-pag-wrap {
+    position: relative;
+    top: -200px;
+    margin: 0 0px;
+}
+.button-next-individ:hover, .button-prev-individ:hover {
+    background-color: rgba(118, 40, 27, .15);
+    transition: all 250ms cubic-bezier(.16,.08,.355,1);
+}
+.button-next-individ {
+    display: block;
+    outline: none;
+    background-image: url('~/assets/svg/outline-arrow_forward_ios-24px.svg');
+    background-color: transparent;
+    background-position-x: 60%;
+    padding: 19px 0px 19px 55px;
+    border-radius: 50%;
+}
+.button-prev-individ {
+    display: block;
+    outline: none;
+    background-image: url('~/assets/svg/outline-arrow_back_ios-24px.svg');
+    background-color: transparent;
+    background-position-x: 50%;
+    padding: 19px 0px 19px 55px;
+    border-radius: 50%;
+}
+.button-prev-individ:active {
+    outline: none;
+}
+
+
 @media (min-width: 480px) {
     .progress-wrap-caption {
         width:  426px;
@@ -344,6 +417,27 @@ transition: all .25s ease-out;
     }
 }
 @media (min-width: 1200px) {
+    .team-hero {
+        margin-bottom: 60px;
+    }
+    .swiper-pag-wrap {
+        margin: 0 350px;
+    }
+    .swiper-slide-next .team-hero {
+        display: none;
+        
+    }
+    .swiper-slide-next+.team-item .team-hero {
+        
+        display: none;
+        transition: all 250ms cubic-bezier(.16,.08,.355,1);
+        width: 300px;
+        opacity: 0;
+    }
+    .swiper-slide-next+.team-item .team-hero {
+        display: block;
+        opacity: 1;
+    }
     .team-list .swiper-slide .team-picture {
         height: 520px;
         transform: scale(.45);
@@ -362,7 +456,7 @@ transition: all .25s ease-out;
        margin: 0;
        margin-bottom: 30px;
     }
-    .ot {
+    .swiperes {
         justify-content: center;
         padding-top: 90px;
         /* height: 100px; */
