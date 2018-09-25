@@ -10,16 +10,25 @@
                     <div class="progress-h2" >Наша команда</div>
                 </div>
                 <div class="swiper-wrap">
-                <div v-swiper:mySwiper="swiperOption">
+                <div v-swiper:mySwiper="swiperOption" class="team-list">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" v-for="(banner, index) in banners" :key="index" >
-                            <div class="slider-wrap">
-                                <div class="sl">{{ index}}</div>
-                                <picture class="ot-picture">
+
+                        <div class="swiper-slide team-item" v-for="(banner, index) in banners" :key="index" >
+                            <div class="team-picture">
+                                <img :src="path(banner.id)" :alt="banner.ud">
+                            </div>
+                            <div class="team-hero">
+                                <div class="team-name">{{ banner.name }}</div>
+                                <div class="team-description">{{ banner.desc }}</div>
+                            </div> 
+                            <!-- <div class="slider-wrap">
+                                <div class="sl">{{ index}}</div> -->
+                                
+                                <!-- <picture class="ot-picture">
                                     <source :srcset="path(banner.id)" media="(min-width: 480px)" :alt="banner.id">
                                     <img :src="path(banner.id)" :alt="banner.ud">
-                                </picture>
-                            </div>
+                                </picture> -->
+                            <!-- </div> -->
                         </div>
                     </div>
                     <!-- <div class="swiper-slide">
@@ -75,38 +84,61 @@ export default {
     data() {
       return {
           banners: {
-            0: { id: "11", resh: 'Нашли покупателя за 24 часа за 1 750 000 рублей. Продали с первого показа.' }, 
-            1: { id: "11", resh: 'Продана за 4 дней по цене 2 850 000 рублей. Квартиры была продана за  3 просмотра.' },
-            2: { id: "11", resh: 'Было  организовано 5 показов квартиры покупателям. Квартира продалась за 21 день по цене 2 300 000 рублей.' },
-            3: { id: "11", resh: 'Дом с земельным участком были проданы за 1 750 000 в течении 2-ух месяцев. ' },
-            4: { id: "11", resh: 'Нашли покупателя за 24 часа за 1 750 000 рублей. Продали с первого показа.' }, 
-            5: { id: "11", resh: 'Продана за 4 дней по цене 2 850 000 рублей. Квартиры была продана за  3 просмотра.' },
-            6: { id: "11", resh: 'Было  организовано 5 показов квартиры покупателям. Квартира продалась за 21 день по цене 2 300 000 рублей.' },
-            7: { id: "11", resh: 'Дом с земельным участком были проданы за 1 750 000 в течении 2-ух месяцев. ' }
+            0: { id: "1", name: 'Марат Даутов', desc: 'Основатель и руководитель компании' }, 
+            1: { id: "2", name: 'Станислав Жуков', desc: 'Риэлтор' },
+            2: { id: "3", name: 'Никита Клименко', desc: 'Риэлтор' },
+            3: { id: "4", name: 'Владислав Логинов', desc: 'Риэлтор' },
+            4: { id: "5", name: 'Антон Мельников', desc: 'Риэлтор' }, 
+            5: { id: "6", name: 'Виталий Реутов', desc: 'Риэлтор' }
           },
           trans: '',
-        swiperOption: {
-          slidesPerView: 3,
-        //   centeredSlides: true,
-          spaceBetween: 30,
-        //   slidesPerGroup: 3,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-          }
-        }        
+        // swiperOption: {
+        //   slidesPerView: this.countSlide(),
+        // //   centeredSlides: true,
+        //   spaceBetween: 0,
+        // //   slidesPerGroup: 3,
+        //   loop: true,
+        //   loopFillGroupWithBlank: true,
+        //   pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable: true
+        //   },
+        //   navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev'
+        //   }
+        // }   
       }
     },
     computed: {
         styleObject() {
             return  {
                 transform: this.trans
+            }
+        },
+        countSlide() {
+            if (process.browser) {
+                if ( document.body.clientWidth >= 1200) {
+                    return 5
+                } else return 3
+            } else return 5
+        },
+        swiperOption() {
+            return {
+                slidesPerView: this.countSlide,
+                //   centeredSlides: true,
+                spaceBetween: 0,
+                //   slidesPerGroup: 3,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                }                
             }
         }
     },
@@ -159,7 +191,7 @@ mark {
     flex-direction: column;
     justify-content: space-between;
     /* background-color: rgb(242, 245, 248); */
-    padding: 10px;
+    /* padding: 10px; */
     padding-bottom: 0;
     position: relative;
 }
@@ -245,9 +277,63 @@ mark {
 .swiper-slide.swiper-slide-next>.sl  {
    color:red;
 }
-.swiper-slide.swiper-slide-next>.slider-wrap>.ot-picture>img {
-  transform: scale(1.2);
-   transition: all .25s ease-out;
+.team-item {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: -1;
+}
+/* img {
+    transform: scale(.5);
+    opacity: .5;
+} */
+
+/* .swiper-slide.swiper-slide-next>.slider-wrap>.ot-picture>img {
+  opacity: 1;
+transition: all .25s ease-out;
+} */
+
+/* .swiper-slide.swiper-slide-next>.team-picture>img {
+  transform: scale(.9);
+  opacity: 1;
+  transform: scale(.8);
+transition: all .25s ease-out;
+} */
+.team-list .swiper-slide .team-picture {
+    height: 520px;
+    transform: scale(.3);
+    opacity: .25;
+    transition: all .25s ease-out;
+}
+/* .swiper-slide.swiper-slide-active.sl  {
+   color:red;
+} */
+.team-list .swiper-slide-next .team-picture {
+    transform: scale(.6);
+    opacity: 1;
+    
+}
+.team-list .swiper-slide-next {
+    z-index: 10;
+}
+.team-picture {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 140px;
+    text-align: center;
+    margin-bottom: 140px;
+    transition: all 250ms cubic-bezier(.16,.08,.355,1);
 }
 @media (min-width: 480px) {
     .progress-wrap-caption {
@@ -258,6 +344,20 @@ mark {
     }
 }
 @media (min-width: 1200px) {
+    .team-list .swiper-slide .team-picture {
+        height: 520px;
+        transform: scale(.45);
+        opacity: .25;
+        transition: all .25s ease-out;
+    }
+    .team-list .swiper-slide-next+.team-item .team-picture {
+        transform: scale(.8);
+        opacity: 1;
+        
+    }
+    .team-list .swiper-slide-next+.team-item {
+        z-index: 10;
+    }
     .progress-wrap-caption {
        margin: 0;
        margin-bottom: 30px;
