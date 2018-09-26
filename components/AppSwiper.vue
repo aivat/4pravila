@@ -168,7 +168,6 @@ export default {
  
 <style scoped>
 .swiper-wrap {
-    /* height: 50px; */
 }
 .ot-picture > img {
     width: 80vw;
@@ -185,8 +184,7 @@ mark {
 }
 .swiperes {
     display: flex;
-    padding-top: 65px;
-    /* height: 650px; */
+    /* padding-top: 25px; */
 }
 .container {
     width: 100%; 
@@ -205,13 +203,14 @@ mark {
   font-weight: 700;
   color: white;
   position: absolute;
-  top: 15px;
-  left: 120px;
+  top: 10px;
+  left: 80px;
   text-align: center;
   /* margin-top: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 20px;
 }
 .progress-list {
     display: flex;
@@ -276,7 +275,6 @@ mark {
 }
 .sl {
     width: 200px;
-    /* height: 350px; */
     margin-bottom: 25px;
 }
 .swiper-slide.swiper-slide-next>.sl  {
@@ -284,11 +282,8 @@ mark {
 }
 .team-item {
     position: relative;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: column;
     flex-flow: column;
-    -ms-flex-align: center;
     align-items: center;
     z-index: -1;
 }
@@ -309,7 +304,7 @@ transition: all .25s ease-out;
 transition: all .25s ease-out;
 } */
 .team-list .swiper-slide .team-picture {
-    height: 520px;
+    height: 410px;
     transform: scale(.3);
     opacity: .25;
     transition: all .25s ease-out;
@@ -342,7 +337,7 @@ transition: all .25s ease-out;
 }
 .team-hero {
     display: none;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .swiper-slide-next .team-hero {
      
@@ -418,9 +413,10 @@ transition: all .25s ease-out;
 }
 @media (min-width: 1200px) {
     .team-hero {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
     .swiper-pag-wrap {
+        top: -180px;
         margin: 0 350px;
     }
     .swiper-slide-next .team-hero {
@@ -439,7 +435,7 @@ transition: all .25s ease-out;
         opacity: 1;
     }
     .team-list .swiper-slide .team-picture {
-        height: 520px;
+        height: 510px;
         transform: scale(.45);
         opacity: .25;
         transition: all .25s ease-out;
@@ -454,18 +450,17 @@ transition: all .25s ease-out;
     }
     .progress-wrap-caption {
        margin: 0;
-       margin-bottom: 30px;
+       /* margin-bottom: 30px; */
     }
     .swiperes {
         justify-content: center;
         padding-top: 90px;
-        /* height: 100px; */
     }
     .progress-h2 {
         font-size: 32px;
         margin: 42px 0;
         top: -30px;
-        left: 140px;
+        left: 100px;
     }
     .progress-wrap {
         padding: 0;

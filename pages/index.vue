@@ -8,6 +8,7 @@
     <AppProblems/>
     <AppProgress/>
     <AppSwiper/>
+    <AppCompare/>
     <AppSale/>
     <AppTypeService/>
     <AppOt/>
@@ -49,7 +50,7 @@ import AppWork from '~/components/AppWork.vue'
 import AppCallActions from '~/components/AppCallActions.vue'
 import AppTypeService from '~/components/AppTypeService.vue'
 import AppSwiper from '~/components/AppSwiper.vue'
-
+import AppCompare from '~/components/AppCompare.vue'
 
 export default {
   data() {
@@ -80,7 +81,8 @@ export default {
     AppWork,
     AppCallActions,
     AppTypeService,
-    AppSwiper
+    AppSwiper,
+    AppCompare
   },
   methods: {
       activedTabRule: function (index) {

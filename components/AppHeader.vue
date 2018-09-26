@@ -28,13 +28,13 @@
                 <div class="header-menu-wrap">
                     <ul class="menu-list">
                         <li>
-                            <a href ="#ot" v-smooth-scroll>
-                                Отзывы
+                            <a href ="#swiperes" v-smooth-scroll>
+                                Команда
                             </a>
                         </li>
                         <li>
-                            <a href ="#banki" v-smooth-scroll>
-                                Партнеры
+                            <a href ="#ot" v-smooth-scroll>
+                                Отзывы
                             </a>
                         </li>
                         <li>
