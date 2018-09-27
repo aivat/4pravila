@@ -33,7 +33,7 @@
                         </svg>
                     </div>
                     <div class="compare-wrap-img">
-                        <image-compare :before="path(banners[0].name)" :after="path(banners[1].name)" v-if="active==0" :padding="{ left: 30, right: 30 }">
+                        <image-compare :before="path(banners[0].name)" :after="path(banners[1].name)" v-if="active==0" :padding="{ left: countPadding, right: countPadding }">
                             <div class="fa fa-angle-left" aria-hidden="true" slot="icon-left">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-5 0 24 24">
                                     <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/>
@@ -45,7 +45,7 @@
                                 </svg>
                             </div>
                         </image-compare>
-                        <image-compare :before="path(banners[2].name)" :after="path(banners[3].name)" v-if="active==1" :padding="{ left: 30, right: 30 }">
+                        <image-compare :before="path(banners[2].name)" :after="path(banners[3].name)" v-if="active==1" :padding="{ left: countPadding, right: countPadding }">
                             <div class="fa fa-angle-left" aria-hidden="true" slot="icon-left">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-5 0 24 24">
                                     <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/>
@@ -57,7 +57,7 @@
                                 </svg>
                             </div>
                         </image-compare>
-                        <image-compare :before="path(banners[4].name)" :after="path(banners[5].name)" v-if="active==2" :padding="{ left: 30, right: 30 }">
+                        <image-compare :before="path(banners[4].name)" :after="path(banners[5].name)" v-if="active==2" :padding="{ left: countPadding, right: countPadding }">
                             <div class="fa fa-angle-left" aria-hidden="true" slot="icon-left">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-5 0 24 24">
                                     <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/><path fill="none" d="M0 0h24v24H0V0z"/>
@@ -118,12 +118,14 @@ export default {
                 transform: this.trans
             }
         },
-        countSlide() {
+        countPadding() {
             if (process.browser) {
                 if ( document.body.clientWidth >= 1200) {
-                    return 5
-                } else return 3
-            } else return 5
+                    return 10
+                } else if ( document.body.clientWidth >= 768) {
+                    return 60
+                }  else return 60
+            } else return 10
         },
         dashoffset: function () {
             return  -(100 / 3) * this.active
@@ -152,7 +154,7 @@ export default {
 }
 .nav-wrap-item {
     /* display: flex; */
-    width: 25%;
+    width: 33%;
     text-align: center;
     font-size: 16px;
     padding: 0 20px;
@@ -486,7 +488,7 @@ mark {
     .progress-h2 {
         font-size: 30px;
         margin: 42px 10px;
-        top: -30px;
+        top: -32px;
         left: 5px;
     }
     .progress-wrap {

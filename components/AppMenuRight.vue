@@ -26,6 +26,11 @@
                 </a>
             </li>
             <li>
+                <a class="menu-right-list-link" href ="#compare" v-bind:class="{ active: isAvtive12 }" v-smooth-scroll>
+                    
+                </a>
+            </li>
+            <li>
                 <a class="menu-right-list-link" href ="#sale" v-bind:class="{ active: isAvtive5 }" v-smooth-scroll>
                     
                 </a>
@@ -35,7 +40,6 @@
                     
                 </a>
             </li>
-            
             <li>
                 <a class="menu-right-list-link" href ="#ot" v-bind:class="{ active: isAvtive6 }" v-smooth-scroll>
                     
@@ -82,6 +86,7 @@ export default {
         isAvtive9: false,
         isAvtive10: false,
         isAvtive11: false,
+        isAvtive12: false,
         elem1: '',
         elemHeight1: '',
         elem2: '',
@@ -103,7 +108,9 @@ export default {
         elem10: '',
         elemHeight10: '',
         elem11: '',
-        elemHeight11: ''
+        elemHeight11: '',
+        elem12: '',
+        elemHeight12: ''
       }
     },
     methods:{
@@ -135,6 +142,10 @@ export default {
         let el11 = document.getElementsByClassName('swiperes')
         this.elem11 = el11['0']
         this.elemHeight11 = this.elem11.clientHeight
+
+        let el12 = document.getElementsByClassName('compare')
+        this.elem12 = el12['0']
+        this.elemHeight12 = this.elem12.clientHeight
 
         let el5 = document.getElementsByClassName('sale')
         this.elem5 = el5['0']
@@ -181,6 +192,7 @@ export default {
             let box9 = this.elem9.getBoundingClientRect()
             let box10 = this.elem10.getBoundingClientRect()
             let box11 = this.elem11.getBoundingClientRect()
+            let box12 = this.elem12.getBoundingClientRect()
             // let box10 = this.elem10.getBoundingClientRect()
 
             let scrollTop = window.pageYOffset
@@ -201,6 +213,7 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = false
                 this.isAvtive11 = false
+                this.isAvtive12 = false
             } 
 
             if ( Math.abs(box2.top) < 65 ) {
@@ -215,6 +228,7 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = false
                 this.isAvtive11 = false
+                this.isAvtive12 = false
             } 
 
             if ( Math.abs(box3.top) < 65 ) {
@@ -229,6 +243,7 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = false
                 this.isAvtive11 = false
+                this.isAvtive12 = false
             } 
 
             if ( Math.abs(box4.top) < 65 ) {
@@ -243,6 +258,7 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = false
                 this.isAvtive11 = false
+                this.isAvtive12 = false
             } 
 
             if ( Math.abs(box5.top) < 65 ) {
@@ -257,6 +273,7 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = false
                 this.isAvtive11 = false
+                this.isAvtive12 = false
             } 
 
             if ( Math.abs(box6.top) < 65 ) {
@@ -271,6 +288,7 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = false
                 this.isAvtive11 = false
+                this.isAvtive12 = false
             } 
 
             if ( Math.abs(box7.top) < 65 ) {
@@ -285,6 +303,7 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = false
                 this.isAvtive11 = false
+                this.isAvtive12 = false
             } 
 
             if ( Math.abs(box8.top) < 65 ) {
@@ -299,6 +318,7 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = false
                 this.isAvtive11 = false
+                this.isAvtive12 = false
             } 
 
             if ( Math.abs(box9.top) < 65 ) {
@@ -313,6 +333,7 @@ export default {
                 this.isAvtive9 = true
                 this.isAvtive10 = false
                 this.isAvtive11 = false
+                this.isAvtive12 = false
                 // this.isAvtive10 = false
             } 
             if ( Math.abs(box10.top) < 65 ) {
@@ -327,6 +348,7 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = true
                 this.isAvtive11 = false
+                this.isAvtive12 = false
                 // this.isAvtive10 = false
             }
             if ( Math.abs(box11.top) < 65 ) {
@@ -341,6 +363,22 @@ export default {
                 this.isAvtive9 = false
                 this.isAvtive10 = false
                 this.isAvtive11 = true
+                this.isAvtive12 = false
+                // this.isAvtive10 = false
+            }
+            if ( Math.abs(box12.top) < 65 ) {
+                this.isAvtive1 = false
+                this.isAvtive2 = false
+                this.isAvtive3 = false
+                this.isAvtive4 = false
+                this.isAvtive5 = false
+                this.isAvtive6 = false
+                this.isAvtive7 = false
+                this.isAvtive8 = false
+                this.isAvtive9 = false
+                this.isAvtive10 = false
+                this.isAvtive11 = false
+                this.isAvtive12 = true
                 // this.isAvtive10 = false
             } 
         }
