@@ -412,11 +412,12 @@ mark {
 
 .compare-wrap {
     margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 25px;
     width: 100%;
 }
 .compare-wrap-img {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 @media (min-width: 480px) {
     .progress-wrap-caption {
@@ -435,12 +436,15 @@ mark {
         display: flex;
         flex-direction: column;
         align-items: center;
-    /* width: 800px; */
     }
     .compare-wrap-img {
-        width: 800px;
-    }
 
+        width: 700px;
+        /* height: 380px; */
+    }
+    .image-compare-wrapper img {
+        width: 700px;
+    }
     .team-hero {
         margin-bottom: 40px;
     }

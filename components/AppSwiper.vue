@@ -12,7 +12,6 @@
                 <div class="swiper-wrap">
                 <div v-swiper:mySwiper="swiperOption" class="team-list">
                     <div class="swiper-wrapper">
-
                         <div class="swiper-slide team-item" v-for="(banner, index) in banners" :key="index" >
                             <div class="team-picture">
                                 <img :src="path(banner.id)" :alt="banner.ud">
@@ -21,59 +20,15 @@
                                 <div class="team-name">{{ banner.name.toUpperCase() }}</div>
                                 <div class="team-description">{{ banner.desc }}</div>
                             </div> 
-                            <!-- <div class="slider-wrap">
-                                <div class="sl">{{ index}}</div> -->
-                                
-                                <!-- <picture class="ot-picture">
-                                    <source :srcset="path(banner.id)" media="(min-width: 480px)" :alt="banner.id">
-                                    <img :src="path(banner.id)" :alt="banner.ud">
-                                </picture> -->
-                            <!-- </div> -->
                         </div>
-                    </div>
-                    <!-- <div class="swiper-slide">
-                        <div class="sl">Slide1</div>
-                        <div class="sl">Slide2</div>
-                        <div class="sl">Slide3</div>
-
-                        <div class="sl">Slide4</div>
-                        <div class="sl">Slide5</div>
-                        <div class="sl">Slide6</div>
-
-                        <div class="sl">Slide7</div>
-                        <div class="sl">Slide8</div>
-                        <div class="sl">Slide9</div>
-                    </div> -->
-                    
+                    </div>     
                     <div class="swiper-pagination" slot="pagination"></div>
                     <div class="swiper-pag-wrap">
                         <div class="swiper-button-prev button-prev-individ sw-but-prev" slot="button-prev"></div>
                         <div class="swiper-button-next button-next-individ" slot="button-next"></div>
                     </div>
-                    
-                    
                 </div>
                 </div>
-                <!-- <div class="swipers-container">
-                    <div class="swipers-wrapper" v-bind:style="styleObject">
-                        <div class="swipers-slide" v-for="(item, index) in items" :key="item.id">
-                            <picture class="ot-picture">
-                                <source :srcset="path(item.id)" media="(min-width: 480px)" :alt="item.id">
-                                <img :src="path(item.id)" :alt="item.ud">
-                            </picture>
-                            <div>{{ index }}</div>
-                        </div>
-                    </div>
-                    <div class="swipers-pagination"></div>
-                    <div class="swipers-navigation">
-                        <div class="swipers-button-prev">
-                            <button @click="flipover(-1)">Влевл</button>
-                        </div>
-                        <div class="swipers-button-next" >    
-                            <button @click="flipover(1)">Вправо</button>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
@@ -413,7 +368,10 @@ transition: all .25s ease-out;
 }
 @media (min-width: 1200px) {
     .team-hero {
-        margin-bottom: 40px;
+        /* margin-bottom: 40px; */
+        position: absolute;
+        top: 385px;
+        margin-bottom: 0;
     }
     .swiper-pag-wrap {
         top: -180px;
