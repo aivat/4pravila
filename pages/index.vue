@@ -1,7 +1,7 @@
 <template>
   <div class="content-wrap">
     <!-- <AppHeaderTop/> -->
-    <AppHeader/>
+    <!-- <AppHeader/> -->
     <AppSlider></AppSlider>
     <!-- <AppSlider v-on:actived-tab="activedTabRule"></AppSlider> -->
     <AppMarat/>

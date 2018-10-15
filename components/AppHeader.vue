@@ -38,9 +38,10 @@
                             </a>
                         </li>
                         <li>
-                            <a href ="#work" v-smooth-scroll>Порядок работы
-                            </a>
+                            <!-- <a href ="#work" v-smooth-scroll>Порядок работы
+                            </a> -->
                             <!-- <div id="#shag"></div> -->
+                            <nuxt-link to="/ipoteka">Ипотека</nuxt-link>
                         </li>
                         <li>
                             <a href ="#contacts" v-smooth-scroll>
