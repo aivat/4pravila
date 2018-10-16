@@ -418,6 +418,7 @@ mark {
 }
 .compare-wrap-img {
     margin-top: 25px;
+    height: 250px;
 }
 @media (min-width: 480px) {
     .progress-wrap-caption {
@@ -431,6 +432,17 @@ mark {
         margin: 0;
     }
 }
+@media (min-width: 768px) {
+    .compare-wrap-img {
+        height: 450px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .compare-wrap-img {
+        height: 580px;
+    }
+}
 @media (min-width: 1200px) {
     .compare-wrap {
         display: flex;
@@ -440,7 +452,7 @@ mark {
     .compare-wrap-img {
 
         width: 700px;
-        /* height: 380px; */
+        height: 394px;
     }
     .image-compare-wrapper img {
         width: 700px;

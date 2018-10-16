@@ -28,12 +28,12 @@
                 <div class="header-menu-wrap">
                     <ul class="menu-list">
                         <li>
-                            <a href ="#swiperes" v-smooth-scroll>
+                            <a href ="/#swiperes" v-smooth-scroll>
                                 Команда
                             </a>
                         </li>
                         <li>
-                            <a href ="#ot" v-smooth-scroll>
+                            <a href ="/#ot" v-smooth-scroll>
                                 Отзывы
                             </a>
                         </li>
@@ -44,7 +44,7 @@
                             <nuxt-link to="/ipoteka">Ипотека</nuxt-link>
                         </li>
                         <li>
-                            <a href ="#contacts" v-smooth-scroll>
+                            <a href ="/#contacts" v-smooth-scroll>
                                 Контакты
                             </a>
                         </li>

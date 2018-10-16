@@ -22,7 +22,7 @@
     <AppFiveShagov/>
     <AppPravila v-bind:initialactive="initialactive"></AppPravila>
     <AppOpinions/> -->
-    <AppFooter/>
+    <!-- <AppFooter/> -->
     <AppMenuRight class="act"></AppMenuRight>
   </div>
 </template>
@@ -37,7 +37,7 @@ import AppPlus from '~/components/AppPlus.vue'
 import AppFiveShagov from '~/components/AppFiveShagov.vue'
 import AppOpinions from '~/components/AppOpinions.vue'
 import AppContacts from '~/components/AppContacts.vue'
-import AppFooter from '~/components/AppFooter.vue'
+// import AppFooter from '~/components/AppFooter.vue'
 import AppPravila from '~/components/AppPravila.vue'
 import AppMenuRight from '~/components/AppMenuRight.vue'
 import AppMarat from '~/components/AppMarat.vue'
@@ -69,7 +69,7 @@ export default {
     AppFiveShagov,
     AppOpinions,
     AppContacts,
-    AppFooter,
+    // AppFooter,
     AppPravila,
     AppMenuRight,
     AppMarat,

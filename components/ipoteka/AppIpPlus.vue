@@ -5,10 +5,10 @@
             <div class="progress-wrap">
                 <div class="progress-wrap-caption">
                     <picture>
-                        <source srcset="~/assets/img/1x/back1.jpg" media="(min-width: 480px)">
-                        <img src='~/assets/img/1x/back1_2.jpg'>
+                        <source srcset="~/assets/img/1x/back2.jpg" media="(min-width: 480px)">
+                        <img src='~/assets/img/1x/back2_2.jpg'>
                     </picture>
-                    <div class="progress-h2" >Вам знакомы эти<br>проблемы?</div>
+                    <div class="progress-h2" >8 Преимуществ, чтобы <br>обратиться в нашу компанию</div>
                 </div>
 
                 <!-- <div class="progress-h2" >в цифрах</div> -->
@@ -624,7 +624,8 @@ export default {
     justify-content: space-between;
     /* background-color: rgb(242, 245, 248); */
     padding: 10px;
-    margin-bottom: 15px;
+    padding-top: 0;
+    /* margin-bottom: 15px; */
     /* background-image: url('~assets/img/marat2.jpg');
     background-repeat: no-repeat;
     height: 500px; */
@@ -648,8 +649,8 @@ export default {
   color: white;
   /* color: #444; */
   position: absolute;
-  top: 10px;
-  left: 70px;
+  top: 20px;
+  left: 15px;
   /* background-image: url('~/assets/img/1x/1.jpg'); */
   /* height: 68px; */
   text-align: center;
@@ -661,6 +662,7 @@ export default {
 .progress-list {
     display: flex;
     margin: 25px 0;
+    margin-bottom: 0;
     padding: 0;
     /* width: 1100px; */
     /* flex-wrap: wrap; */
@@ -730,7 +732,7 @@ picture {
     }
     .progress {
         justify-content: center;
-        padding-top: 90px;
+        padding-top: 70px;
         /* margin-top: 75px; */
         /* height: 100px; */
     }
@@ -741,7 +743,7 @@ picture {
         font-size: 32px;
         margin: 42px 0;
         top: -30px;
-        left: 70px;
+        left: 0px;
     }
     .container {
         width: 1200px; 

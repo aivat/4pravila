@@ -59,7 +59,7 @@ mark {
 }
 .banki {
     display: flex;
-    padding-top: 65px;
+    padding-top: 25px;
     /* flex-direction: column; */
     /* background-color: rgb(242, 245, 248); */
 }

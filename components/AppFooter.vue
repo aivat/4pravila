@@ -7,25 +7,25 @@
                     <hr class="hr">
                     <h2 class="contact-h2 contact-h2-menu">МЕНЮ</h2>
                     <li>
-                        <a href="#work" class="submenu-link">Порядок работы<svg viewBox="0 0 24 24">
+                        <a href="/#swiperes" class="submenu-link">Команда<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#banki" class="submenu-link">Партнеры<svg viewBox="0 0 24 24">
+                        <a href="/#ot" class="submenu-link">Отзывы<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#ot" class="submenu-link">Отзывы<svg viewBox="0 0 24 24">
+                        <a href="/ipoteka" class="submenu-link">Ипотека<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="#contacts" class="submenu-link">Контакты<svg viewBox="0 0 24 24">
+                        <a href="/#contacts" class="submenu-link">Контакты<svg viewBox="0 0 24 24">
                                 <path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />
                             </svg>
                         </a>

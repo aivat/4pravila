@@ -1,5 +1,5 @@
 <template>
-    <div class="header" id="problems">
+    <div class="header head-hidden" id="problems">
         <div class="back-svg back-svg-left">
             <svg xmlns="http://www.w3.org/2000/svg" width="449" height="400" viewBox="0 0 449 400">
                 <g fill="none" fill-rule="evenodd">
@@ -46,7 +46,7 @@
                 <h1>
                     Хотите оформить ипотеку?
                 </h1>
-                <p>И БЕСПЛАТНО получить подбор недвижимости и сопровождение сделки юристом?</p>
+                <p>и <b>БЕСПЛАТНО</b> получить подбор недвижимости и сопровождение сделки юристом?</p>
                 <div class="wrap-table">
                     <div class="wrap-table-row">
                         <div class="wrap-table-row-caption">Низкие ставки</div>
@@ -141,29 +141,57 @@ export default {
     align-items: center;
 }
 .wrap-table {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 h1 {
+    opacity: 0;
     font-size: 30px;
     font-weight: 700;
     text-align: center;
     margin: 0;
     margin-bottom: 20px;
+    animation: opas 1s .1s ease forwards;
+    will-change: opacity;
+}
+@keyframes opas{
+  0%  { opacity: 0}
+  100% { opacity: 1 }
 }
 p {
+    opacity: 0;
     font-size: 14px;
+
     margin: 0;
     margin-bottom: 20px;
     text-align: center;
+    animation: opas 1s .4s ease forwards;
+    will-change: opacity;
+}
+b {
+    color: rgba(129, 34, 25, 1);
 }
 .wrap-table-row {
+    opacity: 0;
     display: flex;
     padding: 15px 0;
     border-bottom: 1px solid rgba(2, 2, 2, 0.1);
     align-items: baseline;
+    /* justify-content: space-between; */
     width: 240px;
+    will-change: opacity;
 }
+.wrap-table-row:nth-child(1){
+    animation: opas 1s .4s ease forwards;
+}
+.wrap-table-row:nth-child(2){
+    animation: opas 1s .9s ease forwards;
+}
+.wrap-table-row:nth-child(3){
+    animation: opas 1s .9s ease forwards;
+}
+
 .wrap-table-row-caption {
+    width: 160px;
     font-size: 14px;
 }
 .wrap-table-row-text {
@@ -175,6 +203,8 @@ p {
     display: none;
 }
 .call-wrap {
+    opacity: 0;
+    animation: opas 1s .9s ease forwards;
     display: flex;
     justify-content: center;
 }
@@ -208,16 +238,57 @@ p {
         justify-content: center;
         padding-top: 90px;
         padding-bottom: 80px;
+        position: relative;
+
+        /* overflow-x: hidden; */
+    }
+    .head-hidden {
+        overflow-x: hidden;
     }
     .back-svg {
+        top: 120px;
+        animation: back-r 1.5s .8s ease forwards;
         display: block;
         position: absolute;
         right: 0;
+        opacity: 0;
+        box-sizing: border-box;
+        will-change: transform,opacity;
+        /* width: 500px; */
+        /* right: -95px; */
     }
     .back-svg-left {
+        width: 449px;
         left: auto;
         left: 0;
-        
+        /* left: -111px; */
+        animation: back-l 1.5s .8s ease forwards;
+    }
+    @keyframes back-l {
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-100px,0,0);
+            transform: translate3d(-100px,0,0)
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none
+        }
+    }
+    @keyframes back-r {
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(100px,0,0);
+            transform: translate3d(100px,0,0)
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none
+        }
     }
     .wrap {
         padding: 0;
@@ -264,6 +335,7 @@ p {
     }
     .wrap-table-row-caption {
         font-size: 16px;
+        width: auto;
     }
     .wrap-table-row-text {
         padding: 0;
