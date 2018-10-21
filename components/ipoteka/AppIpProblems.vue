@@ -1,5 +1,5 @@
 <template>
-    <div class="progress" id="progress">
+    <div class="progress" ref="problems" id="ip_problems">
         <!-- <div class="link" id="progress"></div> -->
         <div class="container">
             <div class="progress-wrap">
@@ -10,12 +10,10 @@
                     </picture>
                     <div class="progress-h2" >Вам знакомы эти<br>проблемы?</div>
                 </div>
-
-                <!-- <div class="progress-h2" >в цифрах</div> -->
                 <ul class="progress-list" >
                     <div class="progress-list-item progress-list-item-left">
                         
-                        <li class="progress-item">
+                        <li class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                             <div class="progress-item-svg">
                                 <svg width="48" height="48" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -97,7 +95,7 @@
                             </div>
                             <div>Нет первоначального взноса либо маленький первоначальный взнос</div>
                         </li>
-                        <li class="progress-item">
+                        <li class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                             <div class="progress-item-svg">
                                 <svg width="48" height="48" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     viewBox="0 0 488.201 488.201" style="enable-background:new 0 0 488.201 488.201;" xml:space="preserve">
@@ -153,7 +151,7 @@
                         </li>
                     </div>
                     <div class="progress-list-item">
-                        <li class="progress-item">
+                        <li class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                             <div class="progress-item-svg">
                                 <svg width="48" height="48" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -234,7 +232,7 @@
                             </div>
                             <div>Не можете подтвердить официальный доход либо занятость</div>
                         </li>
-                        <li class="progress-item">
+                        <li class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                             <div class="progress-item-svg">
                                 <svg width="48" height="48" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve">
@@ -315,8 +313,33 @@ export default {
             1: { id: "2", text: 'Каждая 7 квартира продана с первого показа' },
             2: { id: "3", text: 'Продажа квартиры на 150 000 рублей дороже изначальной цены' },
             3: { id: "4", text: 'Средний срок продажи квартир 15 дней' }
-          }
+          },
+          isActive: false,
+          elemIpProblems: null
       }
+    },
+    mounted: function () {
+        this.$nextTick(function () {
+        let el_ip_problems = this.$refs.problems
+        this.elemIpProblems = el_ip_problems
+        console.log('elemIpProblems=', this.elemIpProblems)
+        })
+    },
+    created () {
+        if (process.browser) {  
+            window.addEventListener('scroll', this.handleScrollIpProblems)
+        }
+    },
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScrollIpProblems)
+    },
+    methods: {
+        handleScrollIpProblems (event) {
+            let box = this.elemIpProblems.getBoundingClientRect()
+            if ( Math.abs(box.top) < 250 ) {
+                this.isActive = true
+            }
+        }
     }
   }
 </script>
@@ -379,10 +402,7 @@ export default {
 }
 .progress-item {
     list-style-type: none;
-    /* width: 550px; */
-    /* text-align: center; */
     margin: 7px 0;
-    /* font-family: Raleway-Medium; */
     font-weight: 500;
     color: rgba(0, 0, 0, .6);
     color: #58595B;
@@ -391,21 +411,13 @@ export default {
     display: flex;
     font-size: 16px;
     align-items: center;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 4px;
-    padding: 10px 25px;
-    background: linear-gradient(to right, rgba(26, 9, 9, 0.6) 0%, rgba(6, 7, 6, 0.6) 100%);
-    background-color: rgba(129,34,25,1);
-    background-color: #009cde;
-    background-color: rgb(187, 48, 36);
-    background-image: radial-gradient(circle farthest-side at 95px 95px,rgb(187, 48, 36),rgba(129,34,25,1) 125%);
-    background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%);
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
-    background-color: #fff;
-    background-image: none;
-    align-items: flex-start; */
+    opacity: 0;
+    transition: all .8s ease-out;
+}
+.progress-item-anim {
+    opacity: 1;
+    /* animation: opas 1s .1s ease forwards;
+    will-change: opacity; */
 }
 .progress-item-svg {
     width: 50px;
@@ -425,7 +437,10 @@ picture {
     position: relative;
     align-self: center;
 }
-
+@keyframes opas{
+  0%  { opacity: 0}
+  100% { opacity: 1 }
+}
 @media (min-width: 480px) {
     .progress-wrap-caption {
         width:  426px;

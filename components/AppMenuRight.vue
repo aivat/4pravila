@@ -177,7 +177,7 @@ export default {
         // this.elemHeight10 = this.elem10.clientHeight
     },
     destroyed () {
-        // window.removeEventListener('scroll', this.handleScroll)
+        window.removeEventListener('scroll', this.handleScroll)
     },
     methods: {
         handleScroll (event) {

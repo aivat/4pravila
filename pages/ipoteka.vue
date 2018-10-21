@@ -3,8 +3,9 @@
     <AppIpHeader/>
     <AppIpProblems/>
     <AppIpPlus/>
-    <AppBanki/>
+    <AppIpBanki/>
     <AppIpSix/>
+    <AppCallActions/>
     <!-- <AppMenuRight class="act"></AppMenuRight> -->
   </div>
 </template>
@@ -13,17 +14,22 @@
 import AppIpHeader from '~/components/ipoteka/AppIpHeader.vue'
 import AppIpProblems from '~/components/ipoteka/AppIpProblems.vue'
 import AppIpPlus from '~/components/ipoteka/AppIpPlus.vue'
-import AppBanki from '~/components/AppBanki.vue'
+import AppIpBanki from '~/components/ipoteka/AppIpBanki.vue'
 import AppIpSix from '~/components/ipoteka/AppIpSix.vue'
+import AppCallActions from '~/components/AppCallActions.vue'
 
 export default {
   components: {
     AppIpHeader,
     AppIpProblems,
     AppIpPlus,
-    AppBanki,
-    AppIpSix
-  }
+    AppIpBanki,
+    AppIpSix,
+    AppCallActions
+  },
+      mounted: function () {
+        console.log('efefefefef12122=')
+    }
 }
 </script>
 

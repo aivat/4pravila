@@ -1,5 +1,5 @@
 <template>
-    <div class="work"  id="work">
+    <div class="work"  ref="six" id="ip_sex">
         <!-- <div class="link"></div> -->
         <div class="container">
             <div class="progress-wrap">
@@ -13,7 +13,7 @@
                 </div>
                 <div class="progress-h2-desc" >6 шагов от оформления ипотеки до покупки недвижимости</div>
                 <div class="progress-list" >
-                    <div class="progress-item">
+                    <div class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                         <div class="progress-left">
                             <div class="progress-left-number">
                                 1
@@ -133,7 +133,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="progress-item">
+                    <div class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                         <div class="progress-left">
                             <div class="progress-left-number">
                                 2
@@ -236,7 +236,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="progress-item">
+                    <div class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                         <div class="progress-left">
                             <div class="progress-left-number">
                                 3
@@ -401,7 +401,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="progress-item">
+                    <div class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                         <div class="progress-left">
                             <div class="progress-left-number">
                                 4
@@ -515,7 +515,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="progress-item">
+                    <div class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                         <div class="progress-left">
                             <div class="progress-left-number">
                                 5
@@ -668,7 +668,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="progress-item">
+                    <div class="progress-item" v-bind:class="{ 'progress-item-anim': isActive }">
                         <div class="progress-left">
                             <div class="progress-left-number">
                                 6
@@ -761,7 +761,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="progress-wrap-caption progress-wrap-caption-tel">
+                <!-- <div class="progress-wrap-caption progress-wrap-caption-tel">
                     <picture>
                         <source srcset="~/assets/img/1x/1.jpg" media="(min-width: 480px)" alt="banner.name">
                         <img src='~/assets/img/1x/1_2.jpg'>
@@ -770,9 +770,9 @@
                     
                 </div>
                 <div class="progress-wrap-call">
-                    <!-- <div class="progress-wrap-call-title"></div> -->
+                    <div class="progress-wrap-call-title"></div>
                     <div class="progress-wrap-call-tel">Звоните <a href="tel:93-50-60" class="tel">93-50-60</a></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -791,13 +791,38 @@ export default {
             6: { id: "7", text: "Ведение переговоров с покупателями" },
             7: { id: "8", text: "Подписание договора купли-продажи" },
             8: { id: "9", text: "Проведение расчетов" }
-          }
+          },
+          isActive: false,
+		  elemSex: 'div'
       }
     },
     methods: {
         path(name) {
             return require('~/assets/img/work/' + name + '.jpg')
+        },
+        handleScrollElemSex (event) {
+           
+            let box = this.elemSex.getBoundingClientRect()
+            if ( Math.abs(box.top) < 250 ) {
+                this.isActive = true
+            }
         }
+    },
+    mounted() {
+        this.$nextTick(function () {
+        let el_sex = this.$refs.six
+        this.elemSex = el_sex
+        console.log('ip_sex=', this.elemSex)
+        })
+    },
+    created () {
+        if (process.browser) {  
+            // console.log('s', this.$el.getElementById('ip_sex'))
+            window.addEventListener('scroll', this.handleScrollElemSex)
+        }
+    },
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScrollElemSex)
     }
   }
 </script>
@@ -863,7 +888,7 @@ mark {
     margin: 15px 0;
 }
 .progress-h2 {
-      font-size:22px;
+font-size:22px;
   margin: 0;
   font-weight: 700;
   color: white;
@@ -879,17 +904,12 @@ mark {
     display: flex;
     margin: 25px 0;
     padding: 0;
-    /* width: 1100px; */
-    /* flex-wrap: wrap; */
     flex-direction: column;
     margin-bottom: 0;
 }
 .progress-item {
-    /* list-style-type: none; */
-    /* width: 550px; */
-    /* text-align: center; */
+    opacity: 0;
     margin: 10px 0;
-    /* font-family: Raleway-Medium; */
     color: rgba(0, 0, 0, .6);
     color: #58595B;
     transition: all 1s ease-out;
@@ -901,25 +921,8 @@ mark {
     padding: 10px 15px;
     border-radius: 4px;
     margin-bottom: 0;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 4px;
-    padding: 10px 25px;
-    background: linear-gradient(to right, rgba(26, 9, 9, 0.6) 0%, rgba(6, 7, 6, 0.6) 100%);
-    background-color: rgba(129,34,25,1);
-    background-color: #009cde;
-    background-color: rgb(187, 48, 36);
-    background-image: radial-gradient(circle farthest-side at 95px 95px,rgb(187, 48, 36),rgba(129,34,25,1) 125%);
-    background-image: radial-gradient(circle farthest-side at 95px 95px,#fff,#ececec 125%);
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
-    background-color: #fff;
-    background-image: none;
-    align-items: flex-start; */
 }
-/* .progress-item:hover {
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
-} */
+
 .progress-item:last-child .strelka {
     display: none;
 }
@@ -941,11 +944,29 @@ mark {
     fill: #76281B;
     fill: #B55031;
 }
-picture {
-    /* align-self: center; */
-    /* display: flex; */
-    /* justify-content: center; */
+.progress-item-anim:nth-child(1){    
+    animation: opas .9s .1s ease forwards;
 }
+.progress-item-anim:nth-child(2) {    
+    animation: opas .9s .2s ease forwards;
+}
+.progress-item-anim:nth-child(3) {    
+    animation: opas .9s .3s ease forwards;
+}
+.progress-item-anim:nth-child(4) {    
+    animation: opas .9s .4s ease forwards;
+}
+.progress-item-anim:nth-child(5) {    
+    animation: opas .9s .5s ease forwards;
+}
+.progress-item-anim:nth-child(6) {    
+    animation: opas .9s .6s ease forwards;
+}
+@keyframes opas{
+  0%  { opacity: 0}
+  100% { opacity: 1 }
+}
+
 .progress-wrap-caption-tel {
     margin-top: 50px;
 }
