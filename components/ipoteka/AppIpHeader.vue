@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="">
-                <!-- <AppModalCall v-if="showModal" v-on:close="showModal = false"></AppModalCall> -->
+                <AppModalCall v-if="showModal" v-on:close="showModal = false"></AppModalCall>
             </div>
         </div>
         <div class="back-svg">
@@ -110,7 +110,7 @@
     </div>
 </template>
 <script>
-// import AppModalCall  from '~/components/AppModalCall.vue'
+import AppModalCall  from '~/components/AppModalCall.vue'
 export default {
     data() {
       return {
@@ -118,7 +118,7 @@ export default {
       }
     },
     components: {
-        // AppModalCall
+        AppModalCall
     },
   }
 </script>
