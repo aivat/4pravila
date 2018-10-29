@@ -52,6 +52,12 @@ import AppTypeService from '~/components/AppTypeService.vue'
 import AppSwiper from '~/components/AppSwiper.vue'
 import AppCompare from '~/components/AppCompare.vue'
 
+// import Vue from 'vue'
+// import Router from 'vue-router'
+// import VueYandexMetrika from 'vue-yandex-metrika'                               
+
+// const router = new VueRouter({...}) // your routes
+
 export default {
   data() {
     return {

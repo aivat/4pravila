@@ -38,12 +38,22 @@ module.exports = {
     // vendor: ['axios', 'vue-smooth-scroll']
   },
   modules: [
-    ['@nuxtjs/yandex-metrika',
-      {
-        id: '50159560',
-        webvisor: true,
-        clickmap:true
-      }]
+    // ['@nuxtjs/yandex-metrika',
+    //   {
+    //     id: '50159560',
+    //     webvisor: true,
+    //     clickmap:true,
+    //     env: process.env.NODE_ENV
+    //   }]
+    // ['vue-yandex-metrika',
+    //   {
+    //     id: '50159560',
+    //     webvisor: true,
+    //     router: router,
+    //     clickmap: true,
+    //     // env: process.env.NODE_ENV,
+    //     debug: true
+    //   }]
   ],
   router: {
     scrollBehavior(to, from, savedPosition) {
@@ -66,4 +76,7 @@ module.exports = {
   // css: [
   //   'swiper/dist/css/swiper.css'
   // ]
+  plugins: [
+    { src: '~plugins/yam.js', ssr: false }
+  ]
 }
