@@ -7,7 +7,7 @@
                         <source srcset="~/assets/img/1x/1.jpg" media="(min-width: 480px)" alt="banner.name">
                         <img src='~/assets/img/1x/1_2.jpg'>
                     </picture>
-                    <div class="progress-h2" >Наша команда</div>
+                    <div class="progress-h2">Наша команда</div>
                 </div>
                 <div class="swiper-wrap">
                 <div v-swiper:mySwiper="swiperOption" class="team-list">

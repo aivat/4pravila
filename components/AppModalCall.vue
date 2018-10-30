@@ -27,6 +27,19 @@
                    
                     <div v-if="showResult" class="modal-result">
                         Спасибо, мы перезвоним Вам в ближайшее время!
+                        <div class="modal-result-top">
+                            <h2>Спасибо за вашу заявку</h2>
+                            <p>Наш менеджер свяжется с вами в течение 30 минут.</p>
+                            <p>Мы работаем с понедельника по пятницу с 9 до 19 часов. Если вы оставите заявку в выходные или в нерабочее время, вы будете первыми кому мы позвоним в ближайший рабочий день :)</p>
+                            <p>До встречи!</p>
+                        </div>
+                        <div class="modal-result-bottom">
+                            <img src='~/assets/img/slide_em/1.png'>
+                            <div class="team-hero">
+                                <div class="team-name">Марат Даутов</div>
+                                <div class="team-description">Основатель и руководитель компании</div>
+                            </div> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,16 +79,16 @@ export default {
     methods: {  
             postClient () {
                 if ( this.isValid ) {
-                    axios.post('https://4-pravila.ru/api/crm_int.php', this.client)
-                    .then(response => {
-                        console.log('данные =', response);
-                        window['yaCounter50159560'].reachGoal('TARGET_PHONE_NUMBER');
-                        this.$ga.event('form','TARGET_PHONE_NUMBER');
-                        // router.push({ path: '/' })
-                    })
-                    .catch(e => {
-                      console.log(e.message)
-                    })  
+                    // axios.post('https://4-pravila.ru/api/crm_int.php', this.client)
+                    // .then(response => {
+                    //     console.log('данные =', response);
+                    //     window['yaCounter50159560'].reachGoal('TARGET_PHONE_NUMBER');
+                    //     this.$ga.event('form','TARGET_PHONE_NUMBER');
+                    //     // router.push({ path: '/' })
+                    // })
+                    // .catch(e => {
+                    //   console.log(e.message)
+                    // })  
                     this.error = false
                     this.showResult = true
                     this.setGetTimeOut()
@@ -86,8 +99,8 @@ export default {
             },
             setGetTimeOut() {
                 setTimeout(()=>{ 
-                    this.showResult = false
-                     this.$emit('close')
+                    //this.showResult = false
+                    // this.$emit('close')
                 }, 1900);
             },
     }
