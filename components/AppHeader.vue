@@ -91,8 +91,10 @@ export default {
     },
     methods: {
         showCall() {
+            this.$ga.event('form','TARGET_CALL');
+            window['yaCounter50159560'].reachGoal('TARGET_CALL');
             this.showModal = true
-            // console.log('efde=', yandexMetrika)
+            console.log('Яндекс и гугл метрика', this.$ga)
             // yandexMetrika.reachGoal('TARGET_CALL')
         }
     },

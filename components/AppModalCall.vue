@@ -69,6 +69,8 @@ export default {
                     axios.post('https://4-pravila.ru/api/crm_int.php', this.client)
                     .then(response => {
                         console.log('данные =', response);
+                        window['yaCounter50159560'].reachGoal('TARGET_PHONE_NUMBER');
+                        this.$ga.event('form','TARGET_PHONE_NUMBER');
                         // router.push({ path: '/' })
                     })
                     .catch(e => {

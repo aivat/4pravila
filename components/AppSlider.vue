@@ -29,7 +29,7 @@
                             <div class="slide-wrap-text-rule-rule">{{ banner.text }}</div>
                             <div class="slide-wrap-text-rule-rule-desc">{{ banner.desc }}</div>
                             <div class="slide-wrap-text-cont">
-                              <div v-show="banner.isActiveButton" class="slide-wrap-text-rule-link" @click="showModal = true">{{ banner.buttonText }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
+                              <div v-show="banner.isActiveButton" class="slide-wrap-text-rule-link" @click="showCall()">{{ banner.buttonText }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 1 20 20">
                                   <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                                   <path d="M0 0h24v24H0z" fill="none"/>
                               </svg>
@@ -141,6 +141,13 @@ export default {
     methods: {
         path(name) {
             return require('~/assets/img/1x/' + name + '.jpg')
+        },
+        showCall() {
+            this.$ga.event('form','TARGET_CALL');
+            window['yaCounter50159560'].reachGoal('TARGET_CALL');
+            this.showModal = true
+            console.log('Яндекс метрика')
+            // yandexMetrika.reachGoal('TARGET_CALL')
         }
     },
     mounted() {

@@ -34,26 +34,18 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    },
-    // vendor: ['axios', 'vue-smooth-scroll']
+    }
   },
   modules: [
-    // ['@nuxtjs/yandex-metrika',
-    //   {
-    //     id: '50159560',
-    //     webvisor: true,
-    //     clickmap:true,
-    //     env: process.env.NODE_ENV
-    //   }]
-    // ['vue-yandex-metrika',
-    //   {
-    //     id: '50159560',
-    //     webvisor: true,
-    //     router: router,
-    //     clickmap: true,
-    //     // env: process.env.NODE_ENV,
-    //     debug: true
-    //   }]
+    ['@nuxtjs/yandex-metrika',
+      {
+        id: '50159560',
+        webvisor: true,
+        clickmap:true,
+      }],
+    ['@nuxtjs/google-analytics', {
+        id: 'UA-22130371-3'
+      }]
   ],
   router: {
     scrollBehavior(to, from, savedPosition) {
@@ -69,14 +61,5 @@ module.exports = {
       }
       return { x: 0, y: 0 }
     }
-  },
-  // plugins: [
-  //   { src: '~/plugins/swiper.js', ssr: false },
-  // ],
-  // css: [
-  //   'swiper/dist/css/swiper.css'
-  // ]
-  plugins: [
-    { src: '~plugins/yam.js', ssr: false }
-  ]
+  }
 }

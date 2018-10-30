@@ -14,7 +14,7 @@
                     <li class="problems-item" v-for="item in problems" :key="item.id">{{ item.text }}</li>
                 </ul>
                 <div class="call-wrap">
-                    <div class="call" @click="showModal = true">
+                    <div class="call" @click="showCall()">
                         Хочу решить проблему
                     </div>
                 </div>
@@ -45,9 +45,17 @@ export default {
       }
     },
     components: {
-
         AppModalCall
     },
+    methods: {
+        showCall() {
+            this.$ga.event('form','TARGET_CALL');
+            window['yaCounter50159560'].reachGoal('TARGET_CALL');
+            this.showModal = true
+            console.log('Яндекс метрика')
+            // yandexMetrika.reachGoal('TARGET_CALL')
+        }
+    }    
   }
 </script>
  
