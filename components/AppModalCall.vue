@@ -3,7 +3,7 @@
     <div name="modal">
         <div class="modal-mask" @click.self="$emit('close')">
                 <div class="modal-container">
-            <div class="modal-wrapper">
+                    <div class="modal-wrapper">
  
                     <div v-if="!showResult" class="modal-actions">
                         <h2 class="modal-h2">Заказать звонок специалиста</h2>
@@ -26,20 +26,24 @@
                     </div>
                    
                     <div v-if="showResult" class="modal-result">
-                        Спасибо, мы перезвоним Вам в ближайшее время!
                         <div class="modal-result-top">
-                            <h2>Спасибо за вашу заявку</h2>
+                            <h2 class="modal-result-h2">Спасибо за вашу заявку!</h2>
                             <p>Наш менеджер свяжется с вами в течение 30 минут.</p>
-                            <p>Мы работаем с понедельника по пятницу с 9 до 19 часов. Если вы оставите заявку в выходные или в нерабочее время, вы будете первыми кому мы позвоним в ближайший рабочий день :)</p>
+                            <p class="modal-result-p">Мы работаем с понедельника по пятницу с 9 до 19 часов. Если вы оставите заявку в выходные или в нерабочее время, вы будете первыми кому мы позвоним в ближайший рабочий день :)</p>
                             <p>До встречи!</p>
                         </div>
                         <div class="modal-result-bottom">
-                            <img src='~/assets/img/slide_em/1.png'>
+                            <picture>
+                                <!-- <source class="round" srcset="~/assets/img/circle.png" media="(min-width: 480px)" alt="banner.name"> -->
+                                <img class="round" src='~/assets/img/circle-m.png'>
+                            </picture>
+                            <!-- <img class="round" src='~/assets/img/circle.png'> -->
                             <div class="team-hero">
                                 <div class="team-name">Марат Даутов</div>
                                 <div class="team-description">Основатель и руководитель компании</div>
                             </div> 
                         </div>
+                        <button @click="$emit('close')" class="modal-wrap-action-button">Закрыть</button>
                     </div>
                 </div>
             </div>
@@ -79,16 +83,16 @@ export default {
     methods: {  
             postClient () {
                 if ( this.isValid ) {
-                    // axios.post('https://4-pravila.ru/api/crm_int.php', this.client)
-                    // .then(response => {
-                    //     console.log('данные =', response);
-                    //     window['yaCounter50159560'].reachGoal('TARGET_PHONE_NUMBER');
-                    //     this.$ga.event('form','TARGET_PHONE_NUMBER');
-                    //     // router.push({ path: '/' })
-                    // })
-                    // .catch(e => {
-                    //   console.log(e.message)
-                    // })  
+                    axios.post('https://4-pravila.ru/api/crm_int.php', this.client)
+                    .then(response => {
+                        console.log('данные =', response);
+                        window['yaCounter50159560'].reachGoal('TARGET_PHONE_NUMBER');
+                        this.$ga.event('form','TARGET_PHONE_NUMBER');
+                        // router.push({ path: '/' })
+                    })
+                    .catch(e => {
+                      console.log(e.message)
+                    })  
                     this.error = false
                     this.showResult = true
                     this.setGetTimeOut()
@@ -99,9 +103,9 @@ export default {
             },
             setGetTimeOut() {
                 setTimeout(()=>{ 
-                    //this.showResult = false
-                    // this.$emit('close')
-                }, 1900);
+                    this.showResult = false
+                    this.$emit('close')
+                }, 7000);
             },
     }
 }
@@ -121,6 +125,7 @@ export default {
     display: flex;
     justify-content: center;
    align-items: center;
+   font-size: 12px;
 }
 .modal-wrapper {
     display: flex;
@@ -129,11 +134,11 @@ export default {
     /* align-items: flex-end; */
 }
 .modal-container {
-    background-color: white;
+    /* background-color: white; */
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .43);
     transition: all .3s ease;
-    padding: 20px 25px;
+    margin: 0 10px;
 }
 .modal-h2 {
     margin-top: 0;
@@ -149,6 +154,9 @@ export default {
 .modal-actions {
     display: flex;
     flex-direction: column;
+    padding: 20px 25px;
+    background-color: white;
+    border-radius: 2px;
 }
 .modal-actions-error {
     margin-bottom: 7px;
@@ -202,11 +210,80 @@ export default {
     background-color: rgb(247, 56, 56);
     background-color: rgba(129,34,25,1);
     color: #ffffff;
-    box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px rgba(129,34,25,1);;
+    box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px rgba(129,34,25,1);
     outline: 0;
 }
 .modal-result {
     text-align: center;
+    border-radius: 2px;
+    background-color: white;
+    padding: 5px 10px 20px;
+}
+
+.round {
+    border-radius: 151px;
+    box-shadow: 0 0 0 2px rgba(129,34,25,1);
+}
+.team-hero {
+    margin-top: 20px;
+}
+.team-name {
+    text-align: center;
+    /* font-size: 1.25rem; */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .05em; 
+}
+.team-description {
+    text-align: center;
+    color: rgb(15, 28, 55);
+    margin-top: .625rem;
+    /* font-size: 18px;  */
+    
+}
+.header-icon-wrap-close {
+    display: flex;
+    font-weight: 600;
+    width: 100%;
+    height: 68px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(230, 230, 230, 0.3);
+    color: rgba(168, 168, 168, 0.7);
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    /* font-family: inherit; */
+    font-size: 14px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent;
+}
+.modal-result-bottom {
+    margin-bottom: 20px;
+}
+.header-icon-wrap-close:active {
+    background-color: rgba(230, 230, 230, 0.4);
+}
+.modal-result-p {
+    display: none;
+}
+@media (min-width: 360px) {
+    .modal-mask {
+        font-size: 16px;
+    }
+    .team-name {
+        font-size: 1.25rem;
+    }
+    .team-description {
+        font-size: 18px; 
+        height: 45px;
+    }
+    .modal-container {
+        /* padding: 15px 15px;
+        margin: 0 10px; */
+    }
+    .modal-result-p {
+        display: block;
+    }
 }
 @media (min-width: 600px) {
     .modal-mask  {
@@ -214,6 +291,23 @@ export default {
     }
     .modal-wrapper {
         margin-bottom: 0;
+    }
+    .round {
+        /* border-radius: 151px; */
+    }
+}
+@media (min-width: 1200px) {
+    .modal-result-bottom {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .modal-result {
+        width: 620px;
+        padding: 5px 10px;
+        padding-bottom: 25px;
+    }
+    .modal-result-h2 {
+        font-size: 2em;
     }
 }
 </style>
