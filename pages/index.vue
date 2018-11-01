@@ -34,7 +34,7 @@ import AppHeaderTop from '~/components/AppHeaderTop.vue'
 import AppSlider from '~/components/AppSlider.vue'
 import AppZachem from '~/components/AppZachem.vue'
 import AppPlus from '~/components/AppPlus.vue'
-import AppFiveShagov from '~/components/AppFiveShagov.vue'
+//import AppFiveShagov from '~/components/AppFiveShagov.vue'
 import AppOpinions from '~/components/AppOpinions.vue'
 import AppContacts from '~/components/AppContacts.vue'
 // import AppFooter from '~/components/AppFooter.vue'
@@ -72,7 +72,7 @@ export default {
     AppSlider,
     AppZachem,
     AppPlus,
-    AppFiveShagov,
+   // AppFiveShagov,
     AppOpinions,
     AppContacts,
     // AppFooter,

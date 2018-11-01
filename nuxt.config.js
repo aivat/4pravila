@@ -37,15 +37,20 @@ module.exports = {
     }
   },
   modules: [
-    ['@nuxtjs/yandex-metrika',
-      {
-        id: '50159560',
-        webvisor: true,
-        clickmap:true,
-      }],
+    // ['@nuxtjs/yandex-metrika',
+    //   {
+    //     id: '50159560',
+    //     webvisor: true,
+    //     clickmap:true,
+    //   }],
     ['@nuxtjs/google-analytics', {
         id: 'UA-22130371-3'
-      }]
+      }],
+    ['modules/module', {
+        id: '50159560',
+        webvisor: true,
+        clickmap: true
+    }]
   ],
   router: {
     scrollBehavior(to, from, savedPosition) {

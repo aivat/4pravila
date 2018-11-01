@@ -144,7 +144,8 @@ export default {
         },
         showCall() {
             this.$ga.event('form','TARGET_CALL');
-            window['yaCounter50159560'].reachGoal('TARGET_CALL');
+            this.$metrika.reachGoal('TARGET_CALL');
+            //window['yaCounter50159560'].reachGoal('TARGET_CALL');
             this.showModal = true
             console.log('Яндекс метрика')
             // yandexMetrika.reachGoal('TARGET_CALL')
