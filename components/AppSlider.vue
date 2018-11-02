@@ -64,12 +64,12 @@
 <script>
 import AppModalCall  from '~/components/AppModalCall.vue'
 import AppTimer from '~/components/AppTimer.vue'
-import Vue from 'vue'
-import 'swiper/dist/css/swiper.css'
-if (process.browser) {
-  const VueAwesomeSwiper = require('vue-awesome-swiper/dist/ssr')
-  Vue.use(VueAwesomeSwiper)
-}
+// import Vue from 'vue'
+// import 'swiper/dist/css/swiper.css'
+// if (process.browser) {
+//   const VueAwesomeSwiper = require('vue-awesome-swiper/dist/ssr')
+//   Vue.use(VueAwesomeSwiper)
+// }
 export default {
     components: {
       AppTimer,

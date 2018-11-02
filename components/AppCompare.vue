@@ -91,11 +91,11 @@
     </div>
 </template>
 <script>
-import Vue from 'vue'
-if (process.browser) {
-    const VueImageCompare = require('vue-image-compare')
-    Vue.use(VueImageCompare)
-}
+// import Vue from 'vue'
+// if (process.browser) {
+//     const VueImageCompare = require('vue-image-compare')
+//     Vue.use(VueImageCompare)
+// }
 // import VueImageCompare from 'vue-image-compare'
 
 export default {
