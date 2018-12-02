@@ -73,5 +73,10 @@ module.exports = {
       }
       return { x: 0, y: 0 }
     }
-  }
+  },
+  plugins: [
+    { src: '~/plugins/vue-awesome-swiper', ssr: false },
+    { src: '~/plugins/vue-yandex-maps', ssr: false },
+    { src: '~/plugins/vue-image-compare', ssr: false }
+  ]
 }

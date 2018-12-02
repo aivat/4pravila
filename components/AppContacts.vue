@@ -1,7 +1,5 @@
 <template>
     <div class="contacts" id="contacts">
-        <!-- <div class="link" id="contacts" href="#contacts"></div> -->
-        <!-- <div class="link" ></div> -->
         <div class="container">
             <div class="contacts-wrap">
                 <div class="progress-wrap-caption">
@@ -10,7 +8,6 @@
                         <img src='~/assets/img/1x/1_2.jpg'>
                     </picture>
                     <div class="progress-h2" >Контакты</div>
-                    
                 </div>
                 <picture class="contacts-picture">
                     <source srcset="~/assets/img/build.jpg" media="(min-width: 480px)">
@@ -142,13 +139,14 @@
     </div>
 </template>
 <script>
-import Vue from 'vue'
+// import Vue from 'vue'
 
-import YmapPlugin from 'vue-yandex-maps'
+//import YmapPlugin from 'vue-yandex-maps'
 
-if (process.browser) {
-  Vue.use(YmapPlugin)
-}
+// if (process.browser) {
+//     const YmapPlugin = require('vue-yandex-maps')
+//      Vue.use(YmapPlugin)
+// }
 export default {
     data() {
       return {
