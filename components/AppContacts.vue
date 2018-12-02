@@ -118,7 +118,7 @@
             </div>
         </div>
         <div class="map-wrapper">
-            <yandex-map 
+            <yandex-map
             :coords="[51.816440, 55.106567]"
             zoom="16"
             style="width: 98vw; height: 600px;"
@@ -152,8 +152,12 @@ if (process.browser) {
 export default {
     data() {
       return {
-          day: 24
+          day: 24,
+          showMap: false
       }
+    },
+    mounted() { 
+        this.showMap = true 
     }
   }
 </script>

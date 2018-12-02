@@ -46,10 +46,17 @@ module.exports = {
     ['@nuxtjs/google-analytics', {
         id: 'UA-22130371-3'
       }],
+    // ['modules/module', {
+    //     id: '50159560',
+    //     webvisor: true,
+    //     clickmap: true
+    // }]
     ['modules/module', {
-        id: '50159560',
-        webvisor: true,
-        clickmap: true
+      id: '50159560',
+      options: {
+        clickmap: true,
+        webvisor: true
+      }  
     }]
   ],
   router: {

@@ -66,6 +66,7 @@
                 <p class="footer-p">© ООО "4 Правила" ОГРН 1185658004707, ИНН 5612170336</p>                  
             </div>
             <p class="footer-p-desc">© ООО "4 Правила" ОГРН 1185658004707, ИНН 5612170336</p>
+            <p class="footer-p-note" v-if="isNote">* ООО "4 Правила" оказывает исключительно посреднические услуги. Не является кредитной организацией. Предложение не является публичной офертой.</p>
         </div>
     </div>
 </template>
@@ -73,7 +74,22 @@
 export default {
     data() {
         return {
-
+            isNote: false
+        }
+    },
+    created() {
+       // console.log(' this.$route.path=',  this.$route.path)
+        if ( this.$route.path == '/ipoteka') {
+            this.isNote = true
+        }
+    },
+    watch: {
+        '$route' (to, from) {
+            // console.log(' this.$route.path=',  this.$route.path)
+            // console.log('to=',  to)
+            if (to.name == 'ipoteka') {
+                this.isNote = true
+            }
         }
     }
   }
@@ -297,7 +313,13 @@ button::-moz-focus-inner {
 .footer-p-desc {
     display: none;
 }
-
+.footer-p-note {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #6e6e6e;
+    text-align: center;
+}
 .contact-h2-menu {
     text-align: left;
     display: none;
@@ -318,12 +340,15 @@ button::-moz-focus-inner {
     .footer-p {
         display: none;
     }
-    .footer-p-desc {
+    .footer-p-desc, .footer-p-note {
         display: block;
         margin-top: 40px;
         font-size: 12px;
         color: #6e6e6e;
         text-align: center;
+    }
+    .footer-p-note {
+        margin-top: 10px;
     }
     .hr {
         display: none;

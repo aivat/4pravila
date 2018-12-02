@@ -13,11 +13,11 @@
                         </div>
                         <div class="modal-input">
                             <label>Номер телефона:</label>
-                            <input class="modal-input-input" type="tel" v-model="client.tel" placeholder="8 (906) 888-77-66">
+                            <input class="modal-input-input" type="tel" v-model="tel" placeholder="8(906)888-77-66" maxlength="15">
                         </div>
                         <div class="modal-actions-error" v-if="error">
                             <p>Заполните все поля правильно!</p>
-                            <p>Формат телефона: 8 (906) 888 77 99</p>
+                            <p>Формат телефона: 8(906)888-77-99</p>
                         </div>
                         <div class="modal-wrap-action">
                             <button @click="$emit('close')" class="modal-wrap-action-button">Закрыть</button>
@@ -68,10 +68,35 @@ export default {
         }
     },
     computed: {
+            tel: {
+                get() {
+                    return this.client.tel
+                },
+                set(value) {
+                    if ( value.length == 1 ) {
+                        this.client.tel = value + '('
+                    }
+                    if ( value.length == 5) {
+                        this.client.tel = value + ')'
+                    }
+                    if ( value.length == 9) {
+                        this.client.tel = value + '-'
+                    }
+                    if ( value.length == 12) {
+                        this.client.tel = value + '-'
+                    }
+                    if ( value.length == 15) {
+                        this.client.tel = value
+                    }
+                }
+            },
         isValid: function () {
-            let regex = /^[0-9]{11}?$/
+            //let regex = /^[0-9]{11}?$/
+            //let regex = /^[0-9]([0-9]{3})[0-9]{3}-[0-9]{2}-[0-9]{2}?$/
             let regex2 = /\d/g
-            console.log('value.match(regex2)=', this.client.tel.match(regex2))
+            // console.log('value=', this.client.tel)
+            // console.log('value.match(regex)=', this.client.tel.match(regex))
+            // console.log('value.match(regex2)=', this.client.tel.match(regex2))
             if ( this.client.tel.match(regex2) === null ) {
                 return false
             }

@@ -44,7 +44,7 @@
         <div class="container">
             <div class="wrap">
                 <h1>
-                    Хотите оформить ипотеку?
+                    Хотите оформить ипотеку?<span class="note">*</span>
                 </h1>
                 <p>и <b>БЕСПЛАТНО</b> получить подбор недвижимости и сопровождение сделки юристом?</p>
                 <div class="wrap-table">
@@ -238,6 +238,14 @@ b {
     background-color: rgba(129, 34, 25, .9);
     background-color: rgba(218, 9, 9, .8);
 }
+.note {
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+    left: 2px;
+    color: rgb(107, 107, 107);
+    /* line-height: 62px; */
+}
 @media (min-width: 480px) {
     h1 {
         font-size: 32px;
@@ -246,8 +254,8 @@ b {
 @media (min-width: 1200px) {
     .header {
         justify-content: center;
-        padding-top: 90px;
-        padding-bottom: 80px;
+        padding-top: 120px;
+        padding-bottom: 135px;
         position: relative;
 
         /* overflow-x: hidden; */
@@ -350,6 +358,11 @@ b {
     .wrap-table-row-text {
         padding: 0;
         margin-top: 15px;
+    }
+    .note {
+        font-size: 16px;
+        top: -25px;
+        left: 2px;
     }
 }
 </style>

@@ -17,6 +17,7 @@ export default async function ({ app: { router } }) {
     Vue.use(VueYandexMetrika, {
             router,
             env: process.env.NODE_ENV,
+            // env: 'production',
             ...moduleOptions
         })
 }
