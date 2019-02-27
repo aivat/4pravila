@@ -10,8 +10,8 @@
                     <div class="progress-h2" >Контакты</div>
                 </div>
                 <picture class="contacts-picture">
-                    <source srcset="~/assets/img/build.jpg" media="(min-width: 480px)">
-                    <img src='~/assets/img/build_2.jpg'>
+                    <source srcset="~/assets/img/build3.jpg" media="(min-width: 480px)">
+                    <img src='~/assets/img/build4.jpg'>
                 </picture>
                 <div class="contacts-body">
                     <div class="contacts-item">
@@ -20,7 +20,7 @@
                                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                                 <path d="M0 0h24v24H0z" fill="none"/>
                             </svg>
-                            <b>г. Оренбург, ул. Терешковой, 263/2, офис № 209</b>
+                            <b>г. Оренбург, ул. Аксакова, д. 19, 2 этаж</b>
                         </div>
                         <div class="contacts-item-p">
                             <svg
@@ -75,14 +75,14 @@
                             inkscape:connector-curvature="0"
                                 />
                             </svg>
-                            <b>ост. Хабаровская, Бизнес-центр "Премьер"</b>
+                            <b>ост. Областная больница</b>
                         </div>
                         <div class="contacts-item-p">                            
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path d="M0 0h24v24H0z" fill="none"/>
                                 <path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/>
                             </svg>
-                            <b>21, 41, 49Т, 51, 59, 61, 79, 158, 188, 4</b>
+                            <b>18</b>
                         </div>
                     </div>
                     <div class="contacts-item contacts-item-rigth">
@@ -116,7 +116,7 @@
         </div>
         <div class="map-wrapper">
             <yandex-map
-            :coords="[51.816440, 55.106567]"
+            :coords="[51.773951, 55.118003]"
             zoom="16"
             style="width: 98vw; height: 600px;"
             :cluster-options="{
@@ -128,9 +128,9 @@
                 <ymap-marker 
                 marker-id='1'
                 marker-type="placemark"
-                :coords="[51.816440, 55.106567]"
-                hint-content="Риэлторская компания '4 Правила', ул. Терешковой, д. 263/2, офис № 209"
-                :balloon="{header: 'Риэлторская компания 4 Правила', body: 'г. Оренбург, ул. Терешковой, д. 263/2, офис № 209<br> Тел.: 8 (3532) 93-50-60', footer: 'Пн-Пт: с 09:00 до 19:00'}"
+                :coords="[51.773951, 55.118003]"
+                hint-content="Риэлторская компания '4 Правила', г. Оренбург, ул. Аксакова, д. 19, 2 этаж"
+                :balloon="{header: 'Риэлторская компания 4 Правила', body: 'г. Оренбург, ул. Аксакова, д. 19, 2 этаж<br> Тел.: 8 (3532) 93-50-60', footer: 'Пн-Пт: с 09:00 до 18:00'}"
                 :icon="{color: 'blue', glyph: 'pocket'}"
                 cluster-name="1"
                 ></ymap-marker>

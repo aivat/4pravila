@@ -2,7 +2,7 @@
   <div class="content-wrap">
     <!-- <AppHeaderTop/> -->
     <!-- <AppHeader/> -->
-    <!-- <AppSlider></AppSlider> -->
+    <AppSlider></AppSlider>
     <!-- <AppSlider v-on:actived-tab="activedTabRule"></AppSlider> -->
     <AppMarat/>
     <AppProblems/>
@@ -23,7 +23,7 @@
     <AppPravila v-bind:initialactive="initialactive"></AppPravila>
     <AppOpinions/> -->
     <!-- <AppFooter/> -->
-    <!-- <AppMenuRight class="act"></AppMenuRight> -->
+    <AppMenuRight class="act"></AppMenuRight>
   </div>
 </template>
 
