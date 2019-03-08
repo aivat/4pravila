@@ -76,10 +76,10 @@ export default {
             3: { id: "4", text: 'Средний срок продажи квартир 15 дней' }
           },
         videos: {
-                0: {id: "0", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/FdRcTsP26OA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
-                1: {id: "1", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/HWpTxsLhugM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
-                2: {id: "2", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/iwOUbKdz4uM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
-                3: {id: "3", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/1JJWS94aNFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}
+                0: {id: "0", link: '<iframe width="510" height="265" src="https://www.youtube.com/embed/FdRcTsP26OA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
+                1: {id: "1", link: '<iframe width="510" height="265" src="https://www.youtube.com/embed/HWpTxsLhugM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
+                2: {id: "2", link: '<iframe width="510" height="265" src="https://www.youtube.com/embed/iwOUbKdz4uM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
+                3: {id: "3", link: '<iframe width="510" height="265" src="https://www.youtube.com/embed/1JJWS94aNFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}
         }
       }
     },
