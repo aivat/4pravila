@@ -11,6 +11,10 @@
                     <div class="progress-h2" >Отзывы</div>
                 </div>
 
+                <AppVideoSwiper 
+                :videos="videos" 
+                ></AppVideoSwiper>  
+
                 <!-- <div class="progress-h2" >в цифрах</div> -->
                 <div class="progress-list" >
                     <div class="progress-item" v-for="item in items" :key="item.id">
@@ -33,6 +37,7 @@
     </div>
 </template>
 <script>
+import AppVideoSwiper from '~/components/AppVideoSwiper.vue';
 export default {
     data() {
       return {
@@ -41,6 +46,12 @@ export default {
             1: { id: "2", text: 'Александр Николаевич изначально был плохо настроен на сотрудничество с риэлторской компанией, так как имел плохой опыт сотрудничества, но изменил свое мнение, увидев наш профессиональный подход к своему дел. Он доверил нам продажу своей двухкомнатной квартиры на проезде Нижний 8/1, в результате чего был заключендоговор об оказании риэлтерских услуг сроком на 30 дней. Квартира по обоюдному соглашению сторон была оценена в  2 850 000 рублей.', resh: 'Продана за 4 дней по цене 2 850 000 рублей. Квартиры была продана за  3 просмотра.' },
             2: { id: "3", text: 'Элида Валитова обратилась в нашу компанию за помощью в продаже двухкомнатной квартиры по адресу: ул. Новая 10/5. Квартира была оценена 2 300 000 рублей. Клиент поставил срок 2 месяца.', resh: 'Было  организовано 5 показов квартиры покупателям. Квартира продалась за 21 день по цене 2 300 000 рублей.' },
             3: { id: "4", text: 'Никита обратился в нашу компанию, чтобы продать частный дом с землей в Подгородней Покровке. За дом с земельным участком он хотел получить  1 800 000 рублей. Срок мы определили в 3 месяца.', resh: 'Дом с земельным участком были проданы за 1 750 000 в течении 2-ух месяцев. ' }
+          },
+          videos: {
+              0: {id: "0", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/3le0Qp3AFpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
+              1: {id: "1", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/91joAkaPABE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
+              2: {id: "2", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/rtAvH601uxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}
+
           }
       }
     },
@@ -48,7 +59,11 @@ export default {
         path(name) {
             return require('~/assets/img/ot/' + name + '.jpg')
         }
+    },
+    components: {
+        AppVideoSwiper
     }
+    
   }
 </script>
  
