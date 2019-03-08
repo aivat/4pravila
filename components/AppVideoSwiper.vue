@@ -46,9 +46,9 @@ export default {
         },
         swiperOption() {
             return {
-                // slidesPerView:3,
-                  centeredSlides: true,
-                spaceBetween: 10,
+                slidesPerView:3,
+                // centeredSlides: true,
+                spaceBetween: 50,
                 //   slidesPerGroup: 1,
                 initialSlide: 0 ,
                 loop: true,
@@ -383,8 +383,8 @@ transition: all .25s ease-out;
         transition: all .25s ease-out;
     }
     .team-list .swiper-slide-next+.team-item .team-picture {
-        transform: scale(.8);
-        opacity: 1;
+        /* transform: scale(.8); */
+        /* opacity: 1; */
         
     }
     .team-list .swiper-slide-next+.team-item {
