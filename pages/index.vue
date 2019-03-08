@@ -51,6 +51,7 @@ import AppCallActions from '~/components/AppCallActions.vue'
 import AppTypeService from '~/components/AppTypeService.vue'
 import AppSwiper from '~/components/AppSwiper.vue'
 import AppCompare from '~/components/AppCompare.vue'
+import AppVideoSwiper from '~/components/AppVideoSwiper.vue';
 
 // import Vue from 'vue'
 // import Router from 'vue-router'
@@ -88,7 +89,8 @@ export default {
     AppCallActions,
     AppTypeService,
     AppSwiper,
-    AppCompare
+    AppCompare,
+    AppVideoSwiper
   },
   methods: {
       activedTabRule: function (index) {
