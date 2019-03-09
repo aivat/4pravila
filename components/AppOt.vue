@@ -48,9 +48,9 @@ export default {
             3: { id: "4", text: 'Никита обратился в нашу компанию, чтобы продать частный дом с землей в Подгородней Покровке. За дом с земельным участком он хотел получить  1 800 000 рублей. Срок мы определили в 3 месяца.', resh: 'Дом с земельным участком были проданы за 1 750 000 в течении 2-ух месяцев. ' }
           },
           videos: {
-              0: {id: "0", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/3le0Qp3AFpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
-              1: {id: "1", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/91joAkaPABE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
-              2: {id: "2", link: '<iframe width="660" height="415" src="https://www.youtube.com/embed/rtAvH601uxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}
+              0: {id: "0", link: '<iframe width="510" height="265" src="https://www.youtube.com/embed/91joAkaPABE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
+              1: {id: "1", link: '<iframe width="510" height="265" src="https://www.youtube.com/embed/3le0Qp3AFpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
+              2: {id: "2", link: '<iframe width="510" height="265" src="https://www.youtube.com/embed/rtAvH601uxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}
 
           }
       }
