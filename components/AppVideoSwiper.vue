@@ -1,5 +1,5 @@
 <template>
-    <div class="swiperes" id="swiperes">
+    <div class="swiperes" >
         <div class="container">
             <div class="progress-wrap">
                 <div class="swiper-wrap">
@@ -303,7 +303,7 @@ transition: all .25s ease-out;
     outline: none;
     background-image: url('~/assets/svg/outline-arrow_forward_ios-24px.svg');
     background-color: transparent;
-    background-position-x: 60%;
+    background-position-x: 75%;
     padding: 19px 0px 19px 55px;
     border-radius: 50%;
 }
@@ -312,7 +312,7 @@ transition: all .25s ease-out;
     outline: none;
     background-image: url('~/assets/svg/outline-arrow_back_ios-24px.svg');
     background-color: transparent;
-    background-position-x: 50%;
+    background-position-x: 35%;
     padding: 19px 0px 19px 55px;
     border-radius: 50%;
 }
@@ -358,7 +358,7 @@ transition: all .25s ease-out;
         margin-bottom: 0;
     }
     .swiper-pag-wrap {
-        top: -180px;
+        top: -150px;
         margin: 0 350px;
     }
     .swiper-slide-next .team-hero {
@@ -377,7 +377,7 @@ transition: all .25s ease-out;
         opacity: 1;
     }
     .team-list .swiper-slide .team-picture {
-        height: 400px;
+        height: 270px;
         transform: scale(.75);
         opacity: 1;
         transition: all .25s ease-out;
@@ -396,7 +396,7 @@ transition: all .25s ease-out;
     }
     .swiperes {
         justify-content: center;
-        padding-top: 10px;
+        /* padding-top: 10px; */
     }
     .progress-h2 {
         font-size: 32px;
@@ -436,7 +436,7 @@ transition: all .25s ease-out;
         margin-right: 100px;
     }
 
-    .button-next-individ {
+    /* .button-next-individ {
         display: block;
         outline: none;
         background-image: url('~/assets/svg/outline-arrow_forward_ios-24px.svg');
@@ -457,7 +457,7 @@ transition: all .25s ease-out;
         border-radius: 50%;
         position: absolute;
         left: -100px;
-    }
+    } */
 
 }
 </style>
