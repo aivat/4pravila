@@ -435,29 +435,5 @@ transition: all .25s ease-out;
     .progress-list-item:first-child {
         margin-right: 100px;
     }
-
-    /* .button-next-individ {
-        display: block;
-        outline: none;
-        background-image: url('~/assets/svg/outline-arrow_forward_ios-24px.svg');
-        background-color: transparent;
-        background-position-x: 90%;
-        padding: 19px 0px 19px 55px;
-        border-radius: 50%;
-        position: absolute;
-        right: -100px;
-    }
-    .button-prev-individ {
-        display: block;
-        outline: none;
-        background-image: url('~/assets/svg/outline-arrow_back_ios-24px.svg');
-        background-color: transparent;
-        background-position-x: 20%;
-        padding: 19px 0px 19px 55px;
-        border-radius: 50%;
-        position: absolute;
-        left: -100px;
-    } */
-
 }
 </style>
