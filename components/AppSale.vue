@@ -55,11 +55,20 @@
                         </li>
                     </div>
                 </ul>
-            </div>
 
+            <div class="progress-wrap-caption example-video-title">
+                <picture>
+                    <source srcset="~/assets/img/1x/back2.jpg" media="(min-width: 500px)">
+                    <img src='~/assets/img/1x/back2_2.jpg'>
+                </picture>
+                <div class="progress-h2" >Примеры профессиональной видеосъемки недвижимости </div>
+            </div>
+            
             <AppVideoSwiper 
                 :videos="videos" 
-            ></AppVideoSwiper>  
+            ></AppVideoSwiper>
+            </div>
+  
 
         </div>
     </div>
@@ -200,6 +209,15 @@ picture {
     }
     .progress-h2 {
         font-size: 32px;
+    }
+    .example-video-title {
+        width: 500px;
+    }
+    .example-video-title img{
+        width: 500px;
+    }
+    .example-video-title .progress-h2 {
+        top: -20px;
     }
 }
 @media (min-width: 1200px) {
