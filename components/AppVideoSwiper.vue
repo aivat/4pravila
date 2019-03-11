@@ -320,6 +320,21 @@ transition: all .25s ease-out;
     outline: none;
 }
 
+@media (max-width: 480px) {
+    .team-list .swiper-slide .team-picture {
+        height: 300px;
+    }
+    .team-item {
+        top: -45px;
+    }
+    .swiper-pag-wrap {
+        top: -60px;
+    }
+    .swiper-slide.team-item.swiper-slide-next .team-picture {
+        transform: scale(.7);
+    }
+}
+
 
 @media (min-width: 480px) {
     .progress-wrap-caption {
