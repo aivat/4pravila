@@ -25,9 +25,11 @@
                         Заказать звонок
                     </div>
                 </div>
-                <div class="tel">
-                    8 (3532) 93-50-60
-                </div>
+                <a v-bind:href="telUrl"  style="text-decoration: none" @click="changeNumber($event)" class="link-to-call">
+                  <div class="tel">
+                      {{ tel }}
+                  </div>
+                </a>
                 <!-- <div @click="showModalVacancy = true" class="vacancy">
                     Стать частью команды
                 </div> -->
@@ -48,7 +50,9 @@ export default {
     data() {
       return {
         showModal: false,
-        isWorkingDay: true
+        isWorkingDay: true,
+        tel: '8 (3532) XX-XX-XX',
+        telUrl: '#'
         // showModalVacancy: false        
       }
     },
@@ -79,6 +83,13 @@ export default {
             this.showModal = true
             console.log('Яндекс метрика')
             // yandexMetrika.reachGoal('TARGET_CALL')
+        },
+        changeNumber(event) {
+          if (this.tel !== '8 (3532) 93-50-60') {
+            event.preventDefault();
+            this.tel = '8 (3532) 93-50-60';
+            this.telUrl = 'tel:+73532935060';
+          }
         }
     },
     created() {
